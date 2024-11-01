@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Satoshi-Light';
+    src: url('../font/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Light.woff2') format('woff2'),
+         url('../font/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Light.woff') format('woff'),
+         url('../font/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Light.ttf') format('truetype');
+         font-weight: 300;
+         font-display: swap;
+         font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Satoshi-Regular';
+    src: url('../font/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff2') format('woff2'),
+         url('../font/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff') format('woff'),
+         url('../font/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.ttf') format('truetype');
+         font-weight: 400;
+         font-display: swap;
+         font-style: normal;
+  }
+
+
+@font-face {
+  font-family: 'Satoshi-Medium';
+  src: url('../font/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Medium.woff2') format('woff2'),
+       url('../font/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Medium.woff') format('woff'),
+       url('../font/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Medium.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Satoshi-Bold';
+    src: url('../fonts/Satoshi-Bold.woff2') format('woff2'),
+         url('../fonts/Satoshi-Bold.woff') format('woff'),
+         url('../fonts/Satoshi-Bold.ttf') format('truetype');
+         font-weight: 700;
+         font-display: swap;
+         font-style: normal;
+  }

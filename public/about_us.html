@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="output.css">
+    <script defer src="script.js"></script>
+</head>
+<body class="relative flex flex-col font-satoshi">
+    <header class="bg-white flex flex-col overflow-hidden">
+        <div class="bg-[#004D3F] w-[100%] h-[1.5rem]"></div>
+    
+        <!-- nav bar section -->
+        <nav class=" hidden md:flex justify-between items-end pr-[4rem] py-[1rem] text-[16px] font-[500]">
+            <div class="flex-1"></div>
+    
+            <ul class="flex flex-1 gap-6 align-baseline text-[#004D3F]">
+                <a href="index.html">Home</a>
+                <a href="about_us.html">About Us</a>
+                <a href="contact_us.html">Contact Us</a>
+            </ul>
+    
+            <button class="w-[201px] h-[47.43px] text-[#004D3F] text-[16px] font-[500] bg-[#C4F86A] rounded-[25px] flex justify-center items-center gap-2">
+                <a href="application_form.html">Apply for a Loan</a> 
+                <small class="rotate-[-45deg] text-black">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                </small>  
+            </button>
+        </nav>
+
+        <!-- mobile nav bar -->
+        <nav class="md:hidden w-full flex flex-col my-[2rem] gap-[2rem]">
+
+            <div class="flex items-end gap-[0.7rem] px-[28px]">
+                <ion-icon name="menu-outline" class="open_nav w-[24px] h-[24px] text-[18px] text-black"></ion-icon>
+            </div>
+
+            <!-- mobile nav bar -->
+            <div class="fixed top-0 pt-[2rem]  z-20 h-[100vh] w-full bg-white mobile_nav hidden flex-col gap-6 items-center text-[#004D3F] text-[16px] font-[500]">
+                
+                <div class="self-start flex items-end gap-[0.7rem] pl-[28px]">
+                    <ion-icon name="close-outline" class="close_nav hidden w-[24px] h-[24px] text-[18px] text-black"></ion-icon>
+                    <a href="index.html" class="text-[20px] text-[#004D3F] font-[700] uppercase">Quickaash</a>
+                </div>
+
+                <div class="h-[0.1rem] w-full bg-[#004D3F]"></div>
+
+                    <a href="index.html">Home</a>
+                    <a href="about_us.html">About Us</a>
+                    <a href="contact_us.html">Contact Us</a>
+                    <a href="terms.html">Terms and Conditions</a>
+
+
+                    <button class="mt-[10rem] w-[201px] h-[47.43px] text-[#004D3F] text-[16px] font-[500] bg-[#C4F86A] rounded-[25px] flex justify-center items-center gap-2">
+                        <a href="application_form.html">Apply for a Loan</a> 
+                        <small class="rotate-[-45deg] text-black">
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </small>  
+                    </button>
+            </div>
+         </nav>
+    
+    </header>
+
+
+    <main class="relative md:static z-10 pt-0 md:pt-[6rem] md:pb-[6rem] overflow-x-hidden">
+        <!-- page watermark section -->
+        <section class="absolute bottom-0 z-[9] flex md:justify-between items-center w-[100%] mt-[7rem]">
+            <img src="../images/Group 15 (2).png" alt="" class="w-[71.9px] h-[78.53px] md:w-[152px] md:h-[166px] md:mb-[10rem]">
+
+            <img src="../images/Ellipse 2 (3).png" alt="" class="hidden md:block md:mb-[17rem] ">
+        </section>
+
+        <section class="flex flex-col gap-[1.5rem] md:gap-[3rem] pb-[4.5rem] items-center">
+
+            <div class="w-full md:w-[500px] flex flex-col items-center">
+                <p class="text-[#004D3F] text-[30px] md:text-[60px] font-[700]">
+                    About <span class="text-[#6B9B90]">Quickaash</span> 
+                </p>
+                <img src="../images/Group 44.png" alt="" class="w-[81.26px] md:w-[174.66px] h-[13.88px] md:h-[29.84px] md:mt-[-0.6rem]">
+            </div>
+    
+            <p class="md:h-[264px] w-[370px] md:w-[1144px] text-[#45413C] text-[20px] md:text-[24px] font-[400] text-left md:text-center leading-[44px]">
+                Quickaash is a loan platform designed to help both businesses and individuals easily access credit for their 
+                energy needs. Whether you need Cooking Gas, CNG, Petrol, Diesel, or to pay your Electricity Bills, Quickaash 
+                is here to take the financial pressure off. Our flexible repayment plans let you cover your energy expenses 
+                now and settle the payments at your convenience—ensuring that your home or business stays powered 
+                without disruption. With no hidden fees and fast approval, Quickaash is your trusted partner for energy 
+                financing.
+            </p>
+        </section>
+    </main>
+    
+    <footer class="relative h-[505px] md:h-[442px] bg-[#EDF3F1] flex justify-center items-end px-8 pb-8">
+        <div class=" md:h-[313.13px] w-full md:w-[1328.63px] text-[#004D3F] flex flex-col justify-between">
+    
+            <section class="z-10 flex flex-col md:flex-row gap-[1.5rem] mb-[3rem] md:mb-0 md:gap-0 md:justify-between text-[10px] md:text-[15.75px] font-[400]">
+                <div class="flex flex-col w-[222px] md:w-[330.75px]">
+                    <a href="index.html" class="text-[18.12px] md:text-[27px] uppercase font-[700]">Quickaash</a>
+                    <p class="leading-[16.61px] md:leading-[24.75px]">
+                        Quickaash provides buinesses and individuals 
+                        with credit for energy needs. Cover your energy 
+                        bills now - Cooking Gas, CNG, Petrol, Diiesel, 
+                        and Electricity - and pay later with ease.
+                    </p>
+                </div>
+    
+                <div class="flex flex-col gap-2 md:gap-8">
+                    <p class="text-[12px] md:text-[15.75px] font-[700] uppercase">information</p>
+    
+                    <p class="leading-[15px] md:leading-[24.75px]">
+                        Email: <a href="mailto:pisquaredenergy@gmail.com">pisquaredenergy@gmail.com</a>  <br>
+                        Working Hours: 8am-5pm                    
+                    </p>
+                </div>
+    
+                <div class="flex flex-col gap-2 md:gap-8">
+                    <p class="text-[12px] md:text-[15.75px] font-[700] uppercase">product</p>
+    
+                    <ul class="flex flex-col gap-2 md:gap-6">
+                        <a href="terms.html">Terms & Condition</a>
+                        <a href="privacy.html">Privacy</a>
+                        <a href="contact_us.html">Contact Us</a>
+                    </ul>
+                </div>
+    
+                <div class="flex flex-col gap-2 md:gap-8">
+                    <p class="text-[12px] md:text-[15.75px] font-[700] uppercase">office address</p>
+    
+                    <p class="leading-[15px] md:leading-[24.75px]">
+                        17 Touggourt Street, Wuse Zone 2, Abuja<br>
+                        Tel: <a href="tel:+2347057944652">+234 7057944652</a>                    
+                    </p>
+                </div>
+    
+            </section>
+    
+            <p class="z-10 w-[287px] md:w-[368px] text-[12px] md:text-[15.75px] font-[400]"> 
+                &copy; 2024 Copyright 
+                <span class="font-[700]">Quickaash</span>, 
+                Inc. All rights reserved.
+            </p>
+    
+            <img src="../images/Ellipse 2 (4).png" alt="" class="absolute md:hidden bottom-0 right-0">
+
+        </div>
+    </footer>
+       <!-- ionicons script -->
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
