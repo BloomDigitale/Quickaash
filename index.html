@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="public/output.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <script defer src="script.js"></script>
+
+    <style>
+        .swiper-pagination-bullet {
+            background: #004D3F;
+        }
+    </style>
+</head>
+<body class="relative flex flex-col font-satoshi">
+   <header class="bg-[#EDF3F1] relative flex flex-col overflow-hidden">
+    <div class="bg-[#004D3F] w-[100%] h-[1.5rem]"></div>
+
+    <!-- nav bar section -->
+    <nav class="hidden md:flex justify-between items-end pr-[4rem] py-[1rem] text-[16px] font-[500]">
+        <div class="flex-1"></div>
+
+        <ul class="flex flex-1 gap-6 align-baseline text-[#004D3F]">
+            <a href="index.html">Home</a>
+            <a href="public/about_us.html">About Us</a>
+            <a href="public/contact_us.html">Contact Us</a>
+        </ul>
+
+        <button class="w-[201px] h-[47.43px] text-[#004D3F] text-[16px] font-[500] bg-[#C4F86A] rounded-[25px] flex justify-center items-center gap-2">
+            <a href="public/application_form.html">Apply for a Loan</a> 
+            <small class="rotate-[-45deg] text-black">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+            </small>  
+        </button>
+    </nav>
+
+     <!-- mobile nav bar -->
+     <nav class="md:hidden w-full flex flex-col my-[2rem] gap-[2rem]">
+
+        <div class="flex items-end gap-[0.7rem] px-[28px]">
+            <ion-icon name="menu-outline" class="open_nav w-[24px] h-[24px] text-[18px] text-black"></ion-icon>
+        </div>
+
+        <!-- mobile nav bar -->
+        <div class="fixed top-0 pt-[2rem]  z-20 h-[100vh] w-full bg-white mobile_nav hidden flex-col gap-6 items-center text-[#004D3F] text-[16px] font-[500]">
+            
+            <div class="self-start flex items-end gap-[0.7rem] pl-[28px]">
+                <ion-icon name="close-outline" class="close_nav hidden w-[24px] h-[24px] text-[18px] text-black"></ion-icon>
+                <a href="index.html" class="text-[20px] text-[#004D3F] font-[700] uppercase">Quickaash</a>
+            </div>
+
+            <div class="h-[0.1rem] w-full bg-[#004D3F]"></div>
+
+                <a href="index.html">Home</a>
+                <a href="public/about_us.html">About Us</a>
+                <a href="public/contact_us.html">Contact Us</a>
+                <a href="public/terms.html">Terms and Conditions</a>
+
+                <button class="mt-[10rem] w-[201px] h-[47.43px] text-[#004D3F] text-[16px] font-[500] bg-[#C4F86A] rounded-[25px] flex justify-center items-center gap-2">
+                    <a href="public/application_form.html">Apply for a Loan</a> 
+                    <small class="rotate-[-45deg] text-black">
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </small>  
+                </button>
+        </div>
+     </nav>
+
+
+    <!-- hero section -->
+    <section class=" self-center justify-center md:mt-[4rem]">
+        <div class="flex flex-col gap-6 text-center">
+            <p class="self-center flex items-center justify-center bg-white rounded-[14.05px] md:rounded-[18.85px] h-[19.83px] md:h-[26.61px] w-[212.34px] md:w-[285px] text-[8.26px] md:text-[11.09px] font-[500] gap-[0.3rem]">
+                Affordable Energy Financing at Your Fingertips 
+                <img src="images/thumbs-up-1.png" alt="A thumbsup icon" class="w-[12.39px] h-[12.39px] md:w-[16.63px] md:h-[16.63px]">
+            </p>
+
+            <p class=" text-[30.25px] md:text-[55px] font-[700] text-[#004D3F] leading-[32.37px] md:leading-[58.85px]">
+               <span class="text-[#6B9B90]">Quickaash:</span>  
+                Power <br> Your Life, Pay Later! 
+            </p>
+
+            <p class=" text-[10px] md:text-[20px] text-[#757575] font-[500] leading-[17.64px] md:leading-[29px]">
+                Acccess instant credit for all your energy needs, From Cooking Gas, <br>
+                Petrol, Diesel, CNG to Electricity Bills - we've got you covered
+            </p>
+
+            <div class=" self-center flex justify-items-center gap-8">
+                <button class="w-[142.85px] md:w-[234.91px] h-[33.71px] md:h-[55.43px] text-[#004D3F] text-[11.37px] md:text-[18.7px] font-[500] bg-[#C4F86A] rounded-[17.77px] md:rounded-[25px] flex justify-center items-center gap-2">
+                    <a href="public/application_form.html">Apply for a Loan</a> 
+                    <small class="rotate-[-45deg] text-black">
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </small>  
+                </button>
+
+                <button class="w-[100.92px] md:w-[165.95px] h-[33.4px] md:h-[54.93px] text-[#004D3F] text-[11.37px] md:text-[18.7px] bg-white py-2 px-4 rounded-[29.22px] font-[500]">
+                    <a href="#">Learn more</a>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- page watermark image -->
+        <img src="images/Group 15.png" alt="" class="w-[61.35px] md:w-[152px] h-[67px] md:h-[166px] absolute z-10 right-0 md:mt-[-2rem]">
+
+        <div class="relative flex flex-col mt-[4rem] w-full">
+
+            <div class="flex justify-between items-center z-10 absolute w-full top-[2.3rem] md:top-[8rem]">
+                <div class="h-[22.21px] md:h-[67px] w-[77.56px] md:w-[234px] absolute left-[-1.8rem] md:left-[-8rem] top-[1.9rem] md:top-[5rem] flex gap-2 justify-center items-center bg-[#C4F86A] rounded-[3.65px] md:rounded-[0.7rem]">
+                    <img src="images/Group 4.png" alt="a calculator icon" class="h-[10.89px] md:h-[25px] w-[10.89px] md:w-[25px]">
+                    <p class="text-[6.28px] md:text-[18.94px] text-[#0F5156] font-[700]">Low interest rate</p>
+                </div>
+
+                <div class="flex flex-col gap-2 md:gap-4 absolute right-[-1.4rem] top-[0.2rem]  md:right-[-9.3rem]">
+                    <div class="flex justify-center items-center gap-2 bg-white rounded-[3.65px] md:rounded-[0.7rem] h-[22.21px] md:h-[67px] w-[86.84px] md:w-[262px]">
+                        <img src="images/Group 3.png" alt="A money bag emoji" class="h-[17.19px] md:h-[35px] w-[17.19px] md:w-[35px]">
+                        <p class="text-[6.28px] md:text-[18.94px] text-[#0F5156] font-[700]">Flexible terms</p>
+                    </div>
+
+                    <div class="bg-[#004D3F] text-white h-[41.13px] md:h-[124.09px] w-[86.83px] md:w-[262px] rounded-[3.65px] md:rounded-[0.7rem] p-[0.3rem] md:p-4">
+                        <p class="text-[3.52px] md:text-[10.61px]">Amount eligible</p>
+                        <p class="text-[5.14px] md:text-[15.52px] font-[700] mb-[0.3rem] md:mb-4">&#8358 100,000 - &#8358 3,000,000</p>
+
+                        <p class="text-[3.52px] md:text-[10.61px]">Fast and easy process</p>
+                        <p class="text-[5.14px] md:text-[15.52px] font-[700]">5 Minutes</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- hero image -->
+            <img src="images/Hero.png" alt="A hand pumping gas into a car" class="w-[261.17px] md:w-[788px] h-[114.35px] md:h-[345px] self-center">
+        </div>
+    </section>
+
+   </header>
+
+   <main>
+
+    <!-- first main section -->
+    <section class="relative md:h-[671px] bg-white flex flex-col  md:gap-[4rem] overflow-hidden">
+        <!-- page watermark image -->
+        <img src="images/Ellipse 2.png" alt="" class="absolute left-[71rem] hidden md:block">
+        
+        <div class="flex flex-col md:flex-row justify-between items-center z-10 mx-10 mt-[5.5rem] text-center md:text-left">
+            <p class="text-[#004D3F] text-[16px] md:text-[45px] font-[700] leading-[17.28px] md:leading-[48.6px] w-[224px] md:w-[504px]">
+                Why <span class="text-[#6B9B90]">Quickaash</span> is the Smart Choice for Your Energy needs
+            </p>
+
+            <p class="text-[#12141D] text-[10px] md:text-[20px] font-[400] leading-[12px] md:leading-[28px] md:w-[632px]">
+                Discover how Quickaash simplifier energy financing with Fast
+                approval, flexible repayment options, and coverage for all your essential energy services.
+            </p>
+        </div>
+
+        <!-- desktop view of services -->
+        <div class="hidden md:grid grid-cols-4 gap-2 text-center px-8 z-10">
+
+            <div class="border border-[#E6E6E6] bg-white rounded-[0.7rem] flex flex-col justify-center items-center gap-4 w-[314.57px] h-[284.32px]">
+                <div class="h-[44px] w-[44px] px-2 text-[24px] text-[#004D3F] bg-[#004d3f1c] rounded-[100%] flex justify-center items-center">
+                    <ion-icon name="stopwatch-outline"></ion-icon>
+                </div>
+
+                <p class="text-[15.12px] text-[#004D3F] font-[700]">Instant Credit Approval</p>
+
+                <p class="text-center md:text-left text-[12.1px] text-[#757575] font-[400] w-[238.95px] leading-[18.15px]"> 
+                    Apply and get approved within minutes,
+                    ensuring you never have to wait to
+                    access the energy you need.
+                </p>
+            </div>
+
+            <div class="border border-[#E6E6E6] bg-white rounded-[0.7rem] flex flex-col justify-center items-center gap-4 w-[314.57px] h-[284.32px]">
+                <div class="h-[44px] w-[44px] px-2 text-[24px] text-red-500 bg-[#FFEAEA] rounded-[100%] flex justify-center items-center">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                </div>
+
+                <p class="text-[15.12px] text-[#004D3F] font-[700]">
+                    Flexible Repayment Options
+                </p>
+
+                <p class="text-center md:text-left text-[12.1px] text-[#757575] font-[400] w-[238.95px] leading-[18.15px]"> 
+                    Choose repayment plans that fit your 
+                    budget and schedule, with no upfront 
+                    costs. Pay over time at your convenience
+                </p>
+            </div>
+
+            <div class="border border-[#E6E6E6] bg-white rounded-[0.7rem] flex flex-col justify-center items-center gap-4 w-[314.57px] h-[284.32px]">
+                <div class="h-[44px] w-[44px] px-2 text-[24px] bg-[#ffa95452] rounded-[100%] flex justify-center items-center">
+                    <img src="images/handshake-24-regular.png" alt="handshakeicon">
+                </div>
+
+                <p class="text-[15.12px] text-[#004D3F] font-[700]">
+                    Trusted by Indiiduals and Businesses
+                </p>
+
+                <p class="text-center md:text-left text-[12.1px] text-[#757575] font-[400] w-[238.95px] leading-[18.15px]"> 
+                    Set up and grow thriving communities 
+                    based on shared interests, values, or 
+                    goals. Connect people who matter
+                </p>
+            </div>
+            
+            <div class="border border-[#E6E6E6] rounded-[0.7rem] flex flex-col justify-center items-center gap-4 bg-white w-[314.57px] h-[284.32px]">
+                <div class="h-[44px] w-[44px] px-2 text-[24px] text-[#6D6D6D] bg-[#15e59921] rounded-[100%] flex justify-center items-center">
+                    <ion-icon name="shield-checkmark-outline"></ion-icon>
+                </div>
+
+                <p class="text-[15.12px] text-[#004D3F] font-[700]">
+                    Secure and Easy to Use
+                </p>
+
+                <p class="text-center md:text-left text-[12.1px] text-[#757575] font-[400] w-[238.95px] leading-[18.15px]"> 
+                    Our platform is designed for a smooth, 
+                    secure exerience, making it simple to 
+                    apply for loans and manage your account.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- mobile view of services in carousel -->
+         <div class="md:hidden ">
+            <div class="w-full relative">
+                <div class="swiper centered-slide-carousel swiper-container relative ">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="h-96 flex justify-center items-center">
+                                <div class="border border-[#E6E6E6] bg-white rounded-[0.7rem] flex flex-col justify-center items-center gap-4 w-[314.57px] h-[284.32px]">
+                                    <div class="h-[44px] w-[44px] px-2 text-[24px] text-[#004D3F] bg-[#004d3f1c] rounded-[100%] flex justify-center items-center">
+                                        <ion-icon name="stopwatch-outline"></ion-icon>
+                                    </div>
+                    
+                                    <p class="text-[15.12px] text-[#004D3F] font-[700]">Instant Credit Approval</p>
+                    
+                                    <p class="text-center md:text-left text-[12.1px] text-[#757575] font-[400] w-[238.95px] leading-[18.15px]"> 
+                                        Apply and get approved within minutes,
+                                        ensuring you never have to wait to
+                                        access the energy you need.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="h-96 flex justify-center items-center">
+                                <div class="border border-[#E6E6E6] bg-white rounded-[0.7rem] flex flex-col justify-center items-center gap-4 w-[314.57px] h-[284.32px]">
+                                    <div class="h-[44px] w-[44px] px-2 text-[24px] text-red-500 bg-[#FFEAEA] rounded-[100%] flex justify-center items-center">
+                                        <ion-icon name="calendar-outline"></ion-icon>
+                                    </div>
+                    
+                                    <p class="text-[15.12px] text-[#004D3F] font-[700]">
+                                        Flexible Repayment Options
+                                    </p>
+                    
+                                    <p class="text-center md:text-left text-[12.1px] text-[#757575] font-[400] w-[238.95px] leading-[18.15px]"> 
+                                        Choose repayment plans that fit your 
+                                        budget and schedule, with no upfront 
+                                        costs. Pay over time at your convenience
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="h-96 flex justify-center items-center">
+                                <div class="border border-[#E6E6E6] bg-white rounded-[0.7rem] flex flex-col justify-center items-center gap-4 w-[314.57px] h-[284.32px]">
+                                    <div class="h-[44px] w-[44px] px-2 text-[24px] bg-[#ffa95452] rounded-[100%] flex justify-center items-center">
+                                        <img src="images/handshake-24-regular.png" alt="handshakeicon">
+                                    </div>
+                    
+                                    <p class="text-[15.12px] text-[#004D3F] font-[700]">
+                                        Trusted by Indiiduals and Businesses
+                                    </p>
+                    
+                                    <p class="text-center md:text-left text-[12.1px] text-[#757575] font-[400] w-[238.95px] leading-[18.15px]"> 
+                                        Set up and grow thriving communities 
+                                        based on shared interests, values, or 
+                                        goals. Connect people who matter
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="h-96 flex justify-center items-center">
+                                <div class="border border-[#E6E6E6] rounded-[0.7rem] flex flex-col justify-center items-center gap-4 bg-white w-[314.57px] h-[284.32px]">
+                                    <div class="h-[44px] w-[44px] px-2 text-[24px] text-[#6D6D6D] bg-[#15e59921] rounded-[100%] flex justify-center items-center">
+                                        <ion-icon name="shield-checkmark-outline"></ion-icon>
+                                    </div>
+                    
+                                    <p class="text-[15.12px] text-[#004D3F] font-[700]">
+                                        Secure and Easy to Use
+                                    </p>
+                    
+                                    <p class="text-center md:text-left text-[12.1px] text-[#757575] font-[400] w-[238.95px] leading-[18.15px]"> 
+                                        Our platform is designed for a smooth, 
+                                        secure exerience, making it simple to 
+                                        apply for loans and manage your account.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination "></div>
+                </div>
+            </div>
+         </div>
+        
+    </section>
+
+    <!-- second main section -->
+    <section class="relative md:h-[1883px] pt-[4rem] pb-[6rem] bg-[#EDF3F1] flex flex-col gap-[3rem] items-center">
+        <div class="text-center md:w-[717px] flex flex-col items-center gap-[0.6rem] md:gap-2 ">
+            <p class="w-[244px] md:w-[490px] text-[16px] md:text-[45px] text-[#0C4E53] font-[700] leading-[17.12px] md:leading-[48.15px]">
+                <span class="text-[#6B9B90]">Quickaash</span> Provides the 
+                Best Services for You
+            </p>
+
+            <p class="text-[#3C7074] text-[10px] md:text-[20px] font-[400] leading-[15px] md:leading-[30px] w-[260px] md:w-full">
+                From fuel to electricity, Quickaash offers fast, easy loans to cover all your essential
+                energy needs, so you can focus on what matters most
+            </p>
+        </div>
+
+        <div class="grid grid-rows-3 px-[4rem] gap-[3rem] w-[100%] z-10">
+            <div class="flex flex-col-reverse md:flex-row justify-between gap-[1rem]"> 
+                <div class=" w-full md:w-[516px] flex flex-col gap-2">
+                    <p class="w-[158px] md:w-[446px] text-[16px] md:text-[45px] text-[#004D3F] font-[700] leading-[17.28px] md:leading-[48.6px]">
+                        Fuel Financing Made 
+                        Easy and Convenient
+                    </p>
+
+                    <p class="text-[10px] md:text-[20px] text-[#757575] font-[400] leading-[15px] md:leading-[30px] my-[0.8rem]">
+                        Constant credit for Petrol, Diesel, and CNG-keeping your 
+                        vehicles and machinery running smoothly. Say goodbye to 
+                        cash flow worries and enjoy seamless refuelling with 
+                        flexible repayment options
+                    </p>
+
+                    <button class="w-[102.33px] md:w-[180px] h-[36.6px] md:h-[64px] border-[1.46px] border-[#ADADAD] rounded-[24.96px] md:rounded-[43.9px] bg-white md:text-[22.27px] text-[#0C4E53] font-[700] text-center">
+                        <a href="public/application_form.html">Apply Now</a>
+                    </button>
+                </div>
+
+                <img src="images/side-view-woman-gas-station.png" alt="A woman pumping gas into her car">
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between gap-[1rem]">
+                <img src="images/2148773451.png" alt="A hand holding safety goggles">
+                
+                <div class="w-full md:w-[516px] flex flex-col gap-2">
+                    <p class="w-[182px] md:w-[446px] text-[16px] md:text-[45px] text-[#004D3F] font-[700] md:leading-[48.6px]">
+                        Quick Loans for 
+                        Cooking Gas
+                    </p>
+
+                    <p class="text-[10px] md:text-[20px] text-[#757575] font-[400] leading-[15px] md:leading-[30px] my-[0.8rem]">
+                        Get the gas you need without the upfront payment,
+                        Whether it's for home or business, Quickaash offers fast, 
+                        reliable financing with tailored repayment plans that fit 
+                        your budget
+                    </p>
+
+                    <button class="w-[102.33px] md:w-[180px] h-[36.6px] md:h-[64px] border-[1.46px] border-[#ADADAD] rounded-[24.96px] md:rounded-[43.9px] bg-white md:text-[22.27px] text-[#0C4E53] font-[700] text-center">
+                        <a href="public/application_form.html">Apply Now</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex flex-col-reverse md:flex-row justify-between gap-[1rem]"> 
+                <div class="w-full md:w-[516px] flex flex-col gap-2">
+                    <p class="w-[182px] md:w-[446px] text-[16px] md:text-[45px] text-[#004D3F] font-[700] md:leading-[48.6px]">
+                        Electricity Bill Payment,
+                        Simplified
+                    </p>
+
+                    <p class="text-[10px] md:text-[20px] text-[#757575] font-[400] leading-[15px] md:leading-[30px] my-[0.8rem]">
+                        Pay your electricity bills now and take care of the payment 
+                        later with our easy financing solutions. Stay connected and 
+                        keep the lights on without financial stress, thanks to 
+                        Quickaash's convenient credit services.
+                    </p>
+
+                    <button class="w-[102.33px] md:w-[180px] h-[36.6px] md:h-[64px] border-[1.46px] border-[#ADADAD] rounded-[24.96px] md:rounded-[43.9px] bg-white md:text-[22.27px] text-[#0C4E53] font-[700] text-center">
+                        <a href="public/application_form.html">Apply Now</a>
+                    </button>
+                </div>
+
+                <img src="images/1976.png" alt="A man using a laptop and a woman who's focused on her phone, standing in the background">
+            </div>
+        </div>
+
+        <!-- page watermark image -->
+        <img src="images/Ellipse 2 (2).png" alt="A page water mark" class="absolute hidden md:block self-start left-[0] mt-[50rem]">
+    </section>
+
+    <!-- third main section -->
+     <section class="relative h-[166px] md:h-[350px] bg-[#0f2028] flex flex-col justify-center items-center overflow-hidden">
+
+        <!-- page watermark images -->
+         <img src="images/Group 15 (1).png" alt="A page watermark" class="absolute self-start bottom-0 left-[-1rem] md:mt-[6.5rem] w-[56.51px] md:w-[152px] h-[61.71px] md:h-[166px]">
+         <img src="images/Ellipse 2 (1).png" alt="A page watermark" class="absolute self-end hidden md:block">
+         <img src="images/Ellipse 3_mobile.png" alt="" class="absolute self-end bottom-0 md:hidden">
+
+        <div class="z-10 w-[309px] md:w-[797px] text-center">
+            <p class="text-[16px] md:text-[45px] text-white font-[700] md:leading-[48.6px]">
+                Apply for a Quickaash Loan Today
+            </p>
+
+            <p class="text-[10px] md:text-[20px] text-[#848484] leading-[15px] md:leading-[30px] font-[400] mt-2 md:mt-6">
+                From fuel to electricity, Quickaash offers fast, easy loans to cover all your essential energy 
+                needs, so you can focus on what matters most
+            </p>
+        </div>
+
+        <button class="z-10 w-[102.33px] md:w-[201px] h-[24.14px] md:h-[47.43px] text-[#004D3F] text-[8.15px] md:text-[16px] font-[500] bg-[#C4F86A] rounded-[12.73px] md:rounded-[25px] flex justify-center items-center gap-2 mt-[1rem] md:mt-[2rem]">
+            <a href="public/application_form.html">Apply for a Loan</a> 
+            <small class="rotate-[-45deg] text-black ">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+            </small>  
+        </button>
+
+     </section>
+   </main>
+
+   <footer class="relative h-[505px] md:h-[442px] bg-[#EDF3F1] flex justify-center items-end px-8 pb-8">
+    <div class=" md:h-[313.13px] w-full md:w-[1328.63px] text-[#004D3F] flex flex-col justify-between">
+
+        <section class="z-10 flex flex-col md:flex-row gap-[1.5rem] mb-[3rem] md:mb-0 md:gap-0 md:justify-between text-[10px] md:text-[15.75px] font-[400]">
+            <div class="flex flex-col w-[222px] md:w-[330.75px]">
+                <a href="index.html" class="text-[18.12px] md:text-[27px] uppercase font-[700]">Quickaash</a>
+                <p class="leading-[16.61px] md:leading-[24.75px]">
+                    Quickaash provides buinesses and individuals 
+                    with credit for energy needs. Cover your energy 
+                    bills now - Cooking Gas, CNG, Petrol, Diiesel, 
+                    and Electricity - and pay later with ease.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-2 md:gap-8">
+                <p class="text-[12px] md:text-[15.75px] font-[700] uppercase">information</p>
+
+                <p class="leading-[15px] md:leading-[24.75px]">
+                    Email: <a href="mailto:pisquaredenergy@gmail.com">pisquaredenergy@gmail.com</a>  <br>
+                    Working Hours: 8am-5pm                    
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-2 md:gap-8">
+                <p class="text-[12px] md:text-[15.75px] font-[700] uppercase">product</p>
+
+                <ul class="flex flex-col gap-2 md:gap-6">
+                    <a href="public/terms.html">Terms & Condition</a>
+                    <a href="privacy.html">Privacy</a>
+                    <a href="public/contact_us.html">Contact Us</a>
+                </ul>
+            </div>
+
+            <div class="flex flex-col gap-2 md:gap-8">
+                <p class="text-[12px] md:text-[15.75px] font-[700] uppercase">office address</p>
+
+                <p class="leading-[15px] md:leading-[24.75px]">
+                    17 Touggourt Street, Wuse Zone 2, Abuja<br>
+                    Tel: <a href="tel:+2347057944652">+234 7057944652</a>                    
+                </p>
+            </div>
+
+        </section>
+
+        <p class="z-10 w-[287px] md:w-[368px] text-[12px] md:text-[15.75px] font-[400]"> 
+            &copy; 2024 Copyright 
+            <span class="font-[700]">Quickaash</span>, 
+            Inc. All rights reserved.
+        </p>
+
+        <img src="images/Ellipse 2 (4).png" alt="" class="absolute md:hidden bottom-0 right-0">
+
+    </div>
+    </footer>
+   <!-- ionicons script -->
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+   <!-- swiper Js -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+   <script>
+        // Swiper js script
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop:true,
+            fraction: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+        });
+   </script>
+</body>
+</html>
