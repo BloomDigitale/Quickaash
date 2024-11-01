@@ -1,5 +1,11 @@
 `use strict`;
 
+// setting the year in the footer
+const year = document.querySelector('.curr_year');
+
+year.innerHTML = new Date().getFullYear();
+
+
 // mobile navbar toggle
 const openNav = document.querySelector('.open_nav');
 const closeNav = document.querySelector('.close_nav');
