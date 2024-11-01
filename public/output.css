@@ -841,6 +841,18 @@ video {
   height: 100%;
 }
 
+.h-\[\] {
+  height: ;
+}
+
+.h-\[800px\] {
+  height: 800px;
+}
+
+.h-\[881px\] {
+  height: 881px;
+}
+
 .w-\[10\.89px\] {
   width: 10.89px;
 }
