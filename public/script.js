@@ -124,6 +124,30 @@ const selfieUpload = document.querySelector('.selfie_upload');
 const idUpload = document.querySelector('.id_upload');
 const receiptUpload = document.querySelector('.receipt_upload');
 
+const body = document.querySelector('body');
+const backbtns = document.querySelectorAll('.back');
+const nextbtns = document.querySelectorAll('.next');
+
+// making sure the form goes back to the top whenever the nextbutton is clicked
+body.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    if(e.target.classList.contains('back')) {
+        console.log('go back to top');
+        const id = e.target.getAttribute('href');
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    if(e.target.classList.contains('next')) {
+        console.log('go back to top');
+        const id = e.target.getAttribute('href');
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+})
 
 next_page2.addEventListener('click', (e) => {
     e.preventDefault();
