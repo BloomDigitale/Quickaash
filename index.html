@@ -2,11 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Home</title>
     <link rel="stylesheet" href="public/output.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- favicon links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+
+    <!-- link for button animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <script defer src="public/script.js"></script>
 
@@ -14,17 +23,27 @@
         .swiper-pagination-bullet {
             background: #004D3F;
         }
+
+        .animate__animated.animate__pulse {
+            --animate-duration: 2s;
+            --animation-delay: 600s;
+        }
     </style>
 </head>
-<body class="relative flex flex-col font-satoshi">
+
+<body class="flex flex-col font-satoshi">
    <header class="bg-[#EDF3F1] relative flex flex-col overflow-hidden">
     <div class="bg-[#004D3F] w-[100%] h-[1.5rem]"></div>
 
     <!-- nav bar section -->
-    <nav class="hidden md:flex justify-between items-end pr-[4rem] py-[1rem] text-[16px] font-[500]">
-        <div class="flex-1"></div>
+    <nav class="hidden md:flex justify-between items-center px-[4rem] py-[1rem] text-[16px] font-[500]">
 
-        <ul class="flex flex-1 gap-6 align-baseline text-[#004D3F]">
+        <a href="index.html">
+            <img src="images/Quickaash Logo Dsgn.png" alt="">
+        </a>
+        
+
+        <ul class="flex gap-6 align-baseline text-[#004D3F]">
             <a href="index.html">Home</a>
             <a href="public/about_us.html">About Us</a>
             <a href="public/contact_us.html">Contact Us</a>
@@ -41,16 +60,21 @@
      <!-- mobile nav bar -->
      <nav class="md:hidden w-full flex flex-col my-[2rem] gap-[2rem]">
 
-        <div class="flex items-end gap-[0.7rem] px-[28px]">
+        <div class="flex justify-between items-center gap-[0.7rem] px-[28px]">
+            <a href="index.html">
+                <img src="images/Quickaash Logo Dsgn.png" alt="" class="w-[68px] h-[20px]">
+            </a>
             <ion-icon name="menu-outline" class="open_nav w-[24px] h-[24px] text-[18px] text-black"></ion-icon>
         </div>
 
         <!-- mobile nav bar -->
         <div class="fixed top-0 pt-[2rem]  z-20 h-[100vh] w-full bg-white mobile_nav hidden flex-col gap-6 items-center text-[#004D3F] text-[16px] font-[500]">
             
-            <div class="self-start flex items-center gap-[0.7rem] pl-[28px]">
+            <div class=" w-full flex justify-between items-center gap-[0.7rem] px-[28px]">
+                <a href="index.html">
+                    <img src="images/Quickaash Logo Dsgn.png" alt="" class="w-[68px] h-[20px]">
+                </a>
                 <ion-icon name="close-outline" class="close_nav hidden w-[24px] h-[24px] text-[18px] text-black"></ion-icon>
-                <a href="index.html" class="text-[20px] text-[#004D3F] font-[700] uppercase">Quickaash</a>
             </div>
 
             <div class="h-[0.1rem] w-full bg-[#004D3F]"></div>
@@ -89,14 +113,14 @@
             </p>
 
             <div class=" self-center flex justify-items-center gap-8">
-                <button class="w-[142.85px] md:w-[234.91px] h-[43.71px] md:h-[55.43px] text-[#004D3F] text-[11.37px] md:text-[18.7px] font-[500] bg-[#C4F86A] rounded-[17.77px] md:rounded-[25px] flex justify-center items-center gap-2">
+                <button class="animate__animated animate__pulse animate__infinite w-[142.85px] md:w-[234.91px] h-[43.71px] md:h-[55.43px] text-[#004D3F] text-[11.37px] md:text-[18.7px] font-[500] bg-[#C4F86A] rounded-[17.77px] md:rounded-[25px] flex justify-center items-center gap-2">
                     <a href="public/application_form.html">Apply for a Loan</a> 
                     <small class="rotate-[-45deg] text-black">
                         <ion-icon name="arrow-forward-outline"></ion-icon>
                     </small>  
                 </button>
 
-                <button class="w-[100.92px] md:w-[165.95px] h-[43.4px] md:h-[54.93px] text-[#004D3F] text-[11.37px] md:text-[18.7px] bg-white py-2 px-4 rounded-[29.22px] font-[500]">
+                <button class="animate__animated animate__pulse animate__infinite w-[100.92px] md:w-[165.95px] h-[43.4px] md:h-[54.93px] text-[#004D3F] text-[11.37px] md:text-[18.7px] bg-white py-2 px-4 rounded-[29.22px] font-[500]">
                     <a href="public/about_us.html">Learn more</a>
                 </button>
             </div>
@@ -431,12 +455,14 @@
      </section>
    </main>
 
-   <footer class="relative h-[505px] md:h-[442px] bg-[#EDF3F1] flex justify-center items-end px-8 pb-8">
+   <footer class="relative h-[505px] md:h-[442px] bg-[#EDF3F1] flex justify-center items-end px-8 py-2">
     <div class=" md:h-[313.13px] w-full md:w-[1328.63px] text-[#004D3F] flex flex-col justify-between">
 
         <section class="z-10 flex flex-col md:flex-row gap-[1.5rem] mb-[3rem] md:mb-0 md:gap-0 md:justify-between text-[10px] md:text-[15.75px] font-[400]">
             <div class="flex flex-col w-[222px] md:w-[330.75px]">
-                <a href="index.html" class="text-[18.12px] md:text-[27px] uppercase font-[700]">Quickaash</a>
+                <a href="index.html" class="w-[107px] md:w-[158.68px] h-[32.27px] md:h-[47.85px] ">
+                    <img src="images/Quickaash Logo Dsgn.png" alt="company logo">
+                </a>
                 <p class="leading-[16.61px] md:leading-[24.75px]">
                     Quickaash provides buinesses and individuals 
                     with credit for energy needs. Cover your energy 
@@ -458,9 +484,10 @@
                 <p class="text-[12px] md:text-[15.75px] font-[700] uppercase">product</p>
 
                 <ul class="flex flex-col gap-2 md:gap-6">
-                    <a href="public/terms.html">Terms & Condition</a>
                     <a href="public/about_us.html">About Us</a>
                     <a href="public/contact_us.html">Contact Us</a>
+                    <a href="public/privacy_policy.html">Privacy Policy</a>
+                    <a href="public/terms.html">Terms & Conditions</a>
                 </ul>
             </div>
 
@@ -484,7 +511,7 @@
         <img src="images/Ellipse 2 (4).png" alt="" class="absolute md:hidden bottom-0 right-0">
 
     </div>
-    </footer>
+   </footer>
    <!-- ionicons script -->
    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

@@ -77,6 +77,54 @@ const back_page4 = document.querySelector('.back_page_4');
 const submitForm = document.querySelector('.submit');
 
 
+// Form variables
+const form = document.querySelector('form');
+
+const firstNameInput = document.querySelector('.first_name');
+const lastNameInput = document.querySelector('.last_name');
+const emailInput = document.querySelector('.email');
+const contactInput = document.querySelector('.phone_number');
+
+const bvnInput = document.querySelector('.bvn');
+const dobInput = document.querySelector('.dob');
+const personAddInput = document.querySelector('.personal_address');
+const nokInput = document.querySelector('.next_of_kin');
+const nokNumInput = document.querySelector('.nok_number');
+
+const eligibilityInput = document.querySelector('.eligibility');
+const amountInput = document.querySelector('.loan_amount');
+const durationInput = document.querySelector('.loan_duration');
+const purposeInput = document.querySelector('.purpose');
+
+
+const guarantorInput = document.querySelector('.guarantor');
+const guarantorNumInput = document.querySelector('.guarantor_number');
+const occupationInput = document.querySelector('.occupation');
+
+const businessNameInput = document.querySelector('.business_name');
+const businessAddInput = document.querySelector('.business_address');
+const businessGuarantorInput = document.querySelector('.business_guarantor');
+const businessNumInput = document.querySelector('.business_contact');
+
+const bankNameInput = document.querySelector('.bank');
+const accNameInput = document.querySelector('.account_name');
+const accNumInput = document.querySelector('.account_num');
+const verifyAccInput = document.querySelector('.verify_account');
+
+const phoneManInput = document.querySelector('.phone_manufacturer');
+const phoneImeiInput = document.querySelector('.phone_imei');
+const phoneModelInput = document.querySelector('.phone_model');
+const phoneConInput = document.querySelector('.phone_condition');
+const maritalStatsInput = document.querySelector('.marital_status');
+
+
+
+// Image upload variables
+const selfieUpload = document.querySelector('.selfie_upload');
+const idUpload = document.querySelector('.id_upload');
+const receiptUpload = document.querySelector('.receipt_upload');
+
+
 next_page2.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -232,54 +280,6 @@ back_page4.addEventListener('click', (e) => {
 
 });
 
-
-
-// Form variables
-const form = document.querySelector('form');
-
-const firstNameInput = document.querySelector('.first_name');
-const lastNameInput = document.querySelector('.last_name');
-const emailInput = document.querySelector('.email');
-const contactInput = document.querySelector('.phone_number');
-
-const bvnInput = document.querySelector('.bvn');
-const dobInput = document.querySelector('.dob');
-const personAddInput = document.querySelector('.personal_address');
-const nokInput = document.querySelector('.next_of_kin');
-const nokNumInput = document.querySelector('.nok_number');
-
-const eligibilityInput = document.querySelector('.eligibility');
-const amountInput = document.querySelector('.loan_amount');
-const durationInput = document.querySelector('.loan_duration');
-const purposeInput = document.querySelector('.purpose');
-
-
-const guarantorInput = document.querySelector('.guarantor');
-const guarantorNumInput = document.querySelector('.guarantor_number');
-const occupationInput = document.querySelector('.occupation');
-
-const businessNameInput = document.querySelector('.business_name');
-const businessAddInput = document.querySelector('.business_address');
-const businessGuarantorInput = document.querySelector('.business_guarantor');
-const businessNumInput = document.querySelector('.business_contact');
-
-const bankNameInput = document.querySelector('.bank');
-const accNameInput = document.querySelector('.account_name');
-const accNumInput = document.querySelector('.account_num');
-const verifyAccInput = document.querySelector('.verify_account');
-
-const phoneManInput = document.querySelector('.phone_manufacturer');
-const phoneImeiInput = document.querySelector('.phone_imei');
-const phoneModelInput = document.querySelector('.phone_model');
-const phoneConInput = document.querySelector('.phone_condition');
-const maritalStatsInput = document.querySelector('.marital_status');
-
-
-
-// Image upload variables
-const selfieUpload = document.querySelector('.selfie_upload');
-const idUpload = document.querySelector('.id_upload');
-const receiptUpload = document.querySelector('.receipt_upload');
 
 
 
