@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./public/**/*.{html,js,css}"],
+  content: [
+    "./public/**/*.{html,js,css}", 
+    "./index.html",
+  ],
   theme: {
     fontFamily: {
       'satoshi': 'Satoshi-Regular, Satoshi-Medium, Satoshi-Bold',

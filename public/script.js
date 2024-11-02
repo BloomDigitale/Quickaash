@@ -80,42 +80,44 @@ const submitForm = document.querySelector('.submit');
 // Form variables
 const form = document.querySelector('form');
 
-const firstNameInput = document.querySelector('.first_name');
-const lastNameInput = document.querySelector('.last_name');
-const emailInput = document.querySelector('.email');
-const contactInput = document.querySelector('.phone_number');
+const firstNameInput = document.querySelector('.first_name').value;
+const lastNameInput = document.querySelector('.last_name').value;
+const emailInput = document.querySelector('.email').value;
+const contactInput = document.querySelector('.phone_number').value;
 
-const bvnInput = document.querySelector('.bvn');
-const dobInput = document.querySelector('.dob');
-const personAddInput = document.querySelector('.personal_address');
-const nokInput = document.querySelector('.next_of_kin');
-const nokNumInput = document.querySelector('.nok_number');
+const bvnInput = document.querySelector('.bvn').value;
+const dobInput = document.querySelector('.dob').value;
+const personAddInput = document.querySelector('.personal_address').value;
+const nokInput = document.querySelector('.next_of_kin').value;
+const nokNumInput = document.querySelector('.nok_number').value;
 
-const eligibilityInput = document.querySelector('.eligibility');
-const amountInput = document.querySelector('.loan_amount');
-const durationInput = document.querySelector('.loan_duration');
-const purposeInput = document.querySelector('.purpose');
+const personalInfo = [];
+
+const eligibilityInput = document.querySelector('.eligibility').value;
+const amountInput = document.querySelector('.loan_amount').value;
+const durationInput = document.querySelector('.loan_duration').value;
+const purposeInput = document.querySelector('.purpose').value;
 
 
-const guarantorInput = document.querySelector('.guarantor');
-const guarantorNumInput = document.querySelector('.guarantor_number');
-const occupationInput = document.querySelector('.occupation');
+const guarantorInput = document.querySelector('.guarantor').value;
+const guarantorNumInput = document.querySelector('.guarantor_number').value;
+const occupationInput = document.querySelector('.occupation').value;
 
-const businessNameInput = document.querySelector('.business_name');
-const businessAddInput = document.querySelector('.business_address');
-const businessGuarantorInput = document.querySelector('.business_guarantor');
-const businessNumInput = document.querySelector('.business_contact');
+const businessNameInput = document.querySelector('.business_name').value;
+const businessAddInput = document.querySelector('.business_address').value;
+const businessGuarantorInput = document.querySelector('.business_guarantor').value;
+const businessNumInput = document.querySelector('.business_contact').value;
 
-const bankNameInput = document.querySelector('.bank');
-const accNameInput = document.querySelector('.account_name');
-const accNumInput = document.querySelector('.account_num');
-const verifyAccInput = document.querySelector('.verify_account');
+const bankNameInput = document.querySelector('.bank').value;
+const accNameInput = document.querySelector('.account_name').value;
+const accNumInput = document.querySelector('.account_num').value;
+const verifyAccInput = document.querySelector('.verify_account').value;
 
-const phoneManInput = document.querySelector('.phone_manufacturer');
-const phoneImeiInput = document.querySelector('.phone_imei');
-const phoneModelInput = document.querySelector('.phone_model');
-const phoneConInput = document.querySelector('.phone_condition');
-const maritalStatsInput = document.querySelector('.marital_status');
+const phoneManInput = document.querySelector('.phone_manufacturer').value;
+const phoneImeiInput = document.querySelector('.phone_imei').value;
+const phoneModelInput = document.querySelector('.phone_model').value;
+const phoneConInput = document.querySelector('.phone_condition').value;
+const maritalStatsInput = document.querySelector('.marital_status').value;
 
 
 
@@ -152,22 +154,27 @@ body.addEventListener('click', (e) => {
 next_page2.addEventListener('click', (e) => {
     e.preventDefault();
 
-    page1.classList.remove('flex');
-    page1.classList.add('hidden');
-    nav1.classList.remove('flex');
-    nav1.classList.add('hidden');
-    hero1.classList.remove('md:flex');
-    hero1.classList.add('md:hidden');
-    heading.classList.add('hidden');
-    heading.classList.remove('flex');
+    
+
+    if(personalInfo.length > 10) {
+        page1.classList.remove('flex');
+        page1.classList.add('hidden');
+        nav1.classList.remove('flex');
+        nav1.classList.add('hidden');
+        hero1.classList.remove('md:flex');
+        hero1.classList.add('md:hidden');
+        heading.classList.add('hidden');
+        heading.classList.remove('flex');
 
 
-    page2.classList.remove('hidden');
-    page2.classList.add('flex');
-    nav2.classList.remove('hidden');
-    nav2.classList.add('flex');
-    hero2.classList.remove('md:hidden');
-    hero2.classList.add('md:flex');
+        page2.classList.remove('hidden');
+        page2.classList.add('flex');
+        nav2.classList.remove('hidden');
+        nav2.classList.add('flex');
+        hero2.classList.remove('md:hidden');
+        hero2.classList.add('md:flex');
+    }
+    
 });
 
 next_page3.addEventListener('click', (e) => {
@@ -318,38 +325,38 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const formData = {
-            first_name: firstNameInput.value,
-            last_name: lastNameInput.value,
-            email: emailInput.value,
-            contact: contactInput.value,
-            BVN: bvnInput.value,
-            D_O_B: dobInput.value,
-            address: personAddInput.value,
-            next_of_kin: nokInput.value,
-            next_of_kin_contact: nokNumInput.value,
-            eligibility: eligibilityInput.value,
-            loan_amount: amountInput.value,
-            loan_duration: durationInput.value,
-            loan_purpose: purposeInput.value,
-            guarantor: guarantorInput.value,
-            guarantor_contact: guarantorNumInput.value,
-            occupation: occupationInput.value,
-            business_name: businessNameInput.value,
-            business_address: businessAddInput.value,
-            business_guarantor: businessGuarantorInput.value,
-            business_contact: businessNumInput.value,
-            bank_name: bankNameInput.value,
-            account_name: accNameInput.value,
-            account_number: accNumInput.value,
-            account_number_verification: verifyAccInput.value,
-            phone_condition: phoneConInput.value,
-            phone_model: phoneModelInput.value,
-            phone_manufacturer: phoneManInput.value,
-            phone_imei: phoneImeiInput.value,
-            marital_status: maritalStatsInput.value,
+            first_name: firstNameInput,
+            last_name: lastNameInput,
+            email: emailInput,
+            contact: contactInput,
+            BVN: bvnInput,
+            D_O_B: dobInput,
+            address: personAddInput,
+            next_of_kin: nokInput,
+            next_of_kin_contact: nokNumInput,
+            eligibility: eligibilityInput,
+            loan_amount: amountInput,
+            loan_duration: durationInput,
+            loan_purpose: purposeInput,
+            guarantor: guarantorInput,
+            guarantor_contact: guarantorNumInput,
+            occupation: occupationInput,
+            business_name: businessNameInput,
+            business_address: businessAddInput,
+            business_guarantor: businessGuarantorInput,
+            business_contact: businessNumInput,
+            bank_name: bankNameInput,
+            account_name: accNameInput,
+            account_number: accNumInput,
+            account_number_verification: verifyAccInput,
+            phone_condition: phoneConInput,
+            phone_model: phoneModelInput,
+            phone_manufacturer: phoneManInput,
+            phone_imei: phoneImeiInput,
+            marital_status: maritalStatsInput,
     };
 
-    const resetValues = formData.values();
+    const resetValues = formData.values() === "";
 
     const inputData = {
         from_name: formData.first_name,
