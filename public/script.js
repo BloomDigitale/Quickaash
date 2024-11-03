@@ -80,51 +80,52 @@ const submitForm = document.querySelector('.submit');
 // Form variables
 const form = document.querySelector('form');
 
-const firstNameInput = document.querySelector('.first_name').value;
-const lastNameInput = document.querySelector('.last_name').value;
-const emailInput = document.querySelector('.email').value;
-const contactInput = document.querySelector('.phone_number').value;
+const firstNameInput = document.querySelector('.first_name');
+const lastNameInput = document.querySelector('.last_name');
+const emailInput = document.querySelector('.email');
+const contactInput = document.querySelector('.phone_number');
 
-const bvnInput = document.querySelector('.bvn').value;
-const dobInput = document.querySelector('.dob').value;
-const personAddInput = document.querySelector('.personal_address').value;
-const maritalStatsInput = document.querySelector('.marital_status').value;
-const nokInput = document.querySelector('.next_of_kin').value;
-const nokNumInput = document.querySelector('.nok_number').value;
+const bvnInput = document.querySelector('.bvn');
+const dobInput = document.querySelector('.dob');
+const personAddInput = document.querySelector('.personal_address');
+const maritalStatsInput = document.querySelector('.marital_status');
+const nokInput = document.querySelector('.next_of_kin');
+const nokNumInput = document.querySelector('.nok_number');
 
 const personalInfo = [];
 
-const eligibilityInput = document.querySelector('.eligibility').value;
-const amountInput = document.querySelector('.loan_amount').value;
-const durationInput = document.querySelector('.loan_duration').value;
-const purposeInput = document.querySelector('.purpose').value;
+const eligibilityInput = document.querySelector('.eligibility');
+const amountInput = document.querySelector('.loan_amount');
+const durationInput = document.querySelector('.loan_duration');
+const purposeInput = document.querySelector('.purpose');
 
-const guarantorInput = document.querySelector('.guarantor').value;
-const guarantorNumInput = document.querySelector('.guarantor_number').value;
-const occupationInput = document.querySelector('.occupation').value;
+const guarantorInput = document.querySelector('.guarantor');
+const guarantorNumInput = document.querySelector('.guarantor_number');
+const occupationInput = document.querySelector('.occupation');
 
 const loanDetails = [];
 
-const businessNameInput = document.querySelector('.business_name').value;
-const businessAddInput = document.querySelector('.business_address').value;
-const businessGuarantorInput = document.querySelector('.business_guarantor').value;
-const businessNumInput = document.querySelector('.business_contact').value;
+const phoneManInput = document.querySelector('.phone_manufacturer');
+const phoneImeiInput = document.querySelector('.phone_imei');
+const phoneModelInput = document.querySelector('.phone_model');
+const phoneConInput = document.querySelector('.phone_condition');
+
+const collateralDetails = [];
+
+const businessNameInput = document.querySelector('.business_name');
+const businessAddInput = document.querySelector('.business_address');
+const businessGuarantorInput = document.querySelector('.business_guarantor');
+const businessNumInput = document.querySelector('.business_contact');
 
 const businessDetails = [];
 
-const bankNameInput = document.querySelector('.bank').value;
-const accNameInput = document.querySelector('.account_name').value;
-const accNumInput = document.querySelector('.account_num').value;
-const verifyAccInput = document.querySelector('.verify_account').value;
+const bankNameInput = document.querySelector('.bank');
+const accNameInput = document.querySelector('.account_name');
+const accNumInput = document.querySelector('.account_num');
+const verifyAccInput = document.querySelector('.verify_account');
 
 const accDetails = [];
 
-const phoneManInput = document.querySelector('.phone_manufacturer').value;
-const phoneImeiInput = document.querySelector('.phone_imei').value;
-const phoneModelInput = document.querySelector('.phone_model').value;
-const phoneConInput = document.querySelector('.phone_condition').value;
-
-const collateralDetails = [];
 
 
 // Image upload variables
@@ -162,6 +163,12 @@ const loanDetailsInput = document.querySelectorAll('#loan_input');
 const collateralDetailsInput = document.querySelectorAll('#collateral_input');
 const businessDetailsInput = document.querySelectorAll('#business_input');
 const accDetailsInput = document.querySelectorAll('#acc_input');
+
+const error = document.querySelectorAll('.error');
+error.forEach( error => {
+    error.classList.remove('opacity-0');
+    error.innnerHTML = `Can't be empty`;
+});
 
 // checking for input changes function
 const personalInfoInputChange = (e) => {
@@ -236,7 +243,7 @@ accDetailsInput.forEach(input => {
 next_page2.addEventListener('click', (e) => {
     e.preventDefault();
 
-    if(personalInfo.length > 9) {
+    if(personalInfo.length === 11) {
         page1.classList.remove('flex');
         page1.classList.add('hidden');
         nav1.classList.remove('flex');
@@ -253,7 +260,9 @@ next_page2.addEventListener('click', (e) => {
         nav2.classList.add('flex');
         hero2.classList.remove('md:hidden');
         hero2.classList.add('md:flex');
-    }
+    }else if(personalInfo.length === 0) {
+      
+    };
     
 });
 

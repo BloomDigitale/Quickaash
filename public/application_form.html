@@ -19,11 +19,11 @@
 
 </head>
 <body class="relative font-satoshi">
-    <header  class=" md:bg-[#EDF3F1] flex flex-col md:overflow-hidden">
-        <div id="top"  class=" bg-[#004D3F] w-full h-[18px] md:h-[1.5rem]"></div>
+    <header  class=" lg:bg-[#EDF3F1] flex flex-col lg:overflow-hidden">
+        <div id="top"  class=" bg-[#004D3F] w-full h-[18px] lg:h-[1.5rem]"></div>
 
          <!-- mobile nav bar -->
-        <nav class="md:hidden w-full flex flex-col my-[2rem] gap-[2rem]">
+        <nav class="lg:hidden w-full flex flex-col my-[2rem] gap-[2rem]">
 
             <div class="flex justify-between items-center gap-[0.7rem] px-[28px]">
                 <a href="../index.html">
@@ -59,122 +59,134 @@
         </nav>
     </header>
 
-    <main class="grid grid-cols-1 md:grid-cols-2 content-between w-full md:h-[1470px]">
+    <main class="grid grid-cols-1 lg:grid-cols-2 content-between w-full lg:h-[1470px]">
 
-        <section class="flex flex-col place-self-center gap-[0.3rem] md:h-full">
+        <section class="flex flex-col place-self-center gap-[0.3rem] lg:h-full">
 
-            <a href="../index.html" class="hidden md:block mt-[1rem]">
+            <a href="../index.html" class="hidden lg:block mt-[1rem]">
                 <img src="../images/Quickaash Logo Dsgn.png" alt="">
             </a>
 
             <div class="heading flex flex-col gap-2 pt-[1rem]">       
-                    <p class="text-[#004D3F] text-[21.26px] md:text-[35px] font-[500] capitalize">
+                    <p class="text-[#004D3F] text-[21.26px] lg:text-[35px] font-[500] capitalize">
                         loan application form
                     </p>
     
-                    <p class="text-[#FF5252] text-[12.15px] md:text-[20px] font-[500] leading-[13.12px] md:leading-[21.6px]">
+                    <p class="text-[#FF5252] text-[12.15px] lg:text-[20px] font-[500] leading-[13.12px] lg:leading-[21.6px]">
                         All questions with * are mandatory <br>
                         Every Accepted Application incurs no fee.
                     </p>
             </div>                            
 
-            <form action="" class="form flex flex-col justify-between mb-[2rem] gap-4 w-[373px] md:w-[602px] h-[881px] md:h-full text-[10.93px] md:text-[18px] text-[#212121] font-[700]">
+            <form action="" class="form flex flex-col justify-between mb-[2rem] gap-4 w-[373px] lg:w-[602px] h-[881px] lg:h-full text-[10.93px] lg:text-[18px] text-[#212121] font-[700]">
 
                 <section class="form_section w-full pt-[1rem]">
                     <section id="page_1" class="step_1 flex flex-col gap-[1.5rem] w-[full]">
-                        <p class=" text-[#004D3F] text-[18.22px] md:text-[30px] font-[500] capitalize">
+                        <p class=" text-[#004D3F] text-[18.22px] lg:text-[30px] font-[500] capitalize">
                             personal information
                         </p>
     
                         <div class="flex flex-col gap-[1.5rem]">
                             <div class="flex justify-between">
                                 <div class="flex flex-col gap-2">
-                                    <label for="first_name">First name <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                    <input type="text" name="first_name" placeholder="First name" id="personal_input" class="first_name w-[170.1px] h-[33.41px] md:w-[280px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
-                                    <small class="error text-red-500 hidden"></small>
+                                    <label for="first_name">First name <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                    <input type="text" name="first_name" placeholder="First name" id="personal_input" class="first_name w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                    <small class="error text-red-500 opacity-0">can't be empty</small>
                                 </div>
         
                                 <div class="flex flex-col gap-2">
-                                    <label for="last_name">Last name <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                    <input type="text" name="last_name" placeholder="Last name" id="personal_input" class="last_name w-[170.1px] h-[33.41px] md:w-[280px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                                    <label for="last_name">Last name <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                    <input type="text" name="last_name" placeholder="Last name" id="personal_input" class="last_name w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                    <small class="error text-red-500 opacity-0"></small>
                                 </div>
                             </div>
         
                             <div class="flex flex-col gap-2">
-                                <label for="email">Email address<span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                <input type="email" name="email" placeholder="Email address" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" id="personal_input" class="email h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                                <label for="email">Email address<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                <input type="email" name="email" placeholder="Email address" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" id="personal_input" class="email h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                <small class="error email_error text-red-500 opacity-0"></small>
                             </div>
          
                             <div class="flex flex-col gap-2">
-                                <label for="contact">Phone number<span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                <input type="tel" name="contact" placeholder="Phone number" minlength="11" maxlength="11" id="personal_input" class="phone_number h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#0e0404] font-[400]" >
+                                <label for="contact">Phone number<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                <input type="tel" name="contact" placeholder="Phone number" minlength="11" maxlength="11" id="personal_input" class="phone_number h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#0e0404] font-[400]" >
+                                <small class="error contact_error text-red-500 opacity-0"></small>
                             </div>
         
                             <div class="flex justify-between">
                                 <div class="flex flex-col gap-2">
-                                    <label for="bvn">BVN <span class="text-[8.5px] md:text-[14px]">(enter a valid BVN number)</span> <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                    <input type="text" name="bvn" placeholder="BVN" id="personal_input" class="bvn w-[170.1px] h-[33.41px] md:w-[280px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                                    <label for="bvn">BVN <span class="text-[8.5px] lg:text-[14px]">(enter a valid BVN number)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                    <input type="text" name="bvn" placeholder="BVN" id="personal_input" class="bvn w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                    <small class="error text-red-500 opacity-0"></small>
                                 </div>
         
                                 <div class="flex flex-col gap-2">
-                                    <label for="dob">Date of birth <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                    <input type="date" name="dob" max="2006-12-31" id="personal_input" class="dob w-[170.1px] h-[33.41px] md:w-[280px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                                    <label for="dob">Date of birth <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                    <input type="date" name="dob" max="2006-12-31" id="personal_input" class="dob w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                    <small class="error text-red-500 opacity-0"></small>
                                 </div>
                             </div>
         
                             <div class="flex flex-col gap-2">
-                                <label for="personal_address">Personal address <span class="text-[8.5px] md:text-[14px]">(enter your full home address and PO Box if you have one)</span> <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                <textarea name="personal_address" placeholder="Personal address" id="personal_input" class="personal_address md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" ></textarea>
+                                <label for="personal_address">Personal address <span class="text-[8.5px] lg:text-[14px]">(enter your full home address and PO Box if you have one)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                <textarea name="personal_address" placeholder="Personal address" id="personal_input" class="personal_address lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" ></textarea>
+                                <small class="error text-red-500 opacity-0"></small>
                             </div>
     
                             <div class="flex flex-col gap-2 w-[50%]">
-                                <label for="marital_status">Marital staus<span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                <select name="marital_status" id="personal_input" class="marital_status w-[170.1px] h-[33.41px] md:w-[280px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                                <label for="marital_status">Marital staus<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                <select name="marital_status" id="personal_input" class="marital_status w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                    <option value=""></option>
                                     <option value="married">Married</option>
                                     <option value="single">Single</option>
                                 </select>
+                                <small class="error text-red-500 opacity-0"></small>
                             </div>
         
                             <div class="flex justify-between">
                                 <div class="flex flex-col gap-2">
-                                    <label for="nok">Next of kin<span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                    <input type="text" name="nok" placeholder="Next of kin" id="personal_input" class="next_of_kin w-[170.1px] h-[33.41px] md:w-[280px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                                    <label for="nok">Next of kin<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                    <input type="text" name="nok" placeholder="Next of kin" id="personal_input" class="next_of_kin w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                    <small class="error text-red-500 opacity-0"></small>
                                 </div>
         
                                 <div class="flex flex-col gap-2">
-                                    <label for="nok_number">Next of kin phone number  <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                    <input type="tel" name="nok" placeholder="Next of kin phone number" minlength="11" maxlength="11" id="personal_input" class="nok_number w-[170.1px] h-[33.41px] md:w-[280px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                                    <label for="nok_number">Next of kin phone number  <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                    <input type="tel" name="nok" placeholder="Next of kin phone number" minlength="11" maxlength="11" id="personal_input" class="nok_number w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                    <small class="error text-red-500 opacity-0"></small>
                                 </div>
                             </div>
         
                             <!-- file upload -->
                             <div class="flex flex-col gap-2">
-                                <label for="selfie_pic">Selfie picture<span class="text-[8.5px] md:text-[14px]">(Take with Camera or Upload)</span> <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
+                                <label for="selfie_pic">Selfie picture<span class="text-[8.5px] lg:text-[14px]">(Take with Camera or Upload)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
         
-                                <div class="relative w-full h-[46.78px] md:h-[77px] flex flex-col justify-center items-center gap-[0.3rem] bg-[#F4FFFC] border border-dashed border-[#CFD8DC] rounded-[20px]">
+                                <div class="relative w-full h-[46.78px] lg:h-[77px] flex flex-col justify-center items-center gap-[0.3rem] bg-[#F4FFFC] border border-dashed border-[#CFD8DC] rounded-[20px]">
         
-                                    <ion-icon name="cloud-upload-outline" class="text-[#474747] text-[10px] md:text-[18px]"></ion-icon>
+                                    <ion-icon name="cloud-upload-outline" class="text-[#474747] text-[10px] lg:text-[18px]"></ion-icon>
         
-                                    <p class=" text-[3.3px] md:text-[5.43px] text-[#7E7E7E]  leading-[3.96px] md:leading-[13.03px] font-[400] text-center">
-                                        <span class="text-[6.6px] md:text-[10.86px] text-[#121A26]">Choose file</span> <br>
+                                    <p class=" text-[3.3px] lg:text-[5.43px] text-[#7E7E7E]  leading-[3.96px] lg:leading-[13.03px] font-[400] text-center">
+                                        <span class="text-[6.6px] lg:text-[10.86px] text-[#121A26]">Choose file</span> <br>
                                         PNG, JPEG under 15MB
                                     </p>
-                                    <input type="file" name="selfie_pic" class="selfie_upload absolute md:right-[2rem] opacity-0" >
+                                    <input type="file" name="selfie_pic" id="personal_input" class="selfie_upload absolute lg:right-[2rem] opacity-0" >
+                                    <small class="error text-red-500 opacity-0"></small>
                                 </div>
                             </div>
         
                             <div class="flex flex-col gap-2">
-                                <label for="Id_upload">Upload ID<span class="text-[8.5px] md:text-[14px]">(International passport, National ID card)</span> <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
+                                <label for="Id_upload">Upload ID<span class="text-[8.5px] lg:text-[14px]">(International passport, National ID card)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
         
-                                <div class="relative w-full h-[46.78px] md:h-[77px] flex flex-col justify-center items-center gap-[0.3rem] bg-[#F4FFFC] border border-dashed border-[#CFD8DC] rounded-[20px]">
+                                <div class="relative w-full h-[46.78px] lg:h-[77px] flex flex-col justify-center items-center gap-[0.3rem] bg-[#F4FFFC] border border-dashed border-[#CFD8DC] rounded-[20px]">
         
-                                    <ion-icon name="cloud-upload-outline" class="text-[#474747] text-[10px] md:text-[18px]"></ion-icon>
+                                    <ion-icon name="cloud-upload-outline" class="text-[#474747] text-[10px] lg:text-[18px]"></ion-icon>
         
-                                    <p class=" text-[3.3px] md:text-[5.43px] text-[#7E7E7E]  leading-[3.96px] md:leading-[13.03px] font-[400] text-center">
-                                        <span class="text-[6.6px] md:text-[10.86px] text-[#121A26]">Choose file</span> <br>
+                                    <p class=" text-[3.3px] lg:text-[5.43px] text-[#7E7E7E]  leading-[3.96px] lg:leading-[13.03px] font-[400] text-center">
+                                        <span class="text-[6.6px] lg:text-[10.86px] text-[#121A26]">Choose file</span> <br>
                                         PNG, JPEG under 15MB
                                     </p>
-                                    <input type="file" name="id_upload" class="id_upload absolute md:right-[2rem] opacity-0" >
+                                    <input type="file" name="id_upload" id="personal_input" class="id_upload absolute lg:right-[2rem] opacity-0" >
+                                    <small class="error text-red-500 opacity-0"></small>
                                 </div>
                             </div>
                         </div>
@@ -182,28 +194,28 @@
                     </section>
     
                     <section id="page_2" class="step_2 hidden flex-col gap-[2rem">
-                        <p class="mb-[1rem] text-[#004D3F] text-[18.22px] md:text-[30px] font-[500] capitalize">
+                        <p class="mb-[1rem] text-[#004D3F] text-[18.22px] lg:text-[30px] font-[500] capitalize">
                             loan details
                         </p>
     
                         <div class="flex flex-col gap-[1.5rem]">
                             
                           <div class="flex flex-col gap-2">
-                            <label for="first_time">First time applying?  <span class="text-[8.5px] md:text-[14px]">(Choosing 'No' will void your application and require reapplying)</span> <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                            <select name="first_time" id="loan_input" class="eligibility w-full h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                            <label for="first_time">First time applying?  <span class="text-[8.5px] lg:text-[14px]">(Choosing 'No' will void your application and require reapplying)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                            <select name="first_time" id="loan_input" class="eligibility w-full h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                <option value="Yes (This is my first time applying)">Yes (This is my first time applying)</option>
                                <option value="No (I am a returning customer)">No (I am a returning customer)</option>
                             </select>
                            </div>
        
                            <div class="flex flex-col gap-2">
-                               <label for="loan_amount">Requested Amount (NGN) <span class="text-[8.5px] md:text-[14px]">(min NGN 5,000 and max NGN 5,000,000)</span> <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                               <input type="text" name="loan_amount" placeholder="Requested Amount" id="loan_input" class="loan_amount h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                               <label for="loan_amount">Requested Amount (NGN) <span class="text-[8.5px] lg:text-[14px]">(min NGN 5,000 and max NGN 5,000,000)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                               <input type="text" name="loan_amount" placeholder="Requested Amount" id="loan_input" class="loan_amount h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                            </div>
        
                            <div class="flex flex-col gap-2">
-                               <label for="loan_duration">Loan circle<span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                               <select name="loan_duration" id="loan_input" class="loan_duration w-full h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                               <label for="loan_duration">Loan circle<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                               <select name="loan_duration" id="loan_input" class="loan_duration w-full h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                   <option value="1 month (5% interest)">1 month (5% interest)</option>
                                   <option value="2 months (7.5% interest)">2 months (7.5% interest)</option>
                                   <option value="3 months (9% interest)">3 months (9% interest)</option>
@@ -221,25 +233,25 @@
        
                            <div class="flex justify-between">
                                <div class="flex flex-col gap-2">
-                                   <label for="bvn">BVN <span class="text-[8.5px] md:text-[14px]">(enter a valid BVN number)</span> <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                   <input type="text" name="bvn" placeholder="BVN" id="loan_input" class="bvn w-[170.1px] h-[33.41px] md:w-[280px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                                   <label for="bvn">BVN <span class="text-[8.5px] lg:text-[14px]">(enter a valid BVN number)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                   <input type="text" name="bvn" placeholder="BVN" id="loan_input" class="bvn w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                </div>
        
                                <div class="flex flex-col gap-2">
-                                   <label for="dob">Date of birth <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                   <input type="date" name="dob" max="2006-12-31" id="loan_input" class="dob w-[170.1px] h-[33.41px] md:w-[280px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                                   <label for="dob">Date of birth <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                   <input type="date" name="dob" max="2006-12-31" id="loan_input" class="dob w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                </div>
                            </div>
        
                            <div class="flex flex-col gap-2">
-                               <label for="purpose">Purpose of Loan <span class="text-[8.5px] md:text-[14px]">(What will you be using the requested Money for)</span> <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                               <textarea name="purpose" placeholder="Purpose of Loan" id="loan_input" class="purpose md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" ></textarea>
+                               <label for="purpose">Purpose of Loan <span class="text-[8.5px] lg:text-[14px]">(What will you be using the requested Money for)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                               <textarea name="purpose" placeholder="Purpose of Loan" id="loan_input" class="purpose lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" ></textarea>
                            </div>
        
                               
                            <div class="flex flex-col gap-2">
-                               <label for="guarantor">Choose Your Guarantor<span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                               <select name="guarantor" id="loan_input" class="guarantor w-full h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                               <label for="guarantor">Choose Your Guarantor<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                               <select name="guarantor" id="loan_input" class="guarantor w-full h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                   <option value="Parent">Parent</option>
                                   <option value="Sibling">Sibling</option>
                                   <option value="Friend">Friend</option>
@@ -248,95 +260,95 @@
                            </div>
        
                            <div class="flex flex-col gap-2">
-                               <label for="guarantor_number">Guarantor Phone number<span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                               <input type="tel" name="guarantor_number" placeholder="Guarantor Phone number" minlength="11" maxlength="11" id="loan_input" class="guarantor_number w-full h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                               <label for="guarantor_number">Guarantor Phone number<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                               <input type="tel" name="guarantor_number" placeholder="Guarantor Phone number" minlength="11" maxlength="11" id="loan_input" class="guarantor_number w-full h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                            </div>
                         </div>
                     </section>
     
                     <section id="page_3" class="step_3 hidden flex-col gap-[2rem">
-                        <p class="mb-[1rem] text-[#004D3F] text-[18.22px] md:text-[30px] font-[500] capitalize">
+                        <p class="mb-[1rem] text-[#004D3F] text-[18.22px] lg:text-[30px] font-[500] capitalize">
                             Collateral Information
                         </p>
     
                         <div class="flex flex-col gap-[1.5rem]">
     
                             <div class="flex flex-col gap-2">
-                                <label for="phone_manufacturer">Phone's manufacturer<span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                <input type="text" name="phone_manufacturer" placeholder="Phone's manufacturer" id="collateral_input" class="phone_manufacturer h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#0e0404] font-[400]" >
+                                <label for="phone_manufacturer">Phone's manufacturer<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                <input type="text" name="phone_manufacturer" placeholder="Phone's manufacturer" id="collateral_input" class="phone_manufacturer h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#0e0404] font-[400]" >
                             </div>
     
                             <div class="flex flex-col gap-2">
-                                <label for="phone_IMEI">Phone's IMEI <span class="text-[8.5px] md:text-[14px]">(optional)</span></label>
-                                <input type="text" name="phone_IMEI" placeholder="Phone's IMEI" id="collateral_input" class="phone_imei h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#0e0404] font-[400]">
+                                <label for="phone_IMEI">Phone's IMEI <span class="text-[8.5px] lg:text-[14px]">(optional)</span></label>
+                                <input type="text" name="phone_IMEI" placeholder="Phone's IMEI" id="collateral_input" class="phone_imei h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#0e0404] font-[400]">
                             </div>
     
                             <div class="flex flex-col gap-2">
-                                <label for="phone_model">Phone's model<span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                <input type="text" name="phone_model" placeholder="Phone's model" id="collateral_input" class="phone_model h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#0e0404] font-[400]" >
+                                <label for="phone_model">Phone's model<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                <input type="text" name="phone_model" placeholder="Phone's model" id="collateral_input" class="phone_model h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#0e0404] font-[400]" >
                             </div>
                             
                             <div class="flex flex-col gap-2">
-                                <label for="phone_condition">Is the phone in good working condition ?<span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                <select name="phone_condition" id="collateral_input" class="phone_condition h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                                <label for="phone_condition">Is the phone in good working condition ?<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                <select name="phone_condition" id="collateral_input" class="phone_condition h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
                                 </select>
                             </div>
                                 <!-- file upload -->
                             <div class="flex flex-col gap-2">
-                                <label for="receipt_upload">Upload purchase receipt of collateral<span class="text-[8.5px] md:text-[14px]">(Take with Camera or Upload)</span> <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
+                                <label for="receipt_upload">Upload purchase receipt of collateral<span class="text-[8.5px] lg:text-[14px]">(Take with Camera or Upload)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
     
-                                <div class="relative w-full h-[46.78px] md:h-[77px] flex flex-col justify-center items-center gap-[0.3rem] bg-[#F4FFFC] border border-dashed border-[#CFD8DC] rounded-[20px]">
+                                <div class="relative w-full h-[46.78px] lg:h-[77px] flex flex-col justify-center items-center gap-[0.3rem] bg-[#F4FFFC] border border-dashed border-[#CFD8DC] rounded-[20px]">
     
-                                    <ion-icon name="cloud-upload-outline" class="text-[#474747] text-[10px] md:text-[18px]"></ion-icon>
+                                    <ion-icon name="cloud-upload-outline" class="text-[#474747] text-[10px] lg:text-[18px]"></ion-icon>
     
-                                    <p class=" text-[3.3px] md:text-[5.43px] text-[#7E7E7E]  leading-[3.96px] md:leading-[13.03px] font-[400] text-center">
-                                        <span class="text-[6.6px] md:text-[10.86px] text-[#121A26]">Choose file</span> <br>
+                                    <p class=" text-[3.3px] lg:text-[5.43px] text-[#7E7E7E]  leading-[3.96px] lg:leading-[13.03px] font-[400] text-center">
+                                        <span class="text-[6.6px] lg:text-[10.86px] text-[#121A26]">Choose file</span> <br>
                                         PNG, JPEG under 15MB
                                     </p>
-                                    <input type="file" name="receipt_upload" class="receipt_upload absolute md:right-[2rem] opacity-0" >
+                                    <input type="file" name="receipt_upload" class="receipt_upload absolute lg:right-[2rem] opacity-0" >
                                 </div>
                             </div>
                         </div>
                     </section>
     
                     <section id="page_4" class="step_4 hidden flex-col gap-[2rem">
-                        <p class="mb-[1rem] text-[#004D3F] text-[18.22px] md:text-[30px] font-[500] capitalize">
+                        <p class="mb-[1rem] text-[#004D3F] text-[18.22px] lg:text-[30px] font-[500] capitalize">
                             Job Details or your Company <br>
                             Details if self Employed
                         </p>
     
                         <div class="flex flex-col gap-[1.5rem]">
                             <div class="flex flex-col gap-2">
-                                <label for="occupation">Occupation or Type of Business<span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                <input type="text" name="occupation" placeholder="Occupation or Type of Business" id="business_input" class="occupation h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                                <label for="occupation">Occupation or Type of Business<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                <input type="text" name="occupation" placeholder="Occupation or Type of Business" id="business_input" class="occupation h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                             </div>
         
                             <div class="flex flex-col gap-2">
-                                <label for="business_name">Company or Business<span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                <input type="text" name="business_name" placeholder="Company name" id="business_input" class="business_name h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                                <label for="business_name">Company or Business<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                <input type="text" name="business_name" placeholder="Company name" id="business_input" class="business_name h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                             </div>
         
                             <div class="flex flex-col gap-2">
-                                <label for="business_address">Company or Business <span class="text-[8.5px] md:text-[14px]">(Enter full office address)</span> <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                <input type="text" name="business_address" placeholder="Company or Business" id="business_input" class="business_address h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                                <label for="business_address">Company or Business <span class="text-[8.5px] lg:text-[14px]">(Enter full office address)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                <input type="text" name="business_address" placeholder="Company or Business" id="business_input" class="business_address h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                             </div>
         
                             <div class="flex flex-col gap-2">
-                                <label for="business_guarantor">Company or Business Guarantor Full Name <span class="text-[8.5px] md:text-[14px]">(if you have someone at your office or Business that can be your gguarantor, this is not mandatory but it would help your application)</span> <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                <input type="text" name="business_guarantor" placeholder="Company or Business Guarantor Full name" id="business_input" class="business_guarantor h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                                <label for="business_guarantor">Company or Business Guarantor Full Name <span class="text-[8.5px] lg:text-[14px]">(if you have someone at your office or Business that can be your gguarantor, this is not mandatory but it would help your application)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                <input type="text" name="business_guarantor" placeholder="Company or Business Guarantor Full name" id="business_input" class="business_guarantor h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                             </div>
         
                             <div class="flex flex-col gap-2">
-                                <label for="business_contact">Company or business Guarantor Phone Number: <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                <input type="text" name="business_contact" placeholder="Company or business Guarantor Phone Number" id="business_input" class="business_contact h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                                <label for="business_contact">Company or business Guarantor Phone Number: <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                <input type="text" name="business_contact" placeholder="Company or business Guarantor Phone Number" id="business_input" class="business_contact h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                             </div>
                         </div>
                     </section>
     
                     <section id="page_5" class="step_5 hidden flex-col gap-[2rem">
-                        <p class="mb-[1rem] text-[#004D3F] text-[18.22px] md:text-[30px] font-[500] capitalize">
+                        <p class="mb-[1rem] text-[#004D3F] text-[18.22px] lg:text-[30px] font-[500] capitalize">
                             Account Details (where loan if <br>
                             approved would be credit)
                         </p>
@@ -344,63 +356,63 @@
                         <div class="flex flex-col gap-[1.5rem]">
                                 
                             <div class="flex flex-col gap-2">
-                                <label for="bank">Bank name<span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                <input type="text" name="bank" placeholder="Bank Name" id="acc_input" class="bank h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                                <label for="bank">Bank name<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                <input type="text" name="bank" placeholder="Bank Name" id="acc_input" class="bank h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                             </div>
     
                             <div class="flex flex-col gap-2">
-                                <label for="account_name">Account Name  <span class="text-[8.5px] md:text-[14px]">(Must match the applicants name or payment would not be made)</span> <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                <input type="text" name="account_name" placeholder="Account Name" id="acc_input" class="account_name h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                                <label for="account_name">Account Name  <span class="text-[8.5px] lg:text-[14px]">(Must match the applicants name or payment would not be made)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                <input type="text" name="account_name" placeholder="Account Name" id="acc_input" class="account_name h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                             </div>
     
                             <div class="flex flex-col gap-2">
-                                <label for="account_num">Account Number <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                <input type="text" name="account_num" placeholder="Account Number" id="acc_input" class="account_num h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                                <label for="account_num">Account Number <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                <input type="text" name="account_num" placeholder="Account Number" id="acc_input" class="account_num h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                             </div>
     
                             <div class="flex flex-col gap-2">
-                                <label for="verify_account">Verify Account Number <span class="text-[12.15px] md:text-[20px] text-[#FF5252]">*</span></label>
-                                <input type="text" name="verify_account" placeholder="Verify Account Number" id="acc_input" class="verify_account h-[33.41px] md:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] md:rounded-[15px] text-[9.72px] md:text-[16px] text-[#474747] font-[400]" >
+                                <label for="verify_account">Verify Account Number <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                                <input type="text" name="verify_account" placeholder="Verify Account Number" id="acc_input" class="verify_account h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                             </div>
                         </div>
                     </section>
                 </section>
 
-                <section class="flex flex-col justify-end form_nav w-[373px] md:w-[602px]">
+                <section class="flex flex-col justify-end form_nav w-[373px] lg:w-[602px]">
                     <div class="nav1 flex justify-between items-center">
 
                         <div class="flex items-center gap-4">
                             <div class="flex gap-[0.3rem]">
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#0C4E53]"></div>
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#0C4E53]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
                             </div>
     
-                            <p class="text-[12px] md:text-[18px] text-black font-[500]">Step 1 of 5</p>
+                            <p class="text-[12px] lg:text-[18px] text-black font-[500]">Step 1 of 5</p>
                         </div>
     
-                        <a href="#top" class="next next_page_2 w-[102.33px] h-[34.5px] md:w-[151px] md:h-[51px] flex items-center justify-center bg-[#C4F86A] text-[12.67px] md:text-[18.7px] text-[#004C3F] font-[500] rounded-[19.8px] md:rounded-[29.22px]">Next</a>
+                        <a href="#top" class="next next_page_2 w-[102.33px] h-[34.5px] lg:w-[151px] lg:h-[51px] flex items-center justify-center bg-[#C4F86A] text-[12.67px] lg:text-[18.7px] text-[#004C3F] font-[500] rounded-[19.8px] lg:rounded-[29.22px]">Next</a>
                     </div>
 
                     <div class="nav2 hidden justify-between items-center">
 
                         <div class="flex items-center gap-4">
                             <div class="flex gap-[0.3rem]">
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#0C4E53]"></div>
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#0C4E53]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
                             </div>
     
-                            <p class="text-[12px] md:text-[18px] text-black font-[500]">Step 2 of 5</p>
+                            <p class="text-[12px] lg:text-[18px] text-black font-[500]">Step 2 of 5</p>
                         </div>
     
                         <div class="flex items-center gap-4">
-                            <a href="#top" class="back back_page_1 w-[102.33px] h-[34.5px] md:w-[151px] md:h-[51px] flex items-center justify-center bg-white text-[12.67px] md:text-[18.7px] text-[#004C3F] font-[500] border border-[#004C3F] rounded-[19.8px] md:rounded-[29.22px]">Back</a>
-                            <a href="#top" class="next next_page_3 w-[102.33px] h-[34.5px] md:w-[151px] md:h-[51px] flex items-center justify-center bg-[#C4F86A] text-[12.67px] md:text-[18.7px] text-[#004C3F] font-[500] rounded-[19.8px] md:rounded-[29.22px]">Next</a>
+                            <a href="#top" class="back back_page_1 w-[102.33px] h-[34.5px] lg:w-[151px] lg:h-[51px] flex items-center justify-center bg-white text-[12.67px] lg:text-[18.7px] text-[#004C3F] font-[500] border border-[#004C3F] rounded-[19.8px] lg:rounded-[29.22px]">Back</a>
+                            <a href="#top" class="next next_page_3 w-[102.33px] h-[34.5px] lg:w-[151px] lg:h-[51px] flex items-center justify-center bg-[#C4F86A] text-[12.67px] lg:text-[18.7px] text-[#004C3F] font-[500] rounded-[19.8px] lg:rounded-[29.22px]">Next</a>
                         </div>
     
                     </div>
@@ -409,19 +421,19 @@
 
                         <div class=" flex items-center gap-4">
                             <div class="flex gap-[0.3rem]">
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#0C4E53]"></div>
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#0C4E53]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
                             </div>
 
-                            <p class="text-[12px] md:text-[18px] text-black font-[500]">Step 3 of 5</p>
+                            <p class="text-[12px] lg:text-[18px] text-black font-[500]">Step 3 of 5</p>
                         </div>
 
                         <div class="flex items-center gap-4">
-                            <a href="#top" class="back back_page_2 w-[102.33px] h-[34.5px] md:w-[151px] md:h-[51px] flex items-center justify-center bg-white text-[12.67px] md:text-[18.7px] text-[#004C3F] font-[500] border border-[#004C3F] rounded-[19.8px] md:rounded-[29.22px]">Back</a>
-                            <a href="#top" class="next next_page_4 w-[102.33px] h-[34.5px] md:w-[151px] md:h-[51px] flex items-center justify-center bg-[#C4F86A] text-[12.67px] md:text-[18.7px] text-[#004C3F] font-[500] rounded-[19.8px] md:rounded-[29.22px]">Next</a>
+                            <a href="#top" class="back back_page_2 w-[102.33px] h-[34.5px] lg:w-[151px] lg:h-[51px] flex items-center justify-center bg-white text-[12.67px] lg:text-[18.7px] text-[#004C3F] font-[500] border border-[#004C3F] rounded-[19.8px] lg:rounded-[29.22px]">Back</a>
+                            <a href="#top" class="next next_page_4 w-[102.33px] h-[34.5px] lg:w-[151px] lg:h-[51px] flex items-center justify-center bg-[#C4F86A] text-[12.67px] lg:text-[18.7px] text-[#004C3F] font-[500] rounded-[19.8px] lg:rounded-[29.22px]">Next</a>
                         </div>
 
                     </div>
@@ -430,35 +442,35 @@
 
                         <div class=" flex items-center gap-4">
                             <div class="flex gap-[0.3rem]">
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#0C4E53]"></div>
-                                <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#0C4E53]"></div>
+                                <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
                             </div>
 
-                            <p class="text-[12px] md:text-[18px] text-black font-[500]">Step 4 of 5</p>
+                            <p class="text-[12px] lg:text-[18px] text-black font-[500]">Step 4 of 5</p>
                         </div>
 
                         <div class="flex items-center gap-4">
-                            <a href="#top" class="back back_page_3 w-[102.33px] h-[34.5px] md:w-[151px] md:h-[51px] flex items-center justify-center bg-white text-[12.67px] md:text-[18.7px] text-[#004C3F] font-[500] border border-[#004C3F] rounded-[19.8px] md:rounded-[29.22px]">Back</a>
-                            <a href="#top" class="next next_page_5 w-[102.33px] h-[34.5px] md:w-[151px] md:h-[51px] flex items-center justify-center bg-[#C4F86A] text-[12.67px] md:text-[18.7px] text-[#004C3F] font-[500] rounded-[19.8px] md:rounded-[29.22px]">Next</a>
+                            <a href="#top" class="back back_page_3 w-[102.33px] h-[34.5px] lg:w-[151px] lg:h-[51px] flex items-center justify-center bg-white text-[12.67px] lg:text-[18.7px] text-[#004C3F] font-[500] border border-[#004C3F] rounded-[19.8px] lg:rounded-[29.22px]">Back</a>
+                            <a href="#top" class="next next_page_5 w-[102.33px] h-[34.5px] lg:w-[151px] lg:h-[51px] flex items-center justify-center bg-[#C4F86A] text-[12.67px] lg:text-[18.7px] text-[#004C3F] font-[500] rounded-[19.8px] lg:rounded-[29.22px]">Next</a>
                         </div>
 
                     </div>
 
                     <div class="nav5 hidden flex-col gap-[1rem]">
 
-                        <div class="flex flex-col gap-4 mb-[2rem] md:mb-[5rem]">
-                            <p class="text-[#004D3F] text-[11.41px] md:text-[20px] font-[700] leading-[12.32px] md:leading-[21.6px]">
+                        <div class="flex flex-col gap-4 mb-[2rem] lg:mb-[5rem]">
+                            <p class="text-[#004D3F] text-[11.41px] lg:text-[20px] font-[700] leading-[12.32px] lg:leading-[21.6px]">
                                 Online Signature by clicking this box you are agreeing to our <a href="terms.html" class="text-[#3274DF]">Terms and
                                 Conditions</a> & <a href="privacy_policy.html" class="text-[#3274DF]">Privacy Policy</a> 
                                 we advise you read it well.
                             </p>
     
                             <div class="flex gap-2 items-center">
-                                <input type="checkbox" name="" id="" class="terms_validator w-[14.54px] h-[14.54px] md:w-[25.5px] md:h-[25.5px]">
-                                <p class="text-[8.56px] md:text-[15px] leading-[11.04px] md:leading-[19.35px] font-[400]">
+                                <input type="checkbox" name="" id="" class="terms_validator w-[14.54px] h-[14.54px] lg:w-[25.5px] lg:h-[25.5px]">
+                                <p class="text-[8.56px] lg:text-[15px] leading-[11.04px] lg:leading-[19.35px] font-[400]">
                                     I have read, understood and accept all the Terms and Conditions & Privacy Policy contained
                                     on this page and I willingly like to proceed with this loan application.
                                 </p>
@@ -470,19 +482,19 @@
                                 
                             <div class=" flex items-center gap-4">
                                 <div class="flex gap-[0.3rem]">
-                                    <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
-                                    <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
-                                    <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
-                                    <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#D9D9D9]"></div>
-                                    <div class="w-[7.46px] h-[7.46px] md:w-[11px] md:h-[11px] rounded-full bg-[#0C4E53]"></div>
+                                    <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                    <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                    <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                    <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#D9D9D9]"></div>
+                                    <div class="w-[7.46px] h-[7.46px] lg:w-[11px] lg:h-[11px] rounded-full bg-[#0C4E53]"></div>
                                 </div>
     
-                                <p class="text-[10px] md:text-[18px] text-black font-[500]">Step 5 of 5</p>
+                                <p class="text-[10px] lg:text-[18px] text-black font-[500]">Step 5 of 5</p>
                             </div>
     
-                            <div class="flex items-center gap-[0.3rem] md:gap-4">
-                                <a href="#top" class="back back_page_4 w-[102.33px] h-[34.5px] md:w-[151px] md:h-[51px] flex items-center justify-center bg-white text-[12.67px] md:text-[18.7px] text-[#004C3F] font-[500] border border-[#004C3F] rounded-[19.8px] md:rounded-[29.22px]">Back</a>
-                                <button type="submit"  class="submit w-[157.16px] h-[35px] md:w-[229px] md:h-[51px] flex items-center justify-center bg-[#C4F86A] text-[12.67px] md:text-[18.7px] text-[#004C3F] font-[500] rounded-[20.05px] md:rounded-[29.22px]">Submit Application</button>
+                            <div class="flex items-center gap-[0.3rem] lg:gap-4">
+                                <a href="#top" class="back back_page_4 w-[102.33px] h-[34.5px] lg:w-[151px] lg:h-[51px] flex items-center justify-center bg-white text-[12.67px] lg:text-[18.7px] text-[#004C3F] font-[500] border border-[#004C3F] rounded-[19.8px] lg:rounded-[29.22px]">Back</a>
+                                <button type="submit"  class="submit w-[157.16px] h-[35px] lg:w-[229px] lg:h-[51px] flex items-center justify-center bg-[#C4F86A] text-[12.67px] lg:text-[18.7px] text-[#004C3F] font-[500] rounded-[20.05px] lg:rounded-[29.22px]">Submit Application</button>
                             </div>
                         </div>
                     </div>
@@ -491,8 +503,8 @@
         </section>
 
 
-        <section class="hidden md:flex flex-col">
-            <div class="hero_1 relative md:w-[710px] md:h-[1317px] md:bg-background-form1 hidden md:flex justify-center items-end">
+        <section class="hidden lg:flex flex-col">
+            <div class="hero_1 relative lg:w-[710px] lg:h-[1317px] lg:bg-background-form1 hidden lg:flex justify-center items-end">
                 <p class="text-[30px] font-[500] leading-[45px] text-white mb-[3rem]">
                     Get the Energy You need, When You Need It <br>
                     Apply for a Quickaash Loan Today! <br>
@@ -504,7 +516,7 @@
                 <img src="../images/Ellipse_form.png" alt="" class="absolute right-0 bottom-0">
             </div>
 
-            <div class="hero_2 relative md:w-[710px] md:h-[1317px] md:bg-background-form2 hidden md:hidden justify-center items-end">
+            <div class="hero_2 relative lg:w-[710px] lg:h-[1317px] lg:bg-background-form2 hidden lg:hidden justify-center items-end">
                 <p class="text-[30px] font-[500] leading-[45px] text-white mb-[3rem]">
                     Power Your Home and Business Now - Repay<br>
                     Later with Flexible Quickaash Loans.<br>
@@ -516,7 +528,7 @@
                 <img src="../images/Ellipse_form.png" alt="" class="absolute right-0 bottom-0">
             </div>
 
-            <div class="hero_3 relative md:w-[710px] md:h-[1317px] md:bg-background-form4 hidden md:hidden justify-center items-end">
+            <div class="hero_3 relative lg:w-[710px] lg:h-[1317px] lg:bg-background-form4 hidden lg:hidden justify-center items-end">
                 <p class="text-[30px] font-[500] leading-[45px] text-white mb-[3rem]">
                     No More Delays! Quickaash Covers Your <br>
                     Energy Bills with Fast, Easy Loans.<br>
@@ -528,7 +540,7 @@
                 <img src="../images/Ellipse_form.png" alt="" class="absolute right-0 bottom-0">
             </div>
 
-            <div class="hero_4 relative md:w-[710px] md:h-[1317px] md:bg-background-form3 bg-no-repeat hidden md:hidden justify-center items-end">
+            <div class="hero_4 relative lg:w-[710px] lg:h-[1317px] lg:bg-background-form3 bg-no-repeat hidden lg:hidden justify-center items-end">
                 <p class="text-[30px] font-[500] leading-[45px] text-white mb-[3rem]">
                     Quckaash: Simplifying Energy Financing for <br>
                     Households and Businesses.<br>
@@ -540,7 +552,7 @@
                 <img src="../images/Ellipse_form.png" alt="" class="absolute right-0 bottom-0">
             </div>
 
-            <div class="hero_5 relative md:w-[710px] md:h-[1317px] md:bg-background-form4 hidden md:hidden justify-center items-end">
+            <div class="hero_5 relative lg:w-[710px] lg:h-[1317px] lg:bg-background-form4 hidden lg:hidden justify-center items-end">
                 <p class="text-[30px] font-[500] leading-[45px] text-white mb-[3rem]">
                     No More Delays! Quickaash Covers Your <br>
                     Energy Bills with Fast, Easy Loans.<br>
@@ -554,15 +566,15 @@
         </section>
     </main>
 
-    <footer class="relative h-[505px] md:h-[50px] bg-[#EDF3F1] flex justify-center items-end px-8 py-2 md:pb-0">
-        <div class=" md:h-[50px] w-full md:w-[1328.63px] text-[#004D3F] flex flex-col justify-between md:justify-end">
+    <footer class="relative h-[505px] lg:h-[50px] bg-[#EDF3F1] flex justify-center items-end px-8 py-2 lg:pb-0">
+        <div class=" lg:h-[50px] w-full lg:w-[1328.63px] text-[#004D3F] flex flex-col justify-between lg:justify-end">
     
-            <section class="z-10 md:hidden flex flex-col md:flex-row gap-[1.5rem] mb-[3rem] md:mb-0 md:gap-0 md:justify-between text-[10px] md:text-[15.75px] font-[400]">
-                <div class="flex flex-col w-[222px] md:w-[330.75px]">
-                    <a href="../index.html" class="w-[107px] md:w-[158.68px] h-[32.27px] md:h-[47.85px] ">
+            <section class="z-10 lg:hidden flex flex-col lg:flex-row gap-[1.5rem] mb-[3rem] lg:mb-0 lg:gap-0 lg:justify-between text-[10px] lg:text-[15.75px] font-[400]">
+                <div class="flex flex-col w-[222px] lg:w-[330.75px]">
+                    <a href="../index.html" class="w-[107px] lg:w-[158.68px] h-[32.27px] lg:h-[47.85px] ">
                         <img src="../images/Quickaash Logo Dsgn.png" alt="company logo">
                     </a>
-                    <p class="leading-[16.61px] md:leading-[24.75px]">
+                    <p class="leading-[16.61px] lg:leading-[24.75px]">
                         Quickaash provides buinesses and individuals 
                         with credit for energy needs. Cover your energy 
                         bills now - Cooking Gas, CNG, Petrol, Diiesel, 
@@ -570,19 +582,19 @@
                     </p>
                 </div>
     
-                <div class="flex flex-col gap-2 md:gap-8">
-                    <p class="text-[12px] md:text-[15.75px] font-[700] uppercase">information</p>
+                <div class="flex flex-col gap-2 lg:gap-8">
+                    <p class="text-[12px] lg:text-[15.75px] font-[700] uppercase">information</p>
     
-                    <p class="leading-[15px] md:leading-[24.75px]">
+                    <p class="leading-[15px] lg:leading-[24.75px]">
                         Email: <a href="mailto:pisquaredenergy@gmail.com">pisquaredenergy@gmail.com</a>  <br>
                         Working Hours: 8am-5pm                    
                     </p>
                 </div>
     
-                <div class="flex flex-col gap-2 md:gap-8">
-                    <p class="text-[12px] md:text-[15.75px] font-[700] uppercase">product</p>
+                <div class="flex flex-col gap-2 lg:gap-8">
+                    <p class="text-[12px] lg:text-[15.75px] font-[700] uppercase">product</p>
     
-                    <ul class="flex flex-col gap-2 md:gap-6">
+                    <ul class="flex flex-col gap-2 lg:gap-6">
                         <a href="about_us.html">About Us</a>
                         <a href="contact_us.html">Contact Us</a>
                         <a href="privacy_policy.html">Privacy Policy</a>
@@ -590,10 +602,10 @@
                     </ul>
                 </div>
     
-                <div class="flex flex-col gap-2 md:gap-8">
-                    <p class="text-[12px] md:text-[15.75px] font-[700] uppercase">office address</p>
+                <div class="flex flex-col gap-2 lg:gap-8">
+                    <p class="text-[12px] lg:text-[15.75px] font-[700] uppercase">office address</p>
     
-                    <p class="leading-[15px] md:leading-[24.75px]">
+                    <p class="leading-[15px] lg:leading-[24.75px]">
                         17 Touggourt Street, Wuse Zone 2, Abuja<br>
                         Tel: <a href="tel:+2347057944652">+234 7057944652</a>                    
                     </p>
@@ -601,13 +613,13 @@
     
             </section>
     
-            <p class="z-10 w-[287px] md:w-full text-[12px] md:text-[15.75px] font-[400]"> 
+            <p class="z-10 w-[287px] lg:w-full text-[12px] lg:text-[15.75px] font-[400]"> 
                 &copy; <span class="curr_year"></span> Copyright 
                 <span class="font-[700]">Quickaash</span>, 
                 Inc. All rights reserved.
             </p>
     
-            <img src="../images/Ellipse 2 (4).png" alt="" class="absolute md:hidden bottom-0 right-0">
+            <img src="../images/Ellipse 2 (4).png" alt="" class="absolute lg:hidden bottom-0 right-0">
 
         </div>
     </footer>
