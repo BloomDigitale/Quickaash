@@ -223,7 +223,6 @@ personalInfoInput.forEach(input => {
     input.addEventListener('blur', personalInfoInputChange);
 
     input.addEventListener('click', (e) => {
-        e.preventDefault();
 
         if(input.classList.contains('border-red-500')) {
             input.addEventListener('blur', (e) => {
