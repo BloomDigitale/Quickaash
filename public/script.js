@@ -165,10 +165,10 @@ const businessDetailsInput = document.querySelectorAll('#business_input');
 const accDetailsInput = document.querySelectorAll('#acc_input');
 
 const error = document.querySelectorAll('.error');
-error.forEach( error => {
-    error.classList.remove('opacity-0');
-    error.innnerHTML = `Can't be empty`;
-});
+// error.forEach( error => {
+//     error.classList.remove('opacity-0');
+//     error.innnerHTML = `Can't be empty`;
+// });
 
 // checking for input changes function
 const personalInfoInputChange = (e) => {

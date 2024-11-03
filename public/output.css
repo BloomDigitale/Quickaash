@@ -885,6 +885,10 @@ video {
   height: 100%;
 }
 
+.h-\[1540px\] {
+  height: 1540px;
+}
+
 .w-\[10\.89px\] {
   width: 10.89px;
 }
@@ -1196,6 +1200,10 @@ video {
 
 .gap-\[65rem\] {
   gap: 65rem;
+}
+
+.gap-\[0\.4rem\] {
+  gap: 0.4rem;
 }
 
 .place-self-center {
