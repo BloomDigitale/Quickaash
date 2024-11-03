@@ -138,7 +138,6 @@ const nextbtns = document.querySelectorAll('.next');
 
 // making sure the form goes back to the top whenever the nextbutton is clicked
 body.addEventListener('click', (e) => {
-    e.preventDefault();
     
     if(e.target.classList.contains('back')) {
         console.log('go back to top');
@@ -411,57 +410,4 @@ const publickey = 'K-c-JQucCIXu54R1_';
 
 emailjs.init(publickey);
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const formData = {
-            first_name: firstNameInput,
-            last_name: lastNameInput,
-            email: emailInput,
-            contact: contactInput,
-            BVN: bvnInput,
-            D_O_B: dobInput,
-            address: personAddInput,
-            next_of_kin: nokInput,
-            next_of_kin_contact: nokNumInput,
-            eligibility: eligibilityInput,
-            loan_amount: amountInput,
-            loan_duration: durationInput,
-            loan_purpose: purposeInput,
-            guarantor: guarantorInput,
-            guarantor_contact: guarantorNumInput,
-            occupation: occupationInput,
-            business_name: businessNameInput,
-            business_address: businessAddInput,
-            business_guarantor: businessGuarantorInput,
-            business_contact: businessNumInput,
-            bank_name: bankNameInput,
-            account_name: accNameInput,
-            account_number: accNumInput,
-            account_number_verification: verifyAccInput,
-            phone_condition: phoneConInput,
-            phone_model: phoneModelInput,
-            phone_manufacturer: phoneManInput,
-            phone_imei: phoneImeiInput,
-            marital_status: maritalStatsInput,
-    };
-
-    const resetValues = formData.values() === "";
-
-    const inputData = {
-        from_name: formData.first_name,
-        message: formData.entries(),
-    };
-
-    console.log(formData.entries());
-
-    emailjs.send(serviceID, templateID, inputData)
-    .then(() => {
-            resetValues.forEach( (value) => value = '');
-            console.log('successful');
-        }, (error) => {
-                console.log(error);
-            }
-        );
-});
 
