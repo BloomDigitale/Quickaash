@@ -165,6 +165,7 @@ const businessDetailsInput = document.querySelectorAll('#business_input');
 const accDetailsInput = document.querySelectorAll('#acc_input');
 
 const error = document.querySelectorAll('.error');
+const errorArr = [];
 
 const fileError = document.querySelectorAll('.file_input_error');
 
@@ -220,6 +221,21 @@ const accInputChange = (e) => {
 
 personalInfoInput.forEach(input => {
     input.addEventListener('blur', personalInfoInputChange);
+
+    input.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if(input.classList.contains('border-red-500')) {
+            input.addEventListener('blur', (e) => {
+                e.preventDefault();
+                if(input.value !== "") {
+                    input.classList.remove('border-red-500');
+                    input.classList.add('border-[#C9C9C9]');
+                }
+            })
+        }
+
+    })
 });
 
 loanDetailsInput.forEach(input => {
