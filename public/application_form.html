@@ -81,59 +81,59 @@
             <form action="" class="form flex flex-col justify-between mb-[2rem] gap-4 w-[373px] lg:w-[602px] h-[881px] lg:h-full text-[10.93px] lg:text-[18px] text-[#212121] font-[700]">
 
                 <section class="form_section w-full pt-[1rem]">
-                    <section id="page_1" class="step_1 flex flex-col gap-[0.4rem] lg:gap-[1.5rem] w-[full]">
+                    <section id="page_1" class="step_1 flex flex-col gap-[1.5rem] w-[full]">
                         <p class=" text-[#004D3F] text-[18.22px] lg:text-[30px] font-[500] capitalize">
                             personal information
                         </p>
     
-                        <div class="flex flex-col gap-[1.5rem]">
+                        <div class="form_container flex flex-col gap-[1.5rem]">
                             <div class="flex justify-between">
-                                <div class="flex flex-col gap-2">
+                                <div class="flex flex-col gap-[0.2rem]">
                                     <label for="first_name">First name <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
                                     <input type="text" name="first_name" placeholder="First name" id="personal_input" class="first_name w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <small class="error text-red-500 opacity-0"></small>
                                 </div>
         
-                                <div class="flex flex-col gap-2">
+                                <div class="flex flex-col gap-[0.2rem]">
                                     <label for="last_name">Last name <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
                                     <input type="text" name="last_name" placeholder="Last name" id="personal_input" class="last_name w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <small class="error text-red-500 opacity-0"></small>
                                 </div>
                             </div>
         
-                            <div class="flex flex-col gap-2">
+                            <div class="flex flex-col gap-[0.2rem]">
                                 <label for="email">Email address<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
                                 <input type="email" name="email" placeholder="Email address" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" id="personal_input" class="email h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                 <small class="error email_error text-red-500 opacity-0"></small>
                             </div>
          
-                            <div class="flex flex-col gap-2">
+                            <div class="flex flex-col gap-[0.2rem]">
                                 <label for="contact">Phone number<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
                                 <input type="tel" name="contact" placeholder="Phone number" minlength="11" maxlength="11" id="personal_input" class="phone_number h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#0e0404] font-[400]" >
                                 <small class="error contact_error text-red-500 opacity-0"></small>
                             </div>
         
                             <div class="flex justify-between">
-                                <div class="flex flex-col gap-2">
+                                <div class="flex flex-col gap-[0.2rem]">
                                     <label for="bvn">BVN <span class="text-[8.5px] lg:text-[14px]">(enter a valid BVN number)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
                                     <input type="text" name="bvn" placeholder="BVN" id="personal_input" class="bvn w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <small class="error text-red-500 opacity-0"></small>
                                 </div>
         
-                                <div class="flex flex-col gap-2">
+                                <div class="flex flex-col gap-[0.2rem]">
                                     <label for="dob">Date of birth <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
                                     <input type="date" name="dob" max="2006-12-31" id="personal_input" class="dob w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <small class="error text-red-500 opacity-0"></small>
                                 </div>
                             </div>
         
-                            <div class="flex flex-col gap-2">
+                            <div class="flex flex-col gap-[0.2rem]">
                                 <label for="personal_address">Personal address <span class="text-[8.5px] lg:text-[14px]">(enter your full home address and PO Box if you have one)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
                                 <textarea name="personal_address" placeholder="Personal address" id="personal_input" class="personal_address lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" ></textarea>
                                 <small class="error text-red-500 opacity-0"></small>
                             </div>
     
-                            <div class="flex flex-col gap-2 w-[50%]">
+                            <div class="flex flex-col gap-[0.2rem] w-[50%]">
                                 <label for="marital_status">Marital staus<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
                                 <select name="marital_status" id="personal_input" class="marital_status w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <option value=""></option>
@@ -144,13 +144,13 @@
                             </div>
         
                             <div class="flex justify-between">
-                                <div class="flex flex-col gap-2">
+                                <div class="flex flex-col gap-[0.2rem]">
                                     <label for="nok">Next of kin<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
                                     <input type="text" name="nok" placeholder="Next of kin" id="personal_input" class="next_of_kin w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <small class="error text-red-500 opacity-0"></small>
                                 </div>
         
-                                <div class="flex flex-col gap-2">
+                                <div class="flex flex-col gap-[0.2rem]">
                                     <label for="nok_number">Next of kin phone number  <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
                                     <input type="tel" name="nok" placeholder="Next of kin phone number" minlength="11" maxlength="11" id="personal_input" class="nok_number w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <small class="error text-red-500 opacity-0"></small>
@@ -158,10 +158,10 @@
                             </div>
         
                             <!-- file upload -->
-                            <div class="flex flex-col gap-2">
+                            <div class="flex flex-col gap-[0.2rem]">
                                 <label for="selfie_pic">Selfie picture<span class="text-[8.5px] lg:text-[14px]">(Take with Camera or Upload)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
         
-                                <div class="relative w-full h-[46.78px] lg:h-[77px] flex flex-col justify-center items-center gap-[0.3rem] bg-[#F4FFFC] border border-dashed border-[#CFD8DC] rounded-[20px]">
+                                <div class="relative w-full h-[46.78px] lg:h-[77px] flex flex-col justify-center items-center gap-[0.3rem] bg-[#F4FFFC] border file_input_error border-dashed border-[#CFD8DC] rounded-[20px]">
         
                                     <ion-icon name="cloud-upload-outline" class="text-[#474747] text-[10px] lg:text-[18px]"></ion-icon>
         
@@ -170,14 +170,14 @@
                                         PNG, JPEG under 15MB
                                     </p>
                                     <input type="file" name="selfie_pic" id="personal_input" class="selfie_upload absolute lg:right-[2rem] opacity-0" >
-                                    <small class="error text-red-500 opacity-0"></small>
                                 </div>
+                                <small class="error text-red-500 opacity-0"></small>
                             </div>
         
-                            <div class="flex flex-col gap-2">
+                            <div class="flex flex-col gap-[0.2rem]">
                                 <label for="Id_upload">Upload ID<span class="text-[8.5px] lg:text-[14px]">(International passport, National ID card)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
         
-                                <div class="relative w-full h-[46.78px] lg:h-[77px] flex flex-col justify-center items-center gap-[0.3rem] bg-[#F4FFFC] border border-dashed border-[#CFD8DC] rounded-[20px]">
+                                <div class="relative w-full h-[46.78px] lg:h-[77px] flex flex-col justify-center items-center gap-[0.3rem] bg-[#F4FFFC] file_input_error border border-dashed border-[#CFD8DC] rounded-[20px]">
         
                                     <ion-icon name="cloud-upload-outline" class="text-[#474747] text-[10px] lg:text-[18px]"></ion-icon>
         
@@ -186,8 +186,8 @@
                                         PNG, JPEG under 15MB
                                     </p>
                                     <input type="file" name="id_upload" id="personal_input" class="id_upload absolute lg:right-[2rem] opacity-0" >
-                                    <small class="error text-red-500 opacity-0"></small>
                                 </div>
+                                <small class="error text-red-500 opacity-0"></small>
                             </div>
                         </div>
     
@@ -198,7 +198,7 @@
                             loan details
                         </p>
     
-                        <div class="flex flex-col gap-[1.5rem]">
+                        <div class="flex flex-col gap-[0.5rem]">
                             
                           <div class="flex flex-col gap-2">
                             <label for="first_time">First time applying?  <span class="text-[8.5px] lg:text-[14px]">(Choosing 'No' will void your application and require reapplying)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
@@ -504,7 +504,7 @@
 
 
         <section class="hidden lg:flex flex-col">
-            <div class="hero_1 relative lg:w-[710px] lg:h-[1317px] lg:bg-background-form1 hidden lg:flex justify-center items-end">
+            <div class="hero_1 relative lg:w-[710px] lg:h-[1540px] bg-no-repeat bg-cover lg:bg-background-form1 hidden lg:flex justify-center items-end">
                 <p class="text-[30px] font-[500] leading-[45px] text-white mb-[3rem]">
                     Get the Energy You need, When You Need It <br>
                     Apply for a Quickaash Loan Today! <br>
@@ -516,7 +516,7 @@
                 <img src="../images/Ellipse_form.png" alt="" class="absolute right-0 bottom-0">
             </div>
 
-            <div class="hero_2 relative lg:w-[710px] lg:h-[1317px] lg:bg-background-form2 hidden lg:hidden justify-center items-end">
+            <div class="hero_2 relative lg:w-[710px] lg:h-[1540px] bg-no-repeat bg-cover lg:bg-background-form2 hidden lg:hidden justify-center items-end">
                 <p class="text-[30px] font-[500] leading-[45px] text-white mb-[3rem]">
                     Power Your Home and Business Now - Repay<br>
                     Later with Flexible Quickaash Loans.<br>
@@ -528,7 +528,7 @@
                 <img src="../images/Ellipse_form.png" alt="" class="absolute right-0 bottom-0">
             </div>
 
-            <div class="hero_3 relative lg:w-[710px] lg:h-[1317px] lg:bg-background-form4 hidden lg:hidden justify-center items-end">
+            <div class="hero_3 relative lg:w-[710px] lg:h-[1540px] bg-no-repeat bg-cover lg:bg-background-form4 hidden lg:hidden justify-center items-end">
                 <p class="text-[30px] font-[500] leading-[45px] text-white mb-[3rem]">
                     No More Delays! Quickaash Covers Your <br>
                     Energy Bills with Fast, Easy Loans.<br>
@@ -540,7 +540,7 @@
                 <img src="../images/Ellipse_form.png" alt="" class="absolute right-0 bottom-0">
             </div>
 
-            <div class="hero_4 relative lg:w-[710px] lg:h-[1317px] lg:bg-background-form3 bg-no-repeat hidden lg:hidden justify-center items-end">
+            <div class="hero_4 relative lg:w-[710px] lg:h-[1540px] bg-no-repeat bg-cover lg:bg-background-form3 bg-no-repeat hidden lg:hidden justify-center items-end">
                 <p class="text-[30px] font-[500] leading-[45px] text-white mb-[3rem]">
                     Quckaash: Simplifying Energy Financing for <br>
                     Households and Businesses.<br>
@@ -552,7 +552,7 @@
                 <img src="../images/Ellipse_form.png" alt="" class="absolute right-0 bottom-0">
             </div>
 
-            <div class="hero_5 relative lg:w-[710px] lg:h-[1317px] lg:bg-background-form4 hidden lg:hidden justify-center items-end">
+            <div class="hero_5 relative lg:w-[710px] lg:h-[1540px] bg-no-repeat bg-cover lg:bg-background-form4 hidden lg:hidden justify-center items-end">
                 <p class="text-[30px] font-[500] leading-[45px] text-white mb-[3rem]">
                     No More Delays! Quickaash Covers Your <br>
                     Energy Bills with Fast, Easy Loans.<br>

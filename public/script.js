@@ -165,10 +165,9 @@ const businessDetailsInput = document.querySelectorAll('#business_input');
 const accDetailsInput = document.querySelectorAll('#acc_input');
 
 const error = document.querySelectorAll('.error');
-// error.forEach( error => {
-//     error.classList.remove('opacity-0');
-//     error.innnerHTML = `Can't be empty`;
-// });
+
+const fileError = document.querySelectorAll('.file_input_error');
+
 
 // checking for input changes function
 const personalInfoInputChange = (e) => {
@@ -261,7 +260,23 @@ next_page2.addEventListener('click', (e) => {
         hero2.classList.remove('md:hidden');
         hero2.classList.add('md:flex');
     }else if(personalInfo.length === 0) {
-      
+        error.forEach( error => {
+            error.classList.remove('opacity-0');
+            error.innerHTML = `Can't be empty`;
+
+            document.querySelector('.form_container').classList.remove('gap-[1.5rem]');
+            document.querySelector('.form_container').classList.add('gap-[0.5rem]');
+
+            personalInfoInput.forEach(input => {
+                input.classList.remove('border-[#C9C9C9]');
+                input.classList.add('border-red-500');
+            });
+
+            fileError.forEach(error =>{
+                error.classList.remove('border-[#C9C9C9]');
+                error.classList.add('border-red-500');
+            })
+        });
     };
     
 });
