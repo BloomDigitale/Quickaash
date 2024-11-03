@@ -9,10 +9,6 @@ module.exports = {
       'satoshi': 'Satoshi-Regular, Satoshi-Medium, Satoshi-Bold',
     },
 
-    screens: {
-      'xsm': '350px',
-    },
-
     extend: {
       backgroundImage: {
         'background-form1': "url('../images/form1.png')",
