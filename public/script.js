@@ -73,7 +73,7 @@ const back_page2 = document.querySelector('.back_page_2');
 const back_page3 = document.querySelector('.back_page_3');
 const back_page4 = document.querySelector('.back_page_4');
 
-
+const validator = document.querySelector('.terms_validator');
 const submitForm = document.querySelector('.submit');
 
 
@@ -164,10 +164,15 @@ const collateralDetailsInput = document.querySelectorAll('#collateral_input');
 const businessDetailsInput = document.querySelectorAll('#business_input');
 const accDetailsInput = document.querySelectorAll('#acc_input');
 
-const error = document.querySelectorAll('.error');
-const errorArr = [];
+const personalInfoError = document.querySelectorAll('.personal_info_error');
+const loanError = document.querySelectorAll('.loan_error');
+const collateralError = document.querySelectorAll('.collateral_error');
+const businessError = document.querySelectorAll('.business_error');
+const accError = document.querySelectorAll('.acc_error');
+ 
 
 const fileError = document.querySelectorAll('.file_input_error');
+const collateralFileError = document.querySelector('.collateral_file_error');
 
 
 // checking for input changes function
@@ -219,45 +224,111 @@ const accInputChange = (e) => {
 
 
 
-personalInfoInput.forEach(input => {
+personalInfoInput.forEach((input, index) => {
     input.addEventListener('blur', personalInfoInputChange);
 
-    input.addEventListener('click', (e) => {
+    input.addEventListener('click', () => {
 
         if(input.classList.contains('border-red-500')) {
             input.addEventListener('blur', (e) => {
                 e.preventDefault();
-                if(input.value !== "") {
+                if(input.value.trim() !== "") {
                     input.classList.remove('border-red-500');
                     input.classList.add('border-[#C9C9C9]');
+                    personalInfoError[index].classList.add('opacity-0');
+
+                    fileError.forEach((error, index) => {
+                        error[index].classList.add('border-[#C9C9C9]');
+                        error[index].classList.remove('border-red-500');
+                    });
                 }
             })
         }
 
-    })
+    });
 });
 
-loanDetailsInput.forEach(input => {
+loanDetailsInput.forEach((input, index) => {
     input.addEventListener('blur', loanInputChange);
+
+    input.addEventListener('click', () => {
+
+        if(input.classList.contains('border-red-500')) {
+            input.addEventListener('blur', (e) => {
+                e.preventDefault();
+                if(input.value.trim() !== "") {
+                    input.classList.remove('border-red-500');
+                    input.classList.add('border-[#C9C9C9]');
+                    loanError[index].classList.add('opacity-0');
+                }
+            })
+        }
+
+    });
 });
 
-collateralDetailsInput.forEach(input => {
+collateralDetailsInput.forEach((input, index) => {
     input.addEventListener('blur', collateralInputChange);
+
+    input.addEventListener('click', () => {
+
+        if(input.classList.contains('border-red-500')) {
+            input.addEventListener('blur', (e) => {
+                e.preventDefault();
+                if(input.value.trim() !== "") {
+                    input.classList.remove('border-red-500');
+                    input.classList.add('border-[#C9C9C9]');
+                    collateralError[index].classList.add('opacity-0');
+                }
+            })
+        }
+
+    });
 });
 
 businessDetailsInput.forEach(input => {
     input.addEventListener('blur', businessInputChange);
+
+    input.addEventListener('click', () => {
+
+        if(input.classList.contains('border-red-500')) {
+            input.addEventListener('blur', (e) => {
+                e.preventDefault();
+                if(input.value.trim() !== "") {
+                    input.classList.remove('border-red-500');
+                    input.classList.add('border-[#C9C9C9]');
+                    businessError[index].classList.add('opacity-0');
+                }
+            })
+        }
+
+    });
 });
 
 accDetailsInput.forEach(input => {
     input.addEventListener('blur', accInputChange);
+
+    input.addEventListener('click', () => {
+
+        if(input.classList.contains('border-red-500')) {
+            input.addEventListener('blur', (e) => {
+                e.preventDefault();
+                if(input.value.trim() !== "") {
+                    input.classList.remove('border-red-500');
+                    input.classList.add('border-[#C9C9C9]');
+                    accError[index].classList.add('opacity-0');
+                }
+            })
+        }
+
+    });
 });
 
 
 next_page2.addEventListener('click', (e) => {
     e.preventDefault();
 
-    if(personalInfo.length === 11) {
+    if(personalInfo.length === 12) {
         page1.classList.remove('flex');
         page1.classList.add('hidden');
         nav1.classList.remove('flex');
@@ -275,7 +346,7 @@ next_page2.addEventListener('click', (e) => {
         hero2.classList.remove('md:hidden');
         hero2.classList.add('md:flex');
     }else if(personalInfo.length === 0) {
-        error.forEach( error => {
+        personalInfoError.forEach( (error) => {
             error.classList.remove('opacity-0');
             error.innerHTML = `Can't be empty`;
 
@@ -314,7 +385,18 @@ next_page3.addEventListener('click', (e) => {
         nav3.classList.add('flex');
         hero3.classList.remove('md:hidden');
         hero3.classList.add('md:flex');
-    }
+    } else if(loanDetails.length === 0) {
+        loanError.forEach( (error) => {
+            error.classList.remove('opacity-0');
+            error.innerHTML = `Can't be empty`;
+
+            loanDetailsInput.forEach(input => {
+                input.classList.remove('border-[#C9C9C9]');
+                input.classList.add('border-red-500');
+            });
+          
+        });
+    };
 
 });
 
@@ -336,8 +418,22 @@ next_page4.addEventListener('click', (e) => {
         nav4.classList.add('flex');
         hero4.classList.remove('md:hidden');
         hero4.classList.add('md:flex');
-    }
+    } else if(collateralDetails.length === 0) {
+        collateralError.forEach( (error) => {
+            error.classList.remove('opacity-0');
+            error.innerHTML = `Can't be empty`;
 
+            collateralDetailsInput.forEach(input => {
+                input.classList.remove('border-[#C9C9C9]');
+                input.classList.add('border-red-500');
+            });
+
+            collateralFileError.classList.remove('border-[#C9C9C9]');
+            collateralFileError.classList.add('border-red-500');
+
+          
+        });
+    };
 
 });
 
@@ -358,7 +454,33 @@ next_page5.addEventListener('click', (e) => {
         nav5.classList.add('flex');
         hero5.classList.remove('md:hidden');
         hero5.classList.add('md:flex');
-    }
+    } else if(businessDetails.length === 0) {
+        businessError.forEach( (error) => {
+            error.classList.remove('opacity-0');
+            error.innerHTML = `Can't be empty`;
+
+            businessDetailsInput.forEach(input => {
+                input.classList.remove('border-[#C9C9C9]');
+                input.classList.add('border-red-500');
+            });
+        });
+    };
+});
+
+submitForm.addEventListener('click', (e) => {
+
+    if(accDetails.length === 0) {
+        accError.forEach( (error) => {
+            error.classList.remove('opacity-0');
+            error.innerHTML = `Can't be empty`;
+
+            accDetailsInput.forEach(input => {
+                input.classList.remove('border-[#C9C9C9]');
+                input.classList.add('border-red-500');
+            });
+        });
+
+    };
 });
 
 
