@@ -78,7 +78,7 @@ const submitForm = document.querySelector('.submit');
 
 
 // Form variables
-const form = document.querySelector('form');
+const form = document.querySelector('#form');
 
 const firstNameInput = document.querySelector('.first_name');
 const lastNameInput = document.querySelector('.last_name');
@@ -216,7 +216,7 @@ const businessInputChange = (e) => {
 const accInputChange = (e) => {
     if(e.target.value !== "") {      
         accDetails.push(`${e.target.name} : ${e.target.value}`);
-        console.log(accDetails,length);
+        console.log(accDetails.length);
     } else{
         console.log(`Input empty: ${e.target.name}`);
     }
@@ -286,7 +286,7 @@ collateralDetailsInput.forEach((input, index) => {
     });
 });
 
-businessDetailsInput.forEach(input => {
+businessDetailsInput.forEach((input, index) => {
     input.addEventListener('blur', businessInputChange);
 
     input.addEventListener('click', () => {
@@ -305,7 +305,7 @@ businessDetailsInput.forEach(input => {
     });
 });
 
-accDetailsInput.forEach(input => {
+accDetailsInput.forEach((input, index) => {
     input.addEventListener('blur', accInputChange);
 
     input.addEventListener('click', () => {
@@ -328,7 +328,7 @@ accDetailsInput.forEach(input => {
 next_page2.addEventListener('click', (e) => {
     e.preventDefault();
 
-    if(personalInfo.length === 12) {
+    if(personalInfo.length >= 12) {
         page1.classList.remove('flex');
         page1.classList.add('hidden');
         nav1.classList.remove('flex');
@@ -337,7 +337,6 @@ next_page2.addEventListener('click', (e) => {
         hero1.classList.add('md:hidden');
         heading.classList.add('hidden');
         heading.classList.remove('flex');
-
 
         page2.classList.remove('hidden');
         page2.classList.add('flex');
@@ -370,7 +369,7 @@ next_page2.addEventListener('click', (e) => {
 next_page3.addEventListener('click', (e) => {
     e.preventDefault();
 
-    if(loanDetails.length === 8 ) {
+    if(loanDetails.length >= 8 ) {
         page2.classList.remove('flex');
         page2.classList.add('hidden');
         nav2.classList.remove('flex');
@@ -403,7 +402,7 @@ next_page3.addEventListener('click', (e) => {
 next_page4.addEventListener('click', (e) => {
     e.preventDefault();
 
-    if(collateralDetails.length > 3) {
+    if(collateralDetails.length >= 3) {
         page3.classList.remove('flex');
         page3.classList.add('hidden');
         nav3.classList.remove('flex');
@@ -440,7 +439,7 @@ next_page4.addEventListener('click', (e) => {
 next_page5.addEventListener('click', (e) => {
     e.preventDefault();
 
-    if(businessDetails.length === 5) {
+    if(businessDetails.length >= 5) {
         page4.classList.remove('flex');
         page4.classList.add('hidden');
         nav4.classList.remove('flex');
@@ -467,21 +466,21 @@ next_page5.addEventListener('click', (e) => {
     };
 });
 
-submitForm.addEventListener('click', (e) => {
+// submitForm.addEventListener('click', (e) => {
 
-    if(accDetails.length === 0) {
-        accError.forEach( (error) => {
-            error.classList.remove('opacity-0');
-            error.innerHTML = `Can't be empty`;
+//     if(accDetails.length === 0) {
+//         accError.forEach( (error) => {
+//             error.classList.remove('opacity-0');
+//             error.innerHTML = `Can't be empty`;
 
-            accDetailsInput.forEach(input => {
-                input.classList.remove('border-[#C9C9C9]');
-                input.classList.add('border-red-500');
-            });
-        });
+//             accDetailsInput.forEach(input => {
+//                 input.classList.remove('border-[#C9C9C9]');
+//                 input.classList.add('border-red-500');
+//             });
+//         });
 
-    };
-});
+//     };
+// });
 
 
 back_page1.addEventListener('click', (e) => {
@@ -563,12 +562,85 @@ back_page4.addEventListener('click', (e) => {
 
 
 
+//submitting the form data
 
-//Form Action variables
-const serviceID = 'service_8ku20jn';
-const templateID = 'template_hiizfrd';
-const publickey = 'K-c-JQucCIXu54R1_';
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    
+   const data = {
+    first_name : firstNameInput.value,
+    last_name : lastNameInput.value,
+    email : emailInput.value,
+    contact : contactInput.value,
+    BVN : bvnInput.value,
+    date_of_birth : dobInput.value,
+    personal_address : personAddInput.value,
+    marital_status : maritalStatsInput.value,
+    next_of_kin : nokInput.value,
+    next_of_kin_contact : nokNumInput.value,
+    selfie_upload : selfieUpload.value,
+    id_upload : idUpload.value,
 
-emailjs.init(publickey);
+    loan_eligibility : eligibilityInput.value,
+    loan_amount : amountInput.value,
+    loan_duration : durationInput.value,
+    loan_purpose : purposeInput.value,
+
+    guarantor_name : guarantorInput.value,
+    guarantor_contact : guarantorNumInput.value,
+    occupation : occupationInput.value,
+
+    phone_manufacturer : phoneManInput.value,
+    phone_imei : phoneImeiInput.value,
+    phone_model : phoneModelInput.value,
+    phone_condition : phoneConInput.value,
+    receipt: receiptUpload.value,
+
+    business_name : businessNameInput.value,
+    business_address : businessAddInput.value,
+    business_guarantor : businessGuarantorInput.value,
+    business_contact : businessNumInput.value,
+
+    bank_name : bankNameInput.value,
+    account_name : accNameInput.value,
+    account_number : accNumInput.value,
+    account_number_verification : verifyAccInput.value,
+   };
+
+   const formData = new FormData();
+   Object.entries(data).forEach(([key, value]) => {
+    formData.append(key, value);
+   });
+
+   const mainData = Object.fromEntries(formData.entries());
+
+   const jsonData = JSON.stringify(mainData);
+
+    try {
+         const response = await fetch("https://quickaash-backend.onrender.com/api/loan-application/", {
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json",
+            },
+            body: jsonData,
+         });
+
+         if(response.ok) {
+
+            console.log(`form submitted successfully`);
+            console.log(formData);
+            form.reset();
+
+            window.location.href = "application_form.html";
+         } else {
+            console.log(await response.json());
+            console.log(`form submission unsuccessful`);
+         }
+    } catch (e) {
+        console.error(e);
+    }
+
+
+});
 
 
