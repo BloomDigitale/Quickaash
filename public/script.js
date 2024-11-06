@@ -427,9 +427,8 @@ next_page4.addEventListener('click', (e) => {
                 input.classList.add('border-red-500');
             });
 
-            collateralFileError.classList.remove('border-[#C9C9C9]');
+            collateralFileError.classList.remove('border-[#CFD8DC]');
             collateralFileError.classList.add('border-red-500');
-
           
         });
     };
@@ -561,6 +560,11 @@ back_page4.addEventListener('click', (e) => {
 });
 
 
+//converting certain data to fit into the form backend validation
+ 
+
+
+
 
 //submitting the form data
 
@@ -571,40 +575,39 @@ form.addEventListener("submit", async (e) => {
     first_name : firstNameInput.value,
     last_name : lastNameInput.value,
     email : emailInput.value,
-    contact : contactInput.value,
-    BVN : bvnInput.value,
+    phone_number : contactInput.value,
+    bvn : bvnInput.value,
     date_of_birth : dobInput.value,
     personal_address : personAddInput.value,
     marital_status : maritalStatsInput.value,
     next_of_kin : nokInput.value,
-    next_of_kin_contact : nokNumInput.value,
-    selfie_upload : selfieUpload.value,
-    id_upload : idUpload.value,
+    next_of_kin_phone_number : nokNumInput.value,
+    selfie_picture : selfieUpload.value,
+    id_document : idUpload.value,
 
-    loan_eligibility : eligibilityInput.value,
-    loan_amount : amountInput.value,
-    loan_duration : durationInput.value,
-    loan_purpose : purposeInput.value,
+    first_time_application : eligibilityInput.value,
+    requested_amount : amountInput.value,
+    loan_circle : durationInput.value,
+    purpose_of_loan : purposeInput.value,
 
     guarantor_name : guarantorInput.value,
-    guarantor_contact : guarantorNumInput.value,
+    guarantor_phone_number : guarantorNumInput.value,
     occupation : occupationInput.value,
 
     phone_manufacturer : phoneManInput.value,
     phone_imei : phoneImeiInput.value,
     phone_model : phoneModelInput.value,
     phone_condition : phoneConInput.value,
-    receipt: receiptUpload.value,
+    collateral_receipt: receiptUpload.value,
 
-    business_name : businessNameInput.value,
-    business_address : businessAddInput.value,
-    business_guarantor : businessGuarantorInput.value,
-    business_contact : businessNumInput.value,
+    company_name : businessNameInput.value,
+    company_address : businessAddInput.value,
+    company_guarantor_name : businessGuarantorInput.value,
+    company_guarantor_phone : businessNumInput.value,
 
     bank_name : bankNameInput.value,
     account_name : accNameInput.value,
     account_number : accNumInput.value,
-    account_number_verification : verifyAccInput.value,
    };
 
    const formData = new FormData();

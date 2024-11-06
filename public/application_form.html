@@ -78,7 +78,7 @@
                     </p>
             </div>                            
 
-            <form enctype="multipart/form-data" id="form" class="flex flex-col justify-between mb-[2rem] gap-4 w-[373px] lg:w-[602px] h-[881px] lg:h-full text-[10.93px] lg:text-[18px] text-[#212121] font-[700]" novalidate>
+            <form action="https://quickaash-backend.onrender.com/api/loan-application/" method="POST" enctype="multipart/form-data" id="form" class="flex flex-col justify-between mb-[2rem] gap-4 w-[373px] lg:w-[602px] h-[881px] lg:h-full text-[10.93px] lg:text-[18px] text-[#212121] font-[700]" novalidate>
 
                 <section class="form_section w-full pt-[1rem]">
                     <section id="page_1" class="step_1 flex flex-col gap-[1.5rem] w-[full]">
@@ -204,8 +204,8 @@
                             <label for="first_time">First time applying?  <span class="text-[8.5px] lg:text-[14px]">(Choosing 'No' will void your application and require reapplying)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
                             <select name="first_time" id="loan_input" class="eligibility w-full h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                 <option value=""></option>
-                               <option value="Yes (This is my first time applying)">Yes (This is my first time applying)</option>
-                               <option value="No (I am a returning customer)">No (I am a returning customer)</option>
+                               <option value="True">Yes (This is my first time applying)</option>
+                               <option value="False">No (I am a returning customer)</option>
                             </select>
                             <small class="loan_error text-red-500 opacity-0"></small>
                            </div>
@@ -309,8 +309,8 @@
                                 <label for="phone_condition">Is the phone in good working condition ?<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
                                 <select name="phone_condition" id="collateral_input" class="phone_condition h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <option value=""></option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
+                                    <option value="true">Yes</option>
+                                    <option value="false">No</option>
                                 </select>
                                 <small class="collateral_error text-red-500 opacity-0"></small>
                             </div>
@@ -318,7 +318,7 @@
                             <div class="flex flex-col gap-2">
                                 <label for="receipt_upload">Upload purchase receipt of collateral<span class="text-[8.5px] lg:text-[14px]">(Take with Camera or Upload)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
     
-                                <div class="relative w-full h-[46.78px] lg:h-[77px] flex flex-col justify-center items-center gap-[0.3rem] bg-[#F4FFFC] border border-dashed border-[#CFD8DC] rounded-[20px]">
+                                <div class="collateral_file_error relative w-full h-[46.78px] lg:h-[77px] flex flex-col justify-center items-center gap-[0.3rem] bg-[#F4FFFC] border border-dashed border-[#CFD8DC] rounded-[20px]">
     
                                     <ion-icon name="cloud-upload-outline" class="text-[#474747] text-[10px] lg:text-[18px]"></ion-icon>
     
