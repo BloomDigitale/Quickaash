@@ -613,9 +613,9 @@ form.addEventListener("submit", async (e) => {
 
    //appending urls stored in the array to the form data object
    allImageUrls.forEach((url, i) => {
-        if(i === 0) data.selfie_picture = url;
-        if(i === 1) data.id_document = url;
-        if(i === 2) data.collateral_receipt = url;
+        if(i === 0) data.selfie_picture = `${url}`;
+        if(i === 1) data.id_document = `${url}`;
+        if(i === 2) data.collateral_receipt = `${url}`;
     });
 
     //converting data to FormData
