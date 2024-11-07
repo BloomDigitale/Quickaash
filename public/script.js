@@ -179,7 +179,6 @@ const collateralFileError = document.querySelector('.collateral_file_error');
 const personalInfoInputChange = (e) => {
     if(e.target.value !== "") {
         personalInfo.push(`${e.target.name} : ${e.target.value}`);
-        console.log(personalInfo.length);
 
     } else{
         console.log(`Input empty: ${e.target.name}`);
@@ -188,8 +187,7 @@ const personalInfoInputChange = (e) => {
 
 const loanInputChange = (e) => {
     if(e.target.value !== "") {
-        loanDetails.push(`${e.target.name} : ${e.target.value}`);
-        console.log(loanDetails.length);  
+        loanDetails.push(`${e.target.name} : ${e.target.value}`); 
     } else{
         console.log(`Input empty: ${e.target.name}`);
     }
@@ -197,8 +195,7 @@ const loanInputChange = (e) => {
 
 const collateralInputChange = (e) => {
     if(e.target.value !== "") {
-        collateralDetails.push(`${e.target.name} : ${e.target.value}`);
-        console.log(collateralDetails.length);  
+        collateralDetails.push(`${e.target.name} : ${e.target.value}`); 
     } else{
         console.log(`Input empty: ${e.target.name}`);
     }
@@ -207,7 +204,6 @@ const collateralInputChange = (e) => {
 const businessInputChange = (e) => {
     if(e.target.value !== "") {
         businessDetails.push(`${e.target.name} : ${e.target.value}`);
-        console.log(businessDetails.length); 
     } else{
         console.log(`Input empty: ${e.target.name}`);
     }
@@ -216,7 +212,6 @@ const businessInputChange = (e) => {
 const accInputChange = (e) => {
     if(e.target.value !== "") {      
         accDetails.push(`${e.target.name} : ${e.target.value}`);
-        console.log(accDetails.length);
     } else{
         console.log(`Input empty: ${e.target.name}`);
     }
@@ -560,17 +555,26 @@ back_page4.addEventListener('click', (e) => {
 });
 
 
-//converting certain data to fit into the form backend validation
- 
 
 
 
-
-//submitting the form data
-
+//submitting the main form data
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    
+
+    // getting all file input tags
+    const fileInputs = document.querySelectorAll(`input[type="file"]`);
+    const allImageUrls = [];
+
+    // looping through each file input and adding the cloudinary url to an array
+    for (const fileInput of fileInputs) {
+        for (const file of fileInput.files) {
+            const url = await uploadFile(file);
+            allImageUrls.push(url);
+        }
+    };
+ 
+    //Initializing the data object witth basic form data
    const data = {
     first_name : firstNameInput.value,
     last_name : lastNameInput.value,
@@ -582,11 +586,9 @@ form.addEventListener("submit", async (e) => {
     marital_status : maritalStatsInput.value,
     next_of_kin : nokInput.value,
     next_of_kin_phone_number : nokNumInput.value,
-    selfie_picture : selfieUpload.value,
-    id_document : idUpload.value,
 
     first_time_application : eligibilityInput.value,
-    requested_amount : amountInput.value,
+    requested_amount : Number(`${amountInput.value.replace(',' , '').trim()}`),
     loan_circle : durationInput.value,
     purpose_of_loan : purposeInput.value,
 
@@ -598,7 +600,6 @@ form.addEventListener("submit", async (e) => {
     phone_imei : phoneImeiInput.value,
     phone_model : phoneModelInput.value,
     phone_condition : phoneConInput.value,
-    collateral_receipt: receiptUpload.value,
 
     company_name : businessNameInput.value,
     company_address : businessAddInput.value,
@@ -610,6 +611,14 @@ form.addEventListener("submit", async (e) => {
     account_number : accNumInput.value,
    };
 
+   //appending urls stored in the array to the form data object
+   allImageUrls.forEach((url, i) => {
+        if(i === 0) data.selfie_picture = url;
+        if(i === 1) data.id_document = url;
+        if(i === 2) data.collateral_receipt = url;
+    });
+
+    //converting data to FormData
    const formData = new FormData();
    Object.entries(data).forEach(([key, value]) => {
     formData.append(key, value);
@@ -631,10 +640,9 @@ form.addEventListener("submit", async (e) => {
          if(response.ok) {
 
             console.log(`form submitted successfully`);
-            console.log(formData);
-            form.reset();
+            // form.reset();
+            // window.location.href = "application_form.html";
 
-            window.location.href = "application_form.html";
          } else {
             console.log(await response.json());
             console.log(`form submission unsuccessful`);
@@ -643,7 +651,33 @@ form.addEventListener("submit", async (e) => {
         console.error(e);
     }
 
-
 });
+
+// uploading file to cloudinary and returning a url
+const uploadFile = async (file) => {
+    const data = {
+        file : file ,
+        upload_preset : `f2hmybal`,
+    };
+
+    // converting data to formdata
+    const formData = new FormData();
+    formData.append(data);
+
+    const response = await fetch(
+        "https://api.cloudinary.com/v1_1/dzv3mffqp/upload",
+        {
+            method : "POST",
+            body : formData,
+        });           
+
+    if (response.ok) {
+        const imageData = await response.json();
+        return imageData.secure_url;
+    } else {
+        throw new Error(`Upload failed`);
+    };
+        
+};
 
 

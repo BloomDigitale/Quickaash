@@ -78,7 +78,7 @@
                     </p>
             </div>                            
 
-            <form action="https://quickaash-backend.onrender.com/api/loan-application/" method="POST" enctype="multipart/form-data" id="form" class="flex flex-col justify-between mb-[2rem] gap-4 w-[373px] lg:w-[602px] h-[881px] lg:h-full text-[10.93px] lg:text-[18px] text-[#212121] font-[700]" novalidate>
+            <form enctype="multipart/form-data" id="form" class="flex flex-col justify-between mb-[2rem] gap-4 w-[373px] lg:w-[602px] h-[881px] lg:h-full text-[10.93px] lg:text-[18px] text-[#212121] font-[700]" novalidate>
 
                 <section class="form_section w-full pt-[1rem]">
                     <section id="page_1" class="step_1 flex flex-col gap-[1.5rem] w-[full]">
@@ -169,7 +169,7 @@
                                         <span class="text-[6.6px] lg:text-[10.86px] text-[#121A26]">Choose file</span> <br>
                                         PNG, JPEG under 15MB
                                     </p>
-                                    <input type="file" name="selfie_pic" id="personal_input" accept="image/*" class="selfie_upload absolute lg:right-[2rem] opacity-0" >
+                                    <input type="file" name="selfie_pic" id="personal_input" accept="image/*" class="selfie_upload file_input absolute lg:right-[2rem] opacity-0" >
                                 </div>
                                 <small class="personal_info_error text-red-500 opacity-0"></small>
                             </div>
@@ -185,7 +185,7 @@
                                         <span class="text-[6.6px] lg:text-[10.86px] text-[#121A26]">Choose file</span> <br>
                                         PNG, JPEG under 15MB
                                     </p>
-                                    <input type="file" name="id_upload" id="personal_input" accept="image/*" class="id_upload absolute lg:right-[2rem] opacity-0" >
+                                    <input type="file" name="id_upload" id="personal_input" accept="image/*" class="id_upload file_input absolute lg:right-[2rem] opacity-0" >
                                 </div>
                                 <small class="personal_info_error text-red-500 opacity-0"></small>
                             </div>
@@ -204,8 +204,8 @@
                             <label for="first_time">First time applying?  <span class="text-[8.5px] lg:text-[14px]">(Choosing 'No' will void your application and require reapplying)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
                             <select name="first_time" id="loan_input" class="eligibility w-full h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                 <option value=""></option>
-                               <option value="True">Yes (This is my first time applying)</option>
-                               <option value="False">No (I am a returning customer)</option>
+                               <option value="true">Yes (This is my first time applying)</option>
+                               <option value="false">No (I am a returning customer)</option>
                             </select>
                             <small class="loan_error text-red-500 opacity-0"></small>
                            </div>
@@ -220,18 +220,18 @@
                                <label for="loan_duration">Loan circle<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
                                <select name="loan_duration" id="loan_input" class="loan_duration w-full h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                   <option value=""></option>
-                                  <option value="1 month (5% interest)">1 month (5% interest)</option>
-                                  <option value="2 months (7.5% interest)">2 months (7.5% interest)</option>
-                                  <option value="3 months (9% interest)">3 months (9% interest)</option>
-                                  <option value="4 months (12% interest)">4 months (12% interest)</option>
-                                  <option value="5 months (15% interest)">5 months (15% interest)</option>
-                                  <option value="6 months (18% interest)">6 months (18% interest)</option>
-                                  <option value="7 months (21% interest)">7 months (21% interest)</option>
-                                  <option value="8 months (24% interest)">8 months (24% interest)</option>
-                                  <option value="9 months (27.5% interest)">9 months (27.5% interest)</option>
-                                  <option value="10 months (30% interest)">10 months (30% interest)</option>
-                                  <option value="11 months (33% interest)">11 months (33% interest)</option>
-                                  <option value="12 month (36% interest)">12 month (36% interest)</option>
+                                  <option value="1 month">1 month (5% interest)</option>
+                                  <option value="2 months">2 months (7.5% interest)</option>
+                                  <option value="3 months">3 months (9% interest)</option>
+                                  <option value="4 months">4 months (12% interest)</option>
+                                  <option value="5 months">5 months (15% interest)</option>
+                                  <option value="6 months">6 months (18% interest)</option>
+                                  <option value="7 months">7 months (21% interest)</option>
+                                  <option value="8 months">8 months (24% interest)</option>
+                                  <option value="9 months">9 months (27.5% interest)</option>
+                                  <option value="10 months">10 months (30% interest)</option>
+                                  <option value="11 months">11 months (33% interest)</option>
+                                  <option value="12 months">12 month (36% interest)</option>
                                </select>
 
                                 <small class="loan_error text-red-500 opacity-0"></small>
@@ -326,7 +326,7 @@
                                         <span class="text-[6.6px] lg:text-[10.86px] text-[#121A26]">Choose file</span> <br>
                                         PNG, JPEG under 15MB
                                     </p>
-                                    <input type="file" name="receipt_upload" accept="image/*" class="receipt_upload absolute lg:right-[2rem] opacity-0" >
+                                    <input type="file" name="receipt_upload" accept="image/*" class="receipt_upload file_input absolute lg:right-[2rem] opacity-0" >
                                 </div>
 
                                 <small class="collateral_error text-red-500 opacity-0"></small>
