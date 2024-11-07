@@ -655,14 +655,10 @@ form.addEventListener("submit", async (e) => {
 
 // uploading file to cloudinary and returning a url
 const uploadFile = async (file) => {
-    const data = {
-        file : file ,
-        upload_preset : `f2hmybal`,
-    };
 
-    // converting data to formdata
     const formData = new FormData();
-    formData.append(data);
+    formData.append("file", file );
+    formData.append("upload_preset", "f2hmybal");
 
     const response = await fetch(
         "https://api.cloudinary.com/v1_1/dzv3mffqp/upload",
