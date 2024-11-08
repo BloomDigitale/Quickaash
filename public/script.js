@@ -640,8 +640,8 @@ form.addEventListener("submit", async (e) => {
          if(response.ok) {
 
             console.log(`form submitted successfully`);
-            // form.reset();
-            // window.location.href = "application_form.html";
+            form.reset();
+            window.location.href = "application_form.html";
 
             // include a load screen when submitting
 
