@@ -109,7 +109,7 @@
          
                             <div class="flex flex-col gap-[0.2rem]">
                                 <label for="contact">Phone number<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                <input type="tel" name="contact" placeholder="Phone number" minlength="11" maxlength="11" id="personal_input" class="phone_number h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#0e0404] font-[400]" >
+                                <input type="tel" name="contact" placeholder="Phone number" maxlength="11" id="personal_input" class="phone_number h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#0e0404] font-[400]" >
                                 <small class="personal_info_error contact_error text-red-500 opacity-0"></small>
                             </div>
         
@@ -152,7 +152,7 @@
         
                                 <div class="flex flex-col gap-[0.2rem]">
                                     <label for="nok_number">Next of kin phone number  <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                    <input type="tel" name="nok" placeholder="Next of kin phone number" minlength="11" maxlength="11" id="personal_input" class="nok_number w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                    <input type="tel" name="nok" placeholder="Next of kin phone number" maxlength="11" id="personal_input" class="nok_number w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <small class="personal_info_error text-red-500 opacity-0"></small>
                                 </div>
                             </div>
@@ -169,7 +169,7 @@
                                         <span class="text-[6.6px] lg:text-[10.86px] text-[#121A26]">Choose file</span> <br>
                                         PNG, JPEG under 15MB
                                     </p>
-                                    <input type="file" name="selfie_pic" id="personal_input" accept="image/*" class="selfie_upload file_input absolute lg:right-[2rem] opacity-0" >
+                                    <input type="file" name="selfie_picture" id="personal_input" class="selfie_upload file_input absolute lg:right-[2rem] opacity-0" >
                                 </div>
                                 <small class="personal_info_error text-red-500 opacity-0"></small>
                             </div>
@@ -185,7 +185,7 @@
                                         <span class="text-[6.6px] lg:text-[10.86px] text-[#121A26]">Choose file</span> <br>
                                         PNG, JPEG under 15MB
                                     </p>
-                                    <input type="file" name="id_upload" id="personal_input" accept="image/*" class="id_upload file_input absolute lg:right-[2rem] opacity-0" >
+                                    <input type="file" name="id_document" id="personal_input" class="id_upload file_input absolute lg:right-[2rem] opacity-0" >
                                 </div>
                                 <small class="personal_info_error text-red-500 opacity-0"></small>
                             </div>
@@ -274,7 +274,7 @@
        
                            <div class="flex flex-col gap-2">
                                <label for="guarantor_number">Guarantor Phone number<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                               <input type="tel" name="guarantor_number" placeholder="Guarantor Phone number" minlength="11" maxlength="11" id="loan_input" class="guarantor_number w-full h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                               <input type="tel" name="guarantor_number" placeholder="Guarantor Phone number" maxlength="11" id="loan_input" class="guarantor_number w-full h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                <small class="loan_error text-red-500 opacity-0"></small>
                            </div>
                         </div>
@@ -326,7 +326,7 @@
                                         <span class="text-[6.6px] lg:text-[10.86px] text-[#121A26]">Choose file</span> <br>
                                         PNG, JPEG under 15MB
                                     </p>
-                                    <input type="file" name="receipt_upload" accept="image/*" class="receipt_upload file_input absolute lg:right-[2rem] opacity-0" >
+                                    <input type="file" name="collateral_receipt" class="receipt_upload file_input absolute lg:right-[2rem] opacity-0" >
                                 </div>
 
                                 <small class="collateral_error text-red-500 opacity-0"></small>
@@ -367,7 +367,7 @@
         
                             <div class="flex flex-col gap-2">
                                 <label for="business_contact">Company or business Guarantor Phone Number: <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                <input type="text" name="business_contact" placeholder="Company or business Guarantor Phone Number" id="business_input" class="business_contact h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                <input type="tel" name="business_contact" placeholder="Company or business Guarantor Phone Number" maxlength="11" id="business_input" class="business_contact h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                 <small class="business_error text-red-500 opacity-0"></small>
                             </div>
                         </div>

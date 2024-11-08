@@ -172,6 +172,7 @@ const accError = document.querySelectorAll('.acc_error');
  
 
 const fileError = document.querySelectorAll('.file_input_error');
+console.log(fileError);
 const collateralFileError = document.querySelector('.collateral_file_error');
 
 
@@ -232,9 +233,9 @@ personalInfoInput.forEach((input, index) => {
                     input.classList.add('border-[#C9C9C9]');
                     personalInfoError[index].classList.add('opacity-0');
 
-                    fileError.forEach((error, index) => {
-                        error[index].classList.add('border-[#C9C9C9]');
-                        error[index].classList.remove('border-red-500');
+                    fileError.forEach((error) => {
+                            error.classList.add('border-[#C9C9C9]');
+                            error.classList.remove('border-red-500');
                     });
                 }
             })
@@ -274,6 +275,9 @@ collateralDetailsInput.forEach((input, index) => {
                     input.classList.remove('border-red-500');
                     input.classList.add('border-[#C9C9C9]');
                     collateralError[index].classList.add('opacity-0');
+
+                    collateralFileError.classList.add('border-[#C9C9C9]');
+                    collateralFileError.classList.remove('border-red-500');
                 }
             })
         }
@@ -461,7 +465,7 @@ next_page5.addEventListener('click', (e) => {
 });
 
 // submitForm.addEventListener('click', (e) => {
-
+//         e.preventDefault();
 //     if(accDetails.length === 0) {
 //         accError.forEach( (error) => {
 //             error.classList.remove('opacity-0');
@@ -471,6 +475,7 @@ next_page5.addEventListener('click', (e) => {
 //                 input.classList.remove('border-[#C9C9C9]');
 //                 input.classList.add('border-red-500');
 //             });
+
 //         });
 
 //     };
@@ -554,57 +559,31 @@ back_page4.addEventListener('click', (e) => {
 
 });
 
+// Handling email error
+const emailError = document.querySelector(`.email_error`);
 
-// uploading file to Cloudinary and returning a url
-const uploadFile = async (file) => {
+emailInput.addEventListener(`blur`, (e) => {
+    e.preventDefault();
+    if(!e.target.value.includes(`@`) && !e.target.value.endsWith(`.com`)) {
+        e.target.classList.remove(`border-[#C9C9C9]`);
+        e.target.classList.add(`border-red-500`);
 
-    const formData = new FormData();
-    formData.append("file", file );
-    formData.append("upload_preset", "f2hmybal");
+        emailError.innerHTML = `Incorrect email format`;
+        emailError.classList.remove(`opacity-0`);
+    } else if(e.target.value.includes(`@`) && e.target.value.endsWith(`.com`)) {
+        e.target.classList.add(`border-[#C9C9C9]`);
+        e.target.classList.remove(`border-red-500`);
 
-    try {
-        const response = await fetch(
-            "https://api.cloudinary.com/v1_1/dzv3mffqp/upload",
-            {
-                method : "POST",
-                body : formData,
-            });           
-    
-        if (response.ok) {
-            const imageData = await response.json();
-            console.log(`Upload Successful:`, imageData);
-            return imageData.secure_url;
-        } else {
-            const imageErrorData = await response.json();
-            console.error(`Upload Failed:`, imageErrorData);
-            return null;
-        };
-    } catch (error) {
-        console.error(`Error:`, error);
-        return null;
+        emailError.innerHTML = ``;
+        emailError.classList.add(`opacity-0`);
     }
-        
-};
+});
+
 
 //submitting the main form data
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // getting all file input tags
-    const fileInputs = document.querySelectorAll(`input[type="file"]`);
-    const allImageUrls = [];
-
-    // looping through each file input and adding the cloudinary url to an array
-    for (const fileInput of fileInputs) {
-        for (const file of fileInput.files) {
-            const url = await uploadFile(file);
-
-            if (url) {
-                allImageUrls.push(url);
-            }
-        }
-    };
- 
     //Initializing the data object witth basic form data
    const data = {
     first_name : firstNameInput.value,
@@ -617,8 +596,10 @@ form.addEventListener("submit", async (e) => {
     marital_status : maritalStatsInput.value,
     next_of_kin : nokInput.value,
     next_of_kin_phone_number : nokNumInput.value,
+    selfie_picture : selfieUpload.files[0],
+    id_document : idUpload.files[0],
 
-    first_time_application : eligibilityInput.value,
+    first_time_application : Boolean(eligibilityInput.value),
     requested_amount : Number(`${amountInput.value.replace(',' , '').trim()}`),
     loan_circle : durationInput.value,
     purpose_of_loan : purposeInput.value,
@@ -631,6 +612,7 @@ form.addEventListener("submit", async (e) => {
     phone_imei : phoneImeiInput.value,
     phone_model : phoneModelInput.value,
     phone_condition : phoneConInput.value,
+    collateral_receipt : receiptUpload.files[0],
 
     company_name : businessNameInput.value,
     company_address : businessAddInput.value,
@@ -642,29 +624,16 @@ form.addEventListener("submit", async (e) => {
     account_number : accNumInput.value,
    };
 
-   //appending urls stored in the array to the form data object
-   allImageUrls.forEach((url, i) => {
-        if(i === 0) data.selfie_picture = url;
-        if(i === 1) data.id_document = url;
-        if(i === 2) data.collateral_receipt = url;
-    });
-
     //converting data to FormData
    const formData = new FormData();
    Object.entries(data).forEach(([key, value]) => {
     formData.append(key, value);
    });
 
-//    const mainData = Object.fromEntries(formData.entries());
-
-//    const jsonData = JSON.stringify(mainData);
 
     try {
          const response = await fetch("https://quickaash-backend.onrender.com/api/loan-application/", {
             method: "POST",
-            headers: {
-                "Content-Type" : "application/json",
-            },
             body: formData,
          });
 
@@ -673,6 +642,8 @@ form.addEventListener("submit", async (e) => {
             console.log(`form submitted successfully`);
             // form.reset();
             // window.location.href = "application_form.html";
+
+            // include a load screen when submitting
 
          } else {
             console.log(await response.json());
