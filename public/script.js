@@ -555,8 +555,36 @@ back_page4.addEventListener('click', (e) => {
 });
 
 
+// uploading file to Cloudinary and returning a url
+const uploadFile = async (file) => {
 
+    const formData = new FormData();
+    formData.append("file", file );
+    formData.append("upload_preset", "f2hmybal");
 
+    try {
+        const response = await fetch(
+            "https://api.cloudinary.com/v1_1/dzv3mffqp/upload",
+            {
+                method : "POST",
+                body : formData,
+            });           
+    
+        if (response.ok) {
+            const imageData = await response.json();
+            console.log(`Upload Successful:`, imageData);
+            return imageData.secure_url;
+        } else {
+            const imageErrorData = await response.json();
+            console.error(`Upload Failed:`, imageErrorData);
+            return null;
+        };
+    } catch (error) {
+        console.error(`Error:`, error);
+        return null;
+    }
+        
+};
 
 //submitting the main form data
 form.addEventListener("submit", async (e) => {
@@ -570,7 +598,10 @@ form.addEventListener("submit", async (e) => {
     for (const fileInput of fileInputs) {
         for (const file of fileInput.files) {
             const url = await uploadFile(file);
-            allImageUrls.push(url);
+
+            if (url) {
+                allImageUrls.push(url);
+            }
         }
     };
  
@@ -613,9 +644,9 @@ form.addEventListener("submit", async (e) => {
 
    //appending urls stored in the array to the form data object
    allImageUrls.forEach((url, i) => {
-        if(i === 0) data.selfie_picture = `${url}`;
-        if(i === 1) data.id_document = `${url}`;
-        if(i === 2) data.collateral_receipt = `${url}`;
+        if(i === 0) data.selfie_picture = url;
+        if(i === 1) data.id_document = url;
+        if(i === 2) data.collateral_receipt = url;
     });
 
     //converting data to FormData
@@ -624,9 +655,9 @@ form.addEventListener("submit", async (e) => {
     formData.append(key, value);
    });
 
-   const mainData = Object.fromEntries(formData.entries());
+//    const mainData = Object.fromEntries(formData.entries());
 
-   const jsonData = JSON.stringify(mainData);
+//    const jsonData = JSON.stringify(mainData);
 
     try {
          const response = await fetch("https://quickaash-backend.onrender.com/api/loan-application/", {
@@ -634,7 +665,7 @@ form.addEventListener("submit", async (e) => {
             headers: {
                 "Content-Type" : "application/json",
             },
-            body: jsonData,
+            body: formData,
          });
 
          if(response.ok) {
@@ -653,27 +684,6 @@ form.addEventListener("submit", async (e) => {
 
 });
 
-// uploading file to cloudinary and returning a url
-const uploadFile = async (file) => {
 
-    const formData = new FormData();
-    formData.append("file", file );
-    formData.append("upload_preset", "f2hmybal");
-
-    const response = await fetch(
-        "https://api.cloudinary.com/v1_1/dzv3mffqp/upload",
-        {
-            method : "POST",
-            body : formData,
-        });           
-
-    if (response.ok) {
-        const imageData = await response.json();
-        return imageData.secure_url;
-    } else {
-        throw new Error(`Upload failed`);
-    };
-        
-};
 
 
