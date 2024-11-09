@@ -109,14 +109,14 @@
          
                             <div class="flex flex-col gap-[0.2rem]">
                                 <label for="contact">Phone number<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                <input type="tel" name="contact" placeholder="Phone number" maxlength="11" id="personal_input" class="phone_number h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#0e0404] font-[400]" >
+                                <input type="tel" name="contact" placeholder="Phone number" maxlength="11" id="personal_input" class="phone_number number_input h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#0e0404] font-[400]" >
                                 <small class="personal_info_error contact_error text-red-500 opacity-0"></small>
                             </div>
         
                             <div class="flex justify-between">
                                 <div class="flex flex-col gap-[0.2rem]">
                                     <label for="bvn">BVN <span class="text-[8.5px] lg:text-[14px]">(enter a valid BVN number)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                    <input type="text" name="bvn" placeholder="BVN" id="personal_input" class="bvn w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                    <input type="text" name="bvn" placeholder="BVN" maxlength="11" id="personal_input" class="bvn number_input w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <small class="personal_info_error text-red-500 opacity-0"></small>
                                 </div>
         
@@ -152,13 +152,13 @@
         
                                 <div class="flex flex-col gap-[0.2rem]">
                                     <label for="nok_number">Next of kin phone number  <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                    <input type="tel" name="nok" placeholder="Next of kin phone number" maxlength="11" id="personal_input" class="nok_number w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                    <input type="tel" name="nok" placeholder="Next of kin phone number" maxlength="11" id="personal_input" class="nok_number number_input w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <small class="personal_info_error text-red-500 opacity-0"></small>
                                 </div>
                             </div>
         
                             <!-- file upload -->
-                            <div class="flex flex-col gap-[0.2rem]">
+                            <div class="flex flex-col gap-[0.2rem] file_container">
                                 <label for="selfie_pic">Selfie picture<span class="text-[8.5px] lg:text-[14px]">(Take with Camera or Upload)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
         
                                 <div class="file_field relative w-full h-[46.78px] lg:h-[77px] flex flex-col justify-center items-center gap-[0.3rem] bg-[#F4FFFC] border file_input_error border-dashed border-[#CFD8DC] rounded-[20px]">
@@ -174,7 +174,7 @@
                                 <small class="personal_info_error text-red-500 opacity-0"></small>
                             </div>
         
-                            <div class="flex flex-col gap-[0.2rem]">
+                            <div class="flex flex-col gap-[0.2rem] file_container">
                                 <label for="Id_upload">Upload ID<span class="text-[8.5px] lg:text-[14px]">(International passport, National ID card)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
         
                                 <div class="file_field relative w-full h-[46.78px] lg:h-[77px] flex flex-col justify-center items-center gap-[0.3rem] bg-[#F4FFFC] file_input_error border border-dashed border-[#CFD8DC] rounded-[20px]">
@@ -212,7 +212,7 @@
        
                            <div class="flex flex-col gap-2">
                                <label for="loan_amount">Requested Amount (NGN) <span class="text-[8.5px] lg:text-[14px]">(min NGN 5,000 and max NGN 5,000,000)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                               <input type="text" name="loan_amount" placeholder="Requested Amount" id="loan_input" class="loan_amount h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                               <input type="text" name="loan_amount" placeholder="Requested Amount" id="loan_input" class="loan_amount number_input h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                 <small class="loan_error text-red-500 opacity-0"></small>
                            </div>
        
@@ -241,7 +241,7 @@
                            <div class="flex justify-between">
                                <div class="flex flex-col gap-2">
                                    <label for="bvn">BVN <span class="text-[8.5px] lg:text-[14px]">(enter a valid BVN number)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                   <input type="text" name="bvn" placeholder="BVN" id="loan_input" class="bvn w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                   <input type="text" name="bvn" placeholder="BVN" maxlength="11" id="loan_input" class="bvn number_input w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                    <small class="loan_error text-red-500 opacity-0"></small>
                                </div>
        
@@ -274,7 +274,7 @@
        
                            <div class="flex flex-col gap-2">
                                <label for="guarantor_number">Guarantor Phone number<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                               <input type="tel" name="guarantor_number" placeholder="Guarantor Phone number" maxlength="11" id="loan_input" class="guarantor_number w-full h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                               <input type="tel" name="guarantor_number" placeholder="Guarantor Phone number" maxlength="11" id="loan_input" class="guarantor_number number_input w-full h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                <small class="loan_error text-red-500 opacity-0"></small>
                            </div>
                         </div>
@@ -367,7 +367,7 @@
         
                             <div class="flex flex-col gap-2">
                                 <label for="business_contact">Company or business Guarantor Phone Number: <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                <input type="tel" name="business_contact" placeholder="Company or business Guarantor Phone Number" maxlength="11" id="business_input" class="business_contact h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                <input type="tel" name="business_contact" placeholder="Company or business Guarantor Phone Number" maxlength="11" id="business_input" class="business_contact number_input h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                 <small class="business_error text-red-500 opacity-0"></small>
                             </div>
                         </div>
@@ -395,13 +395,13 @@
     
                             <div class="flex flex-col gap-2">
                                 <label for="account_num">Account Number <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                <input type="text" name="account_num" placeholder="Account Number" id="acc_input" class="account_num h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                <input type="text" name="account_num" placeholder="Account Number" maxlength="10" id="acc_input" class="account_num number_input h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                 <small class="acc_error text-red-500 opacity-0"></small>
                             </div>
     
                             <div class="flex flex-col gap-2">
                                 <label for="verify_account">Verify Account Number <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                <input type="text" name="verify_account" placeholder="Verify Account Number" id="acc_input" class="verify_account h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                <input type="text" name="verify_account" placeholder="Verify Account Number" maxlength="10" id="acc_input" class="verify_account number_input h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                 <small class="acc_error match_error text-red-500 opacity-0"></small>
                             </div>
                         </div>

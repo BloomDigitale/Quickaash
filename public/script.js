@@ -171,9 +171,117 @@ const businessError = document.querySelectorAll('.business_error');
 const accError = document.querySelectorAll('.acc_error');
  
 
-const fileError = document.querySelectorAll('.file_input_error');
-console.log(fileError);
-const collateralFileError = document.querySelector('.collateral_file_error');
+
+
+// Handling email error
+const emailError = document.querySelector(`.email_error`);
+
+emailInput.addEventListener(`input`, validateEmail);
+
+    function validateEmail() {
+        const email = emailInput.value.trim();
+
+        if(email === "") {
+            showError(`Can't be empty`);
+            return;
+        }
+    
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if(!emailPattern.test(email)) {
+            showError(`Please entera a valid email (e.g., name@example.com)`);
+            return;
+        }
+    
+        if(/[^\w.@-]/.test(email)) {
+            showError(`Email contains invalid characters.`);
+            return;
+        }
+    
+        // checking for the position of '@' and '.' 
+        const atIndex = email.indexOf(`@`);
+        const dotIndex = email.lastIndexOf(`.`);
+    
+        if(atIndex === -1 || atIndex > dotIndex) {
+            showError(`The domain in your email should be formatted correctly (e.g., example.com).`);
+            return;
+        }
+    
+        // check for at least 2 characters after the last dot(domain extension)
+        const domainExtension = email.substring(dotIndex + 1);
+    
+        if (domainExtension.length < 2) {
+          showError(`The domain extension should be at least 2 characters (e.g., .com, .org).`);
+          return;
+        }
+    
+        // Check for length limits
+        if (email.length > 254) {
+          showError(`Email is too long. Maximum length is 254 characters.`);
+          return;
+        }
+    
+            emailInput.classList.add(`border-[#C9C9C9]`);
+            emailInput.classList.remove(`border-red-500`);
+    
+            emailError.textContent = ``;
+            emailError.classList.add(`opacity-0`); 
+    };
+
+
+    function showError(message) {
+        emailInput.classList.remove(`border-[#C9C9C9]`);
+        emailInput.classList.add(`border-red-500`);
+
+        emailError.textContent = message;
+        emailError.classList.remove(`opacity-0`);
+    };
+
+// changing file upload look on image selection
+const fileFields = document.querySelectorAll(`.file_field`);
+
+fileFields.forEach((fileField, index) => {
+ const file = fileField.querySelector(`.file_input`);
+
+//adding a change event to check if a file has been selected
+ file.addEventListener(`change`, (e) => {
+
+    if (e.target === file) {
+
+        const cloudIcon = fileField.querySelector(`.cloud_icon`);
+        const fileFormat = fileField.querySelector(`.file_format`);
+
+        if(file.files.length > 0) {
+    
+            // Removing the cloud icon and upload text
+            if(cloudIcon) cloudIcon.remove();
+            if(fileFormat) fileFormat.remove();
+
+            // Change border color
+            fileField.classList.remove('border-red-500');
+            fileField.classList.add('border-[#C9C9C9]');
+    
+            // Adding a new Icon
+            const successIcon = document.createElement(`ion-icon`);
+            successIcon.setAttribute(`name`, `document-attach-outline`); 
+            successIcon.classList.add(`text-[#004D3F]`, `text-[10px]`, `text-[18px]`);
+            fileField.appendChild(successIcon);
+        }
+    } 
+    
+ })
+
+
+});
+
+
+// making sure some input tags receive only number values
+const numberInputs = document.querySelectorAll(`.number_input`);
+
+numberInputs.forEach(input => {
+    input.addEventListener(`input`, (e) => {
+        e.target.value = e.target.value.replace(/\D/g, '');
+    });
+});
 
 
 // checking for input changes function
@@ -219,6 +327,11 @@ const accInputChange = (e) => {
 };
 
 
+// file upload errors
+const fileError = document.querySelectorAll('.file_input_error');
+const fileContainer = document.querySelectorAll(`.file_container`);
+const collateralFileError = document.querySelector('.collateral_file_error');
+
 
 personalInfoInput.forEach((input, index) => {
     input.addEventListener('blur', personalInfoInputChange);
@@ -232,11 +345,6 @@ personalInfoInput.forEach((input, index) => {
                     input.classList.remove('border-red-500');
                     input.classList.add('border-[#C9C9C9]');
                     personalInfoError[index].classList.add('opacity-0');
-
-                    fileError.forEach((error) => {
-                            error.classList.add('border-[#C9C9C9]');
-                            error.classList.remove('border-red-500');
-                    });
                 }
             })
         }
@@ -559,55 +667,8 @@ back_page4.addEventListener('click', (e) => {
 
 });
 
-// Handling email error
-const emailError = document.querySelector(`.email_error`);
-
-emailInput.addEventListener(`blur`, (e) => {
-    e.preventDefault();
-    if(!e.target.value.includes(`@`) && !e.target.value.endsWith(`.com`)) {
-        e.target.classList.remove(`border-[#C9C9C9]`);
-        e.target.classList.add(`border-red-500`);
-
-        emailError.innerHTML = `Incorrect email format`;
-        emailError.classList.remove(`opacity-0`);
-    } else if(e.target.value.includes(`@`) && e.target.value.endsWith(`.com`)) {
-        e.target.classList.add(`border-[#C9C9C9]`);
-        e.target.classList.remove(`border-red-500`);
-
-        emailError.innerHTML = ``;
-        emailError.classList.add(`opacity-0`);
-    }
-});
-
-// changing file upload look on image selection
-const fileFields = document.querySelectorAll(`.file_field`);
 
 
-fileFields.forEach((fileField, index) => {
- const file = fileField.querySelector(`.file_input`);
-
- //adding a blur event to check if a file has been selected
- file.addEventListener(`change`, (e) => {
-
-    if (e.target === file) {
-        if(file.files.length > 0) {
-            const cloudIcon = fileField.querySelector(`.cloud_icon`);
-            const fileFormat = fileField.querySelector(`.file_format`);
-    
-            // Removing the cloud icon and upload text
-            if(cloudIcon) cloudIcon.remove();
-            if(fileFormat) fileFormat.remove();
-    
-            // Adding a new Icon
-            const successIcon = document.createElement(`ion-icon`);
-            successIcon.setAttribute(`name`, `document-attach-outline`); 
-            successIcon.classList.add(`text-[#004D3F]`, `text-[10px]`, `text-[18px]`);
-            fileField.appendChild(successIcon);
-        }
-    } 
-    
- })
-});
 
 
 //submitting the main form data
