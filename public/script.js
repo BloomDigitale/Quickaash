@@ -579,6 +579,36 @@ emailInput.addEventListener(`blur`, (e) => {
     }
 });
 
+// changing file upload look on image selection
+const fileFields = document.querySelectorAll(`.file_field`);
+
+
+fileFields.forEach((fileField, index) => {
+ const file = fileField.querySelector(`.file_input`);
+
+ //adding a blur event to check if a file has been selected
+ file.addEventListener(`change`, (e) => {
+
+    if (e.target === file) {
+        if(file.files.length > 0) {
+            const cloudIcon = fileField.querySelector(`.cloud_icon`);
+            const fileFormat = fileField.querySelector(`.file_format`);
+    
+            // Removing the cloud icon and upload text
+            if(cloudIcon) cloudIcon.remove();
+            if(fileFormat) fileFormat.remove();
+    
+            // Adding a new Icon
+            const successIcon = document.createElement(`ion-icon`);
+            successIcon.setAttribute(`name`, `document-attach-outline`); 
+            successIcon.classList.add(`text-[#004D3F]`, `text-[10px]`, `text-[18px]`);
+            fileField.appendChild(successIcon);
+        }
+    } 
+    
+ })
+});
+
 
 //submitting the main form data
 form.addEventListener("submit", async (e) => {
