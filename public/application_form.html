@@ -17,6 +17,23 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script defer src="script.js"></script>
 
+    <style>
+        .sending {
+            display: inline-block;
+            animation: flying 1s ease-in-out infinite;
+        }
+
+        @keyframes flying {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(2px, -2px);
+            }
+        }
+    </style>
+
 </head>
 <body class="relative font-satoshi">
     <header  class=" lg:bg-[#EDF3F1] flex flex-col lg:overflow-hidden">
@@ -500,7 +517,7 @@
     
                             <div class="flex gap-2 items-center">
                                 <input type="checkbox" name="" id="" class="terms_validator w-[14.54px] h-[14.54px] lg:w-[25.5px] lg:h-[25.5px]">
-                                <p class="text-[8.56px] lg:text-[15px] leading-[11.04px] lg:leading-[19.35px] font-[400]">
+                                <p class="validator_text text-[8.56px] lg:text-[15px] leading-[11.04px] lg:leading-[19.35px] font-[400]">
                                     I have read, understood and accept all the Terms and Conditions & Privacy Policy contained
                                     on this page and I willingly like to proceed with this loan application.
                                 </p>

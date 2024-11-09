@@ -73,8 +73,7 @@ const back_page2 = document.querySelector('.back_page_2');
 const back_page3 = document.querySelector('.back_page_3');
 const back_page4 = document.querySelector('.back_page_4');
 
-const validator = document.querySelector('.terms_validator');
-const submitForm = document.querySelector('.submit');
+
 
 
 // Form variables
@@ -753,8 +752,33 @@ back_page4.addEventListener('click', (e) => {
 
 });
 
+// Working with the submit button
+const validator = document.querySelector('.terms_validator');
+const validatorText = document.querySelector('.validator_text');
+let validatorCheck;
+validator.addEventListener(`click`, () => {
+    validatorCheck = true;
+    if(validatorText.classList.contains(`text-red-500`)) {
+        validatorText.classList.remove(`text-red-500`);
+    }
+});
 
 
+const submitForm = document.querySelector('.submit');
+const sendIcon = document.querySelector('.sending')
+
+submitForm.addEventListener(`click`, (e) => {
+
+    if (validatorCheck !== true) {
+        e.preventDefault();
+        validatorText.classList.add(`text-red-500`);
+
+    } else {
+        e.target.textContent =``;
+        e.target.innerHTML = `<ion-icon name="paper-plane-outline" class="sending text-[16px]"></ion-icon>`;
+    }
+  
+});
 
 
 //submitting the main form data
@@ -815,14 +839,18 @@ form.addEventListener("submit", async (e) => {
          });
 
          if(response.ok) {
-
+    
             console.log(`form submitted successfully`);
+
+            submitForm.innerHTML = `<ion-icon name="cloud-done-outline" class="sent text-[16px]"></ion-icon>`;
+
             form.reset();
-            window.location.href = "application_form.html";
+            // window.location.href = "application_form.html";
 
             // include a load screen when submitting
 
          } else {
+            submitForm.innerHTML = `Submit Application`;
             console.log(await response.json());
             console.log(`form submission unsuccessful`);
          }
