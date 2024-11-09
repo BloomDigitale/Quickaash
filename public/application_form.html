@@ -78,6 +78,46 @@
 
     <main class="grid grid-cols-1 lg:grid-cols-2 content-between w-full lg:h-[1540px]">
 
+        <!-- Form upload success and failure message page -->
+        <section class="submission_message z-30 absolute top-0 h-[100vh] w-full hidden flex-col justify-center items-center">
+
+            <div class="success_page hidden flex-col justify-between items-center gap-[1rem] p-4 w-[320px] lg-[400px] h-[300px] lg:h-[400px] bg-white rounded-[0.5rem] shadow-sm">
+
+                <ion-icon name="cloud-done-outline" class="text-[#004D3F] text-[50px]"></ion-icon>
+
+                <p class="text-[#004D3F] text-[18px] text-center font-[700]">
+                    Form submitted successfully <br>
+                    <span class="text-[#474747] text-[12px] font-[400] leading-[7px]">
+                        Your application is being reviewed, 
+                        we will reach out to you after 
+                        the review is complete.
+                    </span>
+                </p>
+
+                <div class="flex justify-between items-center self-start w-full">
+                    <a href="application_form.html" class=" w-[102.33px] h-[34.5px] lg:w-[151px] lg:h-[51px] flex items-center justify-center bg-white text-[12.67px] lg:text-[18.7px] text-[#004C3F] font-[500] border border-[#004C3F] rounded-[19.8px] lg:rounded-[29.22px]">Back</a>
+                    <a href="../index.html" class=" w-[102.33px] h-[34.5px] lg:w-[151px] lg:h-[51px] flex items-center justify-center bg-[#C4F86A] text-[12.67px] lg:text-[18.7px] text-[#004C3F] font-[500] rounded-[19.8px] lg:rounded-[29.22px]">Home</a>
+                </div>
+            </div>
+
+            <div class="failed_page hidden flex-col justify-between items-center gap-[1rem] p-4 w-[320px] lg-[400px] h-[300px] lg:h-[400px] bg-white rounded-[0.5rem] shadow-sm">
+
+                <ion-icon name="cloud-offline-outline" class="text-red-500 text-[50px]"></ion-icon>
+
+                <p class="text-red-500 text-[18px] text-center font-[700]">
+                    Form submission unsuccessfully <br>
+                    <span class="text-[#474747] text-[12px] font-[400] leading-[7px]">
+                        Please fill in the correct information on the form.
+                    </span>
+                </p>
+
+                <div class="flex justify-between items-center self-start w-full">
+                    <a href="application_form.html" class=" w-[102.33px] h-[34.5px] lg:w-[151px] lg:h-[51px] flex items-center justify-center bg-white text-[12.67px] lg:text-[18.7px] text-[#004C3F] font-[500] border border-[#004C3F] rounded-[19.8px] lg:rounded-[29.22px]">Back</a>
+                </div>
+            </div>
+
+        </section>
+
         <section class="flex flex-col place-self-center gap-[0.3rem] h-full">
 
             <a href="../index.html" class="hidden lg:block mt-[1rem]">
@@ -549,7 +589,6 @@
             </form>
         </section>
 
-
         <section class="hidden lg:flex flex-col">
             <div class="hero_1 relative lg:w-[710px] lg:h-[1540px] bg-no-repeat bg-cover lg:bg-background-form1 hidden lg:flex justify-center items-end">
                 <p class="text-[30px] font-[500] leading-[45px] text-white mb-[3rem]">
@@ -611,7 +650,10 @@
                 <img src="../images/Ellipse_form.png" alt="" class="absolute right-0 bottom-0">
             </div>
         </section>
+
     </main>
+
+    
 
     <footer class="relative h-[505px] lg:h-[50px] bg-[#EDF3F1] flex justify-center items-end px-8 py-2 lg:pb-0">
         <div class=" lg:h-[50px] w-full lg:w-[1328.63px] text-[#004D3F] flex flex-col justify-between lg:justify-end">

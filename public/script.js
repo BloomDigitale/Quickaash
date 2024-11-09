@@ -285,41 +285,30 @@ numberInputs.forEach(input => {
 const personalInfoInputChange = (e) => {
     if(e.target.value !== "") {
         personalInfo.push(`${e.target.name} : ${e.target.value}`);
-
-    } else{
-        console.log(`Input empty: ${e.target.name}`);
     }
 };
 
 const loanInputChange = (e) => {
     if(e.target.value !== "") {
         loanDetails.push(`${e.target.name} : ${e.target.value}`); 
-    } else{
-        console.log(`Input empty: ${e.target.name}`);
     }
 };
 
 const collateralInputChange = (e) => {
     if(e.target.value !== "") {
         collateralDetails.push(`${e.target.name} : ${e.target.value}`); 
-    } else{
-        console.log(`Input empty: ${e.target.name}`);
     }
 };
 
 const businessInputChange = (e) => {
     if(e.target.value !== "") {
         businessDetails.push(`${e.target.name} : ${e.target.value}`);
-    } else{
-        console.log(`Input empty: ${e.target.name}`);
-    }
+    } 
 };
 
 const accInputChange = (e) => {
     if(e.target.value !== "") {      
         accDetails.push(`${e.target.name} : ${e.target.value}`);
-    } else{
-        console.log(`Input empty: ${e.target.name}`);
     }
 };
 
@@ -781,6 +770,12 @@ submitForm.addEventListener(`click`, (e) => {
 });
 
 
+const submissionMessage = document.querySelector(`.submission_message`)
+const successPage = document.querySelector(`.success_page`);
+const failedPage = document.querySelector(`.failed_page`);
+
+
+
 //submitting the main form data
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -839,20 +834,31 @@ form.addEventListener("submit", async (e) => {
          });
 
          if(response.ok) {
-    
-            console.log(`form submitted successfully`);
-
             submitForm.innerHTML = `<ion-icon name="cloud-done-outline" class="sent text-[16px]"></ion-icon>`;
 
-            form.reset();
-            // window.location.href = "application_form.html";
+            // bring successful upload page into view
+            setTimeout(() => {
+                form.reset();
+                submissionMessage.classList.remove(`hidden`);
+                submissionMessage.classList.add(`flex`);
+                successPage.classList.remove(`hidden`);
+                successPage.classList.add(`flex`);
+            }, 500);
 
-            // include a load screen when submitting
 
          } else {
             submitForm.innerHTML = `Submit Application`;
             console.log(await response.json());
             console.log(`form submission unsuccessful`);
+
+            // bring unsucessful upload page into view
+            setTimeout(() => {
+                form.reset();
+                submissionMessage.classList.remove(`hidden`);
+                submissionMessage.classList.add(`flex`);
+                failedPage.classList.remove(`hidden`);
+                failedPage.classList.add(`flex`);
+            }, 500);
          }
     } catch (e) {
         console.error(e);
