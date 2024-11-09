@@ -599,7 +599,7 @@ form.addEventListener("submit", async (e) => {
     selfie_picture : selfieUpload.files[0],
     id_document : idUpload.files[0],
 
-    first_time_application : Boolean(eligibilityInput.value),
+    first_time_applicant : eligibilityInput.value,
     requested_amount : Number(`${amountInput.value.replace(',' , '').trim()}`),
     loan_circle : durationInput.value,
     purpose_of_loan : purposeInput.value,
