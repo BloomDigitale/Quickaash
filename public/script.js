@@ -763,7 +763,6 @@ submitForm.addEventListener(`click`, (e) => {
         validatorText.classList.add(`text-red-500`);
 
     } else {
-        e.target.textContent =``;
         e.target.innerHTML = `<ion-icon name="paper-plane-outline" class="sending text-[16px]"></ion-icon>`;
     }
   
