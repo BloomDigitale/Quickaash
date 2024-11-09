@@ -172,7 +172,6 @@ const accError = document.querySelectorAll('.acc_error');
  
 
 
-
 // Handling email error
 const emailError = document.querySelector(`.email_error`);
 
@@ -226,7 +225,6 @@ emailInput.addEventListener(`input`, validateEmail);
             emailError.textContent = ``;
             emailError.classList.add(`opacity-0`); 
     };
-
 
     function showError(message) {
         emailInput.classList.remove(`border-[#C9C9C9]`);
@@ -469,7 +467,29 @@ next_page2.addEventListener('click', (e) => {
                 error.classList.add('border-red-500');
             })
         });
-    };
+    } else {
+        //only apply errors to empty fields
+        let hasEmptyFields = false;
+
+        personalInfoInput.forEach((input, i) => {
+            const error = personalInfoError[i];
+
+            if(input.value.trim() === "") {
+                hasEmptyFields = true;
+
+                // error classes
+                error.classList.remove('opacity-0');
+                error.innerHTML = `Can't be empty`;
+                input.classList.remove('border-[#C9C9C9]');
+                input.classList.add('border-red-500');
+            } else {
+                error.classList.add('opacity-0');
+                error.innerHTML = ``;
+                input.classList.remove('border-red-500');
+                input.classList.add('border-[#C9C9C9]');
+            }
+        });
+    }
     
 });
 
@@ -502,7 +522,29 @@ next_page3.addEventListener('click', (e) => {
             });
           
         });
-    };
+    } else {
+        //only apply errors to empty fields
+        let hasEmptyFields = false;
+
+        loanDetailsInput.forEach((input, i) => {
+            const error = loanError[i];
+
+            if(input.value.trim() === "") {
+                hasEmptyFields = true;
+
+                // error classes
+                error.classList.remove('opacity-0');
+                error.innerHTML = `Can't be empty`;
+                input.classList.remove('border-[#C9C9C9]');
+                input.classList.add('border-red-500');
+            } else {
+                error.classList.add('opacity-0');
+                error.innerHTML = ``;
+                input.classList.remove('border-red-500');
+                input.classList.add('border-[#C9C9C9]');
+            }
+        });
+    }
 
 });
 
@@ -538,7 +580,29 @@ next_page4.addEventListener('click', (e) => {
             collateralFileError.classList.add('border-red-500');
           
         });
-    };
+    } else {
+        //only apply errors to empty fields
+        let hasEmptyFields = false;
+
+        collateralDetailsInput.forEach((input, i) => {
+            const error = collateralError[i];
+
+            if(input.value.trim() === "") {
+                hasEmptyFields = true;
+
+                // error classes
+                error.classList.remove('opacity-0');
+                error.innerHTML = `Can't be empty`;
+                input.classList.remove('border-[#C9C9C9]');
+                input.classList.add('border-red-500');
+            } else {
+                error.classList.add('opacity-0');
+                error.innerHTML = ``;
+                input.classList.remove('border-red-500');
+                input.classList.add('border-[#C9C9C9]');
+            }
+        });
+    }
 
 });
 
@@ -569,7 +633,29 @@ next_page5.addEventListener('click', (e) => {
                 input.classList.add('border-red-500');
             });
         });
-    };
+    } else {
+        //only apply errors to empty fields
+        let hasEmptyFields = false;
+
+        businessDetailsInput.forEach((input, i) => {
+            const error = businessError[i];
+
+            if(input.value.trim() === "") {
+                hasEmptyFields = true;
+
+                // error classes
+                error.classList.remove('opacity-0');
+                error.innerHTML = `Can't be empty`;
+                input.classList.remove('border-[#C9C9C9]');
+                input.classList.add('border-red-500');
+            } else {
+                error.classList.add('opacity-0');
+                error.innerHTML = ``;
+                input.classList.remove('border-red-500');
+                input.classList.add('border-[#C9C9C9]');
+            }
+        });
+    }
 });
 
 // submitForm.addEventListener('click', (e) => {
