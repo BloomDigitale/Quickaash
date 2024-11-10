@@ -143,7 +143,7 @@
                     </p>
             </div>                            
 
-            <form enctype="multipart/form-data" id="form" class="flex flex-col justify-between mb-[2rem] gap-4 w-[373px] lg:w-[602px] h-[881px] lg:h-full text-[10.93px] lg:text-[18px] text-[#212121] font-[700]" novalidate>
+            <form enctype="multipart/form-data" id="form" class="flex flex-col justify-between mb-[2rem] gap-4 min-w-[300px] max-w-[375px] lg:w-[602px] h-[881px] lg:h-full text-[10.93px] lg:text-[18px] text-[#212121] font-[700]" novalidate>
 
                 <section class="form_section w-full pt-[1rem]">
                     <section id="page_1" class="step_1 flex flex-col gap-[1.5rem] w-[full]">
@@ -155,13 +155,13 @@
                             <div class="flex justify-between">
                                 <div class="flex flex-col gap-[0.2rem]">
                                     <label for="first_name">First name <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                    <input type="text" name="first_name" placeholder="First name" id="personal_input" class="first_name w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                    <input type="text" name="first_name" placeholder="First name" id="personal_input" class="first_name min-w-[140px]  max-w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <small class="personal_info_error text-red-500 opacity-0"></small>
                                 </div>
         
                                 <div class="flex flex-col gap-[0.2rem]">
                                     <label for="last_name">Last name <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                    <input type="text" name="last_name" placeholder="Last name" id="personal_input" class="last_name w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                    <input type="text" name="last_name" placeholder="Last name" id="personal_input" class="last_name min-w-[140px]  max-w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <small class="personal_info_error text-red-500 opacity-0"></small>
                                 </div>
                             </div>
@@ -181,13 +181,13 @@
                             <div class="flex justify-between">
                                 <div class="flex flex-col gap-[0.2rem]">
                                     <label for="bvn">BVN <span class="text-[8.5px] lg:text-[14px]">(enter a valid BVN number)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                    <input type="text" name="bvn" placeholder="BVN" maxlength="11" id="personal_input" class="bvn number_input w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                    <input type="text" name="bvn" placeholder="BVN" maxlength="11" id="personal_input" class="bvn number_input min-w-[140px]  max-w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <small class="personal_info_error text-red-500 opacity-0"></small>
                                 </div>
         
                                 <div class="flex flex-col gap-[0.2rem]">
                                     <label for="dob">Date of birth <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                    <input type="date" name="dob" max="2006-12-31" id="personal_input" class="dob w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                    <input type="date" name="dob" max="2006-12-31" id="personal_input" class="dob min-w-[140px]  max-w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <small class="personal_info_error text-red-500 opacity-0"></small>
                                 </div>
                             </div>
@@ -200,7 +200,7 @@
     
                             <div class="flex flex-col gap-[0.2rem] w-[50%]">
                                 <label for="marital_status">Marital staus<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                <select name="marital_status" id="personal_input" class="marital_status w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                <select name="marital_status" id="personal_input" class="marital_status min-w-[140px]  max-w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <option value=""></option>
                                     <option value="married">Married</option>
                                     <option value="single">Single</option>
@@ -211,13 +211,13 @@
                             <div class="flex justify-between">
                                 <div class="flex flex-col gap-[0.2rem]">
                                     <label for="nok">Next of kin<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                    <input type="text" name="nok" placeholder="Next of kin" id="personal_input" class="next_of_kin w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                    <input type="text" name="nok" placeholder="Next of kin" id="personal_input" class="next_of_kin min-w-[140px]  max-w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <small class="personal_info_error text-red-500 opacity-0"></small>
                                 </div>
         
                                 <div class="flex flex-col gap-[0.2rem]">
                                     <label for="nok_number">Next of kin phone number  <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                    <input type="tel" name="nok" placeholder="Next of kin phone number" maxlength="11" id="personal_input" class="nok_number number_input w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                    <input type="tel" name="nok" placeholder="Next of kin phone number" maxlength="11" id="personal_input" class="nok_number number_input min-w-[140px]  max-w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <small class="personal_info_error text-red-500 opacity-0"></small>
                                 </div>
                             </div>
@@ -306,13 +306,13 @@
                            <div class="flex justify-between">
                                <div class="flex flex-col gap-2">
                                    <label for="bvn">BVN <span class="text-[8.5px] lg:text-[14px]">(enter a valid BVN number)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                   <input type="text" name="bvn" placeholder="BVN" maxlength="11" id="loan_input" class="bvn number_input w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                   <input type="text" name="bvn" placeholder="BVN" maxlength="11" id="loan_input" class="bvn number_input min-w-[140px]  max-w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                    <small class="loan_error text-red-500 opacity-0"></small>
                                </div>
        
                                <div class="flex flex-col gap-2">
                                    <label for="dob">Date of birth <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                   <input type="date" name="dob" max="2006-12-31" id="loan_input" class="dob w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
+                                   <input type="date" name="dob" max="2006-12-31" id="loan_input" class="dob min-w-[140px]  max-w-[170.1px] h-[33.41px] lg:w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                     <small class="loan_error text-red-500 opacity-0"></small>
                                </div>
                            </div>
@@ -473,7 +473,7 @@
                     </section>
                 </section>
 
-                <section class="flex flex-col justify-end form_nav w-[373px] lg:w-[602px]">
+                <section class="flex flex-col justify-end form_nav min-w-[300px] max-w-[350px] lg:w-[602px]">
                     <div class="nav1 flex justify-between items-center">
 
                         <div class="flex items-center gap-4">
