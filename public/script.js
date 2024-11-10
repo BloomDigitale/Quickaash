@@ -842,6 +842,12 @@ form.addEventListener("submit", async (e) => {
                 submissionMessage.classList.add(`flex`);
                 successPage.classList.remove(`hidden`);
                 successPage.classList.add(`flex`);
+
+                if(submissionMessage.classList.contains(`flex`)) {
+                    document.body.classList.add('no-scroll');
+                } else {
+                    document.body.classList.remove('no-scroll');
+                }
             }, 500);
 
 
@@ -857,6 +863,12 @@ form.addEventListener("submit", async (e) => {
                 submissionMessage.classList.add(`flex`);
                 failedPage.classList.remove(`hidden`);
                 failedPage.classList.add(`flex`);
+
+                if(submissionMessage.classList.contains(`flex`)) {
+                    document.body.classList.add('no-scroll');
+                } else {
+                    document.body.classList.remove('no-scroll');
+                }
             }, 500);
          }
     } catch (e) {
