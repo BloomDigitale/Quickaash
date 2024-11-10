@@ -167,7 +167,6 @@ const personalInfoError = document.querySelectorAll('.personal_info_error');
 const loanError = document.querySelectorAll('.loan_error');
 const collateralError = document.querySelectorAll('.collateral_error');
 const businessError = document.querySelectorAll('.business_error');
-const accError = document.querySelectorAll('.acc_error');
  
 
 
@@ -271,6 +270,7 @@ fileFields.forEach((fileField, index) => {
 });
 
 
+
 // making sure some input tags receive only number values
 const numberInputs = document.querySelectorAll(`.number_input`);
 
@@ -278,6 +278,38 @@ numberInputs.forEach(input => {
     input.addEventListener(`input`, (e) => {
         e.target.value = e.target.value.replace(/\D/g, '');
     });
+});
+
+// making sure the loan amount input is within 5000 - 5000000
+const amountError = document.querySelector(`.amount_error`);
+
+amountInput.addEventListener(`blur`, () => {
+    const amountValue = parseInt(amountInput.value, 10);
+
+    if(amountValue < 5000 || amountValue > 5000000) {
+        amountInput.value = "";
+        amountInput.classList.add(`border-red-500`);
+        amountError.textContent = `Please input an amount between 5,000 - 5,000,000`;
+        amountError.classList.remove(`opacity-0`);
+    } else {
+        amountInput.classList.remove(`border-red-500`);
+        amountError.classList.add(`opacity-0`);
+    }
+});
+
+// account number verification
+const accError = document.querySelector('.match_error');
+
+verifyAccInput.addEventListener (`input`, (e) => {
+    if (verifyAccInput.value === accNumInput.value) {
+        accError.textContent = ``;
+        accError.classList.add(`opacity-0`);
+        verifyAccInput.classList.remove(`border-red-500`);
+    } else {
+        accError.textContent = `Account number must match`;
+        accError.classList.remove(`opacity-0`);
+        verifyAccInput.classList.add(`border-red-500`);
+    }
 });
 
 
@@ -769,10 +801,10 @@ submitForm.addEventListener(`click`, (e) => {
 });
 
 
+// form submission messages
 const submissionMessage = document.querySelector(`.submission_message`)
 const successPage = document.querySelector(`.success_page`);
 const failedPage = document.querySelector(`.failed_page`);
-
 
 
 //submitting the main form data

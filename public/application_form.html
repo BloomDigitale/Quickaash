@@ -45,15 +45,15 @@
 </head>
 <body class="relative font-satoshi">
      <!-- Form upload success and failure message page -->
-     <section class="submission_message z-[9999] fixed inset-0 h-[100vh] w-full hidden flex-col justify-center items-center">
+    <section class="submission_message z-[9999] fixed inset-0 h-[100vh] w-full hidden flex-col justify-center items-center">
 
-        <div class="success_page flex flex-col justify-between items-center gap-[1rem] p-4 w-[320px] lg-[400px] h-[300px] lg:h-[400px] bg-white rounded-[0.5rem] shadow-sm">
+        <div class="success_page hidden flex-col justify-between items-center gap-[1rem] p-4 w-[320px] lg:w-[600px] h-[300px] lg:h-[400px] bg-white rounded-[0.5rem] shadow-sm">
 
-            <ion-icon name="cloud-done-outline" class="text-[#004D3F] text-[50px]"></ion-icon>
+            <ion-icon name="cloud-done-outline" class="text-[#004D3F] text-[50px] lg:text-[70px]"></ion-icon>
 
-            <p class="text-[#004D3F] text-[18px] text-center font-[700]">
+            <p class="text-[#004D3F] text-[18px] lg:text-[30px] text-center font-[700]">
                 Form submitted successfully <br>
-                <span class="text-[#474747] text-[12px] font-[400] leading-[7px]">
+                <span class="text-[#474747] text-[12px] lg:text-[15px] font-[400] leading-[7px]">
                     Your application is being reviewed, 
                     we will reach out to you after 
                     the review is complete.
@@ -66,13 +66,13 @@
             </div>
         </div>
 
-        <div class="failed_page hidden flex-col justify-between items-center gap-[1rem] p-4 w-[320px] lg-[400px] h-[300px] lg:h-[400px] bg-white rounded-[0.5rem] shadow-sm">
+        <div class="failed_page hidden flex-col justify-between items-center gap-[1rem] p-4 w-[320px] lg:w-[600px] h-[300px] lg:h-[400px] bg-white rounded-[0.5rem] shadow-sm">
 
-            <ion-icon name="cloud-offline-outline" class="text-red-500 text-[50px]"></ion-icon>
+            <ion-icon name="cloud-offline-outline" class="text-red-500 text-[50px] lg:text-[70px]"></ion-icon>
 
-            <p class="text-red-500 text-[18px] text-center font-[700]">
+            <p class="text-red-500 text-[18px] lg:text-[30px] text-center font-[700]">
                 Form submission unsuccessfully <br>
-                <span class="text-[#474747] text-[12px] font-[400] leading-[7px]">
+                <span class="text-[#474747] text-[12px] lg:text-[15px] font-[400] leading-[7px]">
                     Please fill in the correct information on the form.
                 </span>
             </p>
@@ -278,7 +278,7 @@
                            <div class="flex flex-col gap-2">
                                <label for="loan_amount">Requested Amount (NGN) <span class="text-[8.5px] lg:text-[14px]">(min NGN 5,000 and max NGN 5,000,000)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
                                <input type="text" name="loan_amount" placeholder="Requested Amount" id="loan_input" class="loan_amount number_input h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
-                                <small class="loan_error text-red-500 opacity-0"></small>
+                                <small class="loan_error amount_error text-red-500 opacity-0"></small>
                            </div>
        
                            <div class="flex flex-col gap-2">
@@ -661,7 +661,6 @@
 
     </main>
 
-    
 
     <footer class="relative h-[505px] lg:h-[50px] bg-[#EDF3F1] flex justify-center items-end px-8 py-2 lg:pb-0">
         <div class=" lg:h-[50px] w-full lg:w-[1328.63px] text-[#004D3F] flex flex-col justify-between lg:justify-end">
