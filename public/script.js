@@ -441,7 +441,6 @@ accDetailsInput.forEach((input, index) => {
                 if(input.value.trim() !== "") {
                     input.classList.remove('border-red-500');
                     input.classList.add('border-[#C9C9C9]');
-                    accError[index].classList.add('opacity-0');
                 }
             })
         }
@@ -786,9 +785,38 @@ validator.addEventListener(`click`, () => {
 
 
 const submitForm = document.querySelector('.submit');
-const sendIcon = document.querySelector('.sending')
+const allAccField = document.querySelectorAll(`.acc_info`);
+const sendIcon = document.querySelector('.sending');
+
+allAccField.forEach((field, i) => {
+    const accInput = field.querySelector(`#acc_input`);
+    const accError = field.querySelector(`.acc_error`);
+    
+    accInput.addEventListener(`input`, () => {
+        if(accInput.value !== "") {
+            accInput.classList.remove(`border-red-500`);
+            accError.textContent = ``;
+            accError.classList.add(`opacity-0`);
+        }
+    });
+});
 
 submitForm.addEventListener(`click`, (e) => {
+
+    allAccField.forEach((field, i) => {
+        const accInput = field.querySelector(`#acc_input`);
+        const accError = field.querySelector(`.acc_error`);
+        if(accInput.value === "") {
+            e.preventDefault();
+            accInput.classList.add(`border-red-500`);
+            accError.textContent = `Can't be empty`;
+            accError.classList.remove(`opacity-0`);
+        }else {
+            accInput.classList.remove(`border-red-500`);
+            accError.textContent = ``;
+            accError.classList.add(`opacity-0`);
+        };
+    });
 
     if (validatorCheck !== true) {
         e.preventDefault();
