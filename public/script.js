@@ -297,20 +297,6 @@ amountInput.addEventListener(`blur`, () => {
     }
 });
 
-// account number verification
-const accError = document.querySelector('.match_error');
-
-verifyAccInput.addEventListener (`input`, (e) => {
-    if (verifyAccInput.value === accNumInput.value) {
-        accError.textContent = ``;
-        accError.classList.add(`opacity-0`);
-        verifyAccInput.classList.remove(`border-red-500`);
-    } else {
-        accError.textContent = `Account number must match`;
-        accError.classList.remove(`opacity-0`);
-        verifyAccInput.classList.add(`border-red-500`);
-    }
-});
 
 
 // checking for input changes function
@@ -776,6 +762,11 @@ back_page4.addEventListener('click', (e) => {
 const validator = document.querySelector('.terms_validator');
 const validatorText = document.querySelector('.validator_text');
 let validatorCheck;
+
+const submitForm = document.querySelector('.submit');
+const allAccField = document.querySelectorAll(`.acc_info`);
+const sendIcon = document.querySelector('.sending');
+
 validator.addEventListener(`click`, () => {
     validatorCheck = true;
     if(validatorText.classList.contains(`text-red-500`)) {
@@ -783,34 +774,36 @@ validator.addEventListener(`click`, () => {
     }
 });
 
+// account number verification
+const accError = document.querySelector('.match_error');
 
-const submitForm = document.querySelector('.submit');
-const allAccField = document.querySelectorAll(`.acc_info`);
-const sendIcon = document.querySelector('.sending');
-
-allAccField.forEach((field, i) => {
-    const accInput = field.querySelector(`#acc_input`);
-    const accError = field.querySelector(`.acc_error`);
-    
-    accInput.addEventListener(`input`, () => {
-        if(accInput.value !== "") {
-            accInput.classList.remove(`border-red-500`);
-            accError.textContent = ``;
-            accError.classList.add(`opacity-0`);
-        }
-    });
+verifyAccInput.addEventListener (`input`, () => {
+    if (verifyAccInput.value === accNumInput.value) {
+        accError.textContent = ``;
+        accError.classList.add(`opacity-0`);
+        verifyAccInput.classList.remove(`border-red-500`);
+    } else {
+        accError.textContent = `Account number must match`;
+        accError.classList.remove(`opacity-0`);
+        verifyAccInput.classList.add(`border-red-500`);
+    }
 });
+
 
 submitForm.addEventListener(`click`, (e) => {
 
-    allAccField.forEach((field, i) => {
+    let formIsValid = true;
+
+    allAccField.forEach((field) => {
         const accInput = field.querySelector(`#acc_input`);
         const accError = field.querySelector(`.acc_error`);
-        if(accInput.value === "") {
+
+        if(accInput.value.trim() === "") {
             e.preventDefault();
             accInput.classList.add(`border-red-500`);
             accError.textContent = `Can't be empty`;
             accError.classList.remove(`opacity-0`);
+            formIsValid = false;
         }else {
             accInput.classList.remove(`border-red-500`);
             accError.textContent = ``;
@@ -818,15 +811,50 @@ submitForm.addEventListener(`click`, (e) => {
         };
     });
 
+    // Ensuring the account numbers match before allowing submission
+
+    if(verifyAccInput.value !== accNumInput.value) {
+        e.preventDefault();
+        accError.textContent = `Account number must match`;
+        accError.classList.remove(`opacity-0`);
+        verifyAccInput.classList.add(`border-red-500`);
+        e.target.innerHTML = `Submit Application`;
+        formIsValid = false;
+    } else {
+        formIsValid = true;
+    }
+
+    // Check validatorCheck condition
     if (validatorCheck !== true) {
         e.preventDefault();
-        validatorText.classList.add(`text-red-500`);
+        validatorText.classList.add('text-red-500');
+        formIsValid = false;
+    }
 
+    // Update button content only if both formIsValid and validatorCheck are true
+    if (formIsValid && validatorCheck) {
+        submitForm.innerHTML = `<ion-icon name="paper-plane-outline" class="sending text-[16px]"></ion-icon>`;
     } else {
-        e.target.innerHTML = `<ion-icon name="paper-plane-outline" class="sending text-[16px]"></ion-icon>`;
+        submitForm.textContent = "Submit Application";
     }
   
 });
+
+
+allAccField.forEach((field) => {
+    const accInput = field.querySelector(`#acc_input`);
+    const accError = field.querySelector(`.acc_error`);
+    
+    accInput.addEventListener(`input`, () => {
+        if(accInput.value.trim() !== "") {
+            accInput.classList.remove(`border-red-500`);
+            accError.textContent = ``;
+            accError.classList.add(`opacity-0`);
+        }
+    });
+});
+
+
 
 
 // form submission messages
