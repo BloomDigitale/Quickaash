@@ -276,7 +276,7 @@
                            </div>
        
                            <div class="flex flex-col gap-2">
-                               <label for="loan_amount">Requested Amount (NGN) <span class="text-[8.5px] lg:text-[14px]">(min NGN 5,000 and max NGN 5,000,000)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
+                               <label for="loan_amount">Requested Amount (NGN) <span class="text-[8.5px] lg:text-[14px]">(min NGN 1,000 and max NGN 50,000)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
                                <input type="text" name="loan_amount" placeholder="Requested Amount" id="loan_input" class="loan_amount number_input h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                 <small class="loan_error amount_error text-red-500 opacity-0"></small>
                            </div>
@@ -285,37 +285,14 @@
                                <label for="loan_duration">Loan circle<span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
                                <select name="loan_duration" id="loan_input" class="loan_duration w-full h-[33.41px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
                                   <option value=""></option>
-                                  <option value="1 month">1 month (5% interest)</option>
-                                  <option value="2 months">2 months (7.5% interest)</option>
-                                  <option value="3 months">3 months (9% interest)</option>
-                                  <option value="4 months">4 months (12% interest)</option>
-                                  <option value="5 months">5 months (15% interest)</option>
-                                  <option value="6 months">6 months (18% interest)</option>
-                                  <option value="7 months">7 months (21% interest)</option>
-                                  <option value="8 months">8 months (24% interest)</option>
-                                  <option value="9 months">9 months (27.5% interest)</option>
-                                  <option value="10 months">10 months (30% interest)</option>
-                                  <option value="11 months">11 months (33% interest)</option>
-                                  <option value="12 months">12 month (36% interest)</option>
+                                  <option value="1,000 - 5,000">&#8358 1,000 - &#8358 5,000 (0% interest)</option>
+                                  <option value="5,000 - Above">&#8358 5,000 - Above (42% interest)</option>
                                </select>
 
                                 <small class="loan_error text-red-500 opacity-0"></small>
 
                            </div> 
-       
-                           <div class="flex justify-between">
-                               <div class="flex flex-col gap-2">
-                                   <label for="bvn">BVN <span class="text-[8.5px] lg:text-[14px]">(enter a valid BVN number)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                   <input type="text" name="bvn" placeholder="BVN" maxlength="11" id="loan_input" class="bvn number_input min-w-[140px]  max-w-[170.1px] h-[33.41px] lg:max-w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
-                                   <small class="loan_error text-red-500 opacity-0"></small>
-                               </div>
-       
-                               <div class="flex flex-col gap-2">
-                                   <label for="dob">Date of birth <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
-                                   <input type="date" name="dob" max="2006-12-31" id="loan_input" class="dob min-w-[140px]  max-w-[170.1px] h-[33.41px] lg:max-w-[280px] lg:h-[55px] pl-2 border border-[#C9C9C9] rounded-[9.11px] lg:rounded-[15px] text-[9.72px] lg:text-[16px] text-[#474747] font-[400]" >
-                                    <small class="loan_error text-red-500 opacity-0"></small>
-                               </div>
-                           </div>
+    
        
                            <div class="flex flex-col gap-2">
                                <label for="purpose">Purpose of Loan <span class="text-[8.5px] lg:text-[14px]">(What will you be using the requested Money for)</span> <span class="text-[12.15px] lg:text-[20px] text-[#FF5252]">*</span></label>
@@ -441,7 +418,7 @@
                     <section id="page_5" class="step_5 hidden flex-col gap-[2rem">
                         <p class="mb-[1rem] text-[#004D3F] text-[18.22px] lg:text-[30px] font-[500] capitalize">
                             Account Details (where loan if <br>
-                            approved would be credit)
+                            approved would be credited)
                         </p>
     
                         <div class="flex flex-col gap-[1.5rem]">

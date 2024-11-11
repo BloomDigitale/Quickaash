@@ -280,16 +280,16 @@ numberInputs.forEach(input => {
     });
 });
 
-// making sure the loan amount input is within 5000 - 5000000
+// making sure the loan amount input is within 1,000 - 50,000
 const amountError = document.querySelector(`.amount_error`);
 
 amountInput.addEventListener(`blur`, () => {
     const amountValue = parseInt(amountInput.value, 10);
 
-    if(amountValue < 5000 || amountValue > 5000000) {
+    if(amountValue < 1000 || amountValue > 50000) {
         amountInput.value = "";
         amountInput.classList.add(`border-red-500`);
-        amountError.textContent = `Please input an amount between 5,000 - 5,000,000`;
+        amountError.textContent = `Please input an amount between 1,000 - 50,000`;
         amountError.classList.remove(`opacity-0`);
     } else {
         amountInput.classList.remove(`border-red-500`);
@@ -501,7 +501,7 @@ next_page2.addEventListener('click', (e) => {
 next_page3.addEventListener('click', (e) => {
     e.preventDefault();
 
-    if(loanDetails.length >= 8 ) {
+    if(loanDetails.length >= 6 ) {
         page2.classList.remove('flex');
         page2.classList.add('hidden');
         nav2.classList.remove('flex');
