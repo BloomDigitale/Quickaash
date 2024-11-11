@@ -166,6 +166,7 @@ const accDetailsInput = document.querySelectorAll('#acc_input');
 const personalInfoError = document.querySelectorAll('.personal_info_error');
 const loanError = document.querySelectorAll('.loan_error');
 const collateralError = document.querySelectorAll('.collateral_error');
+const collateralErrorMessage = document.querySelector(`.collateral_file_error_message`);
 const businessError = document.querySelectorAll('.business_error');
  
 
@@ -390,6 +391,7 @@ collateralDetailsInput.forEach((input, index) => {
 
                     collateralFileError.classList.add('border-[#C9C9C9]');
                     collateralFileError.classList.remove('border-red-500');
+                    collateralErrorMessage.classList.add('opacity-0');
                 }
             })
         }
